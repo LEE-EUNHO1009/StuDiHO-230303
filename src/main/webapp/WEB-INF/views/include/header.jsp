@@ -51,9 +51,7 @@
 			<td class="headertext01"><a href="question">QUESTION</a></td>
 			<td class="margin02">&nbsp;</td>
 		</tr>		
-		<tr class="header02">
-			<td>&nbsp;</td>
-		</tr>	
+			
 	</table>
 </body>
 </html>
