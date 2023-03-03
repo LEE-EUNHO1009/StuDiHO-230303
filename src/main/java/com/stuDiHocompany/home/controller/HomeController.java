@@ -40,6 +40,16 @@ public class HomeController {
 	public String gallery() {
 		return "gallery";
 	}
+	
+	@RequestMapping(value = "/gallery2")
+	public String gallery2() {
+		return "gallery2";
+	}
+	
+	@RequestMapping(value = "/gallery3")
+	public String gallery3() {
+		return "gallery3";
+	}
 
 	@RequestMapping(value = "/login")
 	public String login() {
