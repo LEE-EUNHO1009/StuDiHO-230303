@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/main.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/content.css">
-<title>우리들의 스튜디호</title>
+<title>스튜디호 소개</title>
 </head>
 <body>
 <%@ include file="include/header.jsp" %>

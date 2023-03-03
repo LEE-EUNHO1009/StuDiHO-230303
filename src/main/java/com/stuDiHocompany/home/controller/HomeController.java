@@ -26,9 +26,25 @@ public class HomeController {
 		return "reservation";
 	}
 	
+	
+	@RequestMapping(value = "/profile")
+	public String profile() {
+		return "profile";
+	}
+	
 	@RequestMapping(value = "/gallery")
 	public String gallery() {
 		return "gallery";
+	}
+	
+	@RequestMapping(value = "/gallery2")
+	public String gallery2() {
+		return "gallery2";
+	}
+	
+	@RequestMapping(value = "/gallery3")
+	public String gallery3() {
+		return "gallery3";
 	}
 
 	@RequestMapping(value = "/login")
