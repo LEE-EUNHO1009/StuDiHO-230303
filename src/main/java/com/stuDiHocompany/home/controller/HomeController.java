@@ -1,8 +1,15 @@
 package com.stuDiHocompany.home.controller;
 
 
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.stuDiHocompany.home.dto.ResDto;
 
 @Controller
 public class HomeController {
@@ -26,6 +33,25 @@ public class HomeController {
 		return "reservation";
 	}
 	
+	@RequestMapping(value = "/idpic")
+	public String idpic() {
+		return "idpic";
+	}
+	//@RequestMapping(value = "/idpic.do", method = RequestMethod.GET)
+	//public String idpic(HttpServletRequest request, ResDto resDto) {
+		
+	//	Calender cal= Calender.getInstance();
+	//	ResDto idpicResDto; //dto
+		
+	//	public Map<String, Integer>today_info(ResDto resDto){
+	//	Map<String, Integer>today_Data = new HaspMap<String, Integer>();
+	//	Calender cal= Calender.getInstance();
+	//	cal.set(Integer.parseInt(dateDate.getYear()),Integer.parseInt(ResDto.getMonth()),1);
+	//	}
+	//	
+	//	
+	//	return "idpic";
+	//}
 	
 	@RequestMapping(value = "/profile")
 	public String profile() {
