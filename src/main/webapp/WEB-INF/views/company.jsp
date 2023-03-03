@@ -32,7 +32,7 @@
 							우리들의 스튜디호는 2인으로 운영되는 사진관으로<br>
 							각자의 개성을 살릴 수 있는 프로필 사진이나<br>
 							기본적인 증명사진을 촬영하실 수 있습니다.<br>
-							사진에 관련하여 궁금하신 분은 StuDiHoCompany@gmail.com으로 연락주세요.1<br>	
+							사진에 관련하여 궁금하신 분은 StuDiHoCompany@gmail.com으로 연락주세요.<br>	
 						</td>
 					</tr>
 				</table>

@@ -26,6 +26,16 @@ public class HomeController {
 		return "reservation";
 	}
 	
+	@RequestMapping(value = "/idpic")
+	public String idpic() {
+		return "idpic";
+	}
+	
+	@RequestMapping(value = "/profile")
+	public String profile() {
+		return "profile";
+	}
+	
 	@RequestMapping(value = "/gallery")
 	public String gallery() {
 		return "gallery";
