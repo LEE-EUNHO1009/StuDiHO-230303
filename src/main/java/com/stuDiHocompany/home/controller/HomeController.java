@@ -1,8 +1,14 @@
 package com.stuDiHocompany.home.controller;
 
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import com.stuDiHocompany.home.dto.ResDto;
+
+//import javax.util.Calendar;
 
 @Controller
 public class HomeController {
@@ -26,10 +32,14 @@ public class HomeController {
 		return "reservation";
 	}
 	
-	@RequestMapping(value = "/idpic")
-	public String idpic() {
+	@RequestMapping(value = "/idpic.do", method = RequestMethod.GET)
+	public String idpic(HttpServletRequest request, ResDto resDto) {
+		
+		//Calender cal= Calender.getInstance();
+		
 		return "idpic";
 	}
+	
 	
 	@RequestMapping(value = "/profile")
 	public String profile() {

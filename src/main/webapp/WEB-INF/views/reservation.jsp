@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/main.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/hyperlink.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/reservation.css">
 <title>우리들의 스튜디호</title>
 </head>
 <body>
@@ -26,16 +27,16 @@
 				<td align="center">
 					<table width="80%" border="0" cellspacing="0" cellpadding="10">
 						<tr>
-							<td>
-								<a href="idpic">
+							<td class="click01">
+								<a href="idpic" class="click01">
 									<img src="${pageContext.request.contextPath }/resources/img/Dia.png" width="500">
 								</a>
 							</td>
 							<td width="70px">
 								&nbsp;&nbsp;&nbsp;
 							</td>
-							<td>
-								<a href="profile">
+							<td  class="click01">
+								<a href="profile" class="click01">
 									<img src="${pageContext.request.contextPath }/resources/img/eunho.png" width="500" height="665">
 								</a>
 							</td>

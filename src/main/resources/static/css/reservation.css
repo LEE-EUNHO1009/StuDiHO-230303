@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+td.click01 figure img{
+	opacity: 1;
+  	-webkit-transition: .3s ease-in-out;
+  	transition: .3s ease-in-out;
+  	
+}
+a.click01:hover img {
+  	opacity: .5;
+}
