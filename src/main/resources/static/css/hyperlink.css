@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+a:link {
+	text-decoration: none; /*하이퍼링크 밑줄 삭제*/
+	color: inherit; /*원래 색을 상속받겠다.*/
+}
+a:visited {
+	text-decoration: none; /* 방문한 곳의 하이퍼링크 밑줄 삭제*/
+	color: inherit; /*원래 색을 상속받겠다.*/
+}
+a:hover {
+	text-decoration: underline; /* 마우스 커서 도달한 하이퍼링크에 밑줄 출력*/
+	color: inherit; 
+}
