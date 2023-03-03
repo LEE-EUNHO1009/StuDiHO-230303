@@ -1,6 +1,8 @@
 package com.stuDiHocompany.home.controller;
 
 
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
@@ -35,7 +37,13 @@ public class HomeController {
 	@RequestMapping(value = "/idpic.do", method = RequestMethod.GET)
 	public String idpic(HttpServletRequest request, ResDto resDto) {
 		
-		//Calender cal= Calender.getInstance();
+		Calender cal= Calender.getInstance();
+		ResDto idpicResDto; //dto
+		
+		public Map<String, Integer>today_info(ResDto resDto){
+			
+		}
+		
 		
 		return "idpic";
 	}
