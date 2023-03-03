@@ -8,9 +8,7 @@
 </head>
 <body>
 	<%@ include file="include/header.jsp" %>
-	<center>
-		<img src="${pageContext.request.contextPath }/resources/img/gran.png" width="100%" height="100%">	
-	</center>
+	
 	<%@ include file="include/footer.jsp" %>
 </body>
 </html>

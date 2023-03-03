@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/main.css">
-/*<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/content.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/content.css">
 <title>우리들의 스튜디호</title>
 </head>
 <body>
