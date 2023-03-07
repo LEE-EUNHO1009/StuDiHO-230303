@@ -37,24 +37,24 @@
 		SELECT * FROM
 			(SELECT A.*,Floor((ROWNUM-1)/#{amount}+1)PAGE,ROWNUM
 			FROM
-			(SELECT * FROM profile_board ORDER BY qnum DESC)A) 
+			(SELECT * FROM QUESTION_BOARD ORDER BY qnum DESC)A) 
 		WHERE PAGE= #{pageNum}
 	</select>
 	
 	<select id="questionView" resultType="com.stuDiHocompany.home.dto.QuestionDto">
-		SELECT * FROM profile_board WHERE qnum=#{param1}
+		SELECT * FROM QUESTION_BOARD WHERE qnum=#{param1}
 	</select>	
 	
 	<update id="questionModify">
-		UPDATE profile_board SET qname=#{param2}, qcontent=#{param3}, qemail=#{param4} WHERE qnum=#{param1}
+		UPDATE QUESTION_BOARD SET qname=#{param2}, qcontent=#{param3}, qemail=#{param4} WHERE qnum=#{param1}
 	</update>
 	
 	<delete id="questionDelete">
-		DELETE FROM profile_board WHERE qnum=#{param1}
+		DELETE FROM QUESTION_BOARD WHERE qnum=#{param1}
 	</delete>
 	
 	<select id="boardAllCount" resultType="int">
-		SELECT COUNT(*) FROM profile_board
+		SELECT COUNT(*) FROM QUESTION_BOARD
 	</select>	
 
 
