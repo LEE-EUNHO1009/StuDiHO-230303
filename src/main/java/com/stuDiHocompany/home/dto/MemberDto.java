@@ -8,6 +8,7 @@ public class MemberDto {
 	private String mname;//이름
 	private String memail;//이메일
 	private String mdate;//가입일시
+	
 	public MemberDto() {
 		super();
 		// TODO Auto-generated constructor stub

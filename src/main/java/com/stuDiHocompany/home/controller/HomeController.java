@@ -1,6 +1,8 @@
 package com.stuDiHocompany.home.controller;
 
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -11,7 +13,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.stuDiHocompany.home.dao.IDao;
+import com.stuDiHocompany.home.dto.Criteria;
 import com.stuDiHocompany.home.dto.MemberDto;
+import com.stuDiHocompany.home.dto.PageDto;
+import com.stuDiHocompany.home.dto.QuestionDto;
 
 @Controller
 public class HomeController {
@@ -41,21 +46,6 @@ public class HomeController {
 	public String idpic() {
 		return "idpic";
 	}
-	//@RequestMapping(value = "/idpic.do", method = RequestMethod.GET)
-	//public String idpic(HttpServletRequest request, ResDto resDto) {
-		
-	//	Calender cal= Calender.getInstance();
-	//	ResDto idpicResDto; //dto
-		
-	//	public Map<String, Integer>today_info(ResDto resDto){
-	//	Map<String, Integer>today_Data = new HaspMap<String, Integer>();
-	//	Calender cal= Calender.getInstance();
-	//	cal.set(Integer.parseInt(dateDate.getYear()),Integer.parseInt(ResDto.getMonth()),1);
-	//	}
-	//	
-	//	
-	//	return "idpic";
-	//}
 	
 	@RequestMapping(value = "/profile")
 	public String profile() {
@@ -157,23 +147,107 @@ public class HomeController {
 		return "question";
 	}
 
-	//@RequestMapping(value = "/memberModify")
-	//public String memberModify() {
-	//	return "memberModify";
-	//}
-
-	//@RequestMapping(value = "/memberModifyOk")
-	//public String memberModifyOk() {
-	//	return "memberModifyOk";
-	//}
+	@RequestMapping(value = "/questionOk")
+	public String questionOk(HttpServletRequest request) {
+		
+		String qid = request.getParameter("qid");//글쓴유저 아이디
+		String qcontent = request.getParameter("qcontent");//글쓴 질문 내용
+		String qtitle = request.getParameter("qtitle");
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		System.out.println(qtitle);
+		dao.writeQuestion(qid, qtitle, qcontent);
+		
+		return "redirect:list";
+	}
 	
-	//@RequestMapping(value = "/questionModify")
-	//public String questionModify() {
-	//	return "questionModify";
-	//}
-
-	//@RequestMapping(value = "/questionView")
-	//public String questionView() {
-	//	return "questionView";
-	//}
+	@RequestMapping(value = "list")
+	public String list(Model model, Criteria cri, HttpServletRequest request) {
+		
+		int pageNumInt = 0;
+		if(request.getParameter("pageNum") == null) {
+			pageNumInt = 1;
+			cri.setPageNum(pageNumInt);
+			
+		} else {
+			pageNumInt = Integer.parseInt(request.getParameter("pageNum"));
+			cri.setPageNum(pageNumInt);
+		}
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		int totalRecord = dao.boardAllCount();
+		
+		//cri.setPageNum();
+		
+		cri.setStartNum(cri.getPageNum()-1 * cri.getAmount());//해당 페이지의 시작번호를 설정
+		
+		PageDto pageDto = new PageDto(cri, totalRecord);
+		
+		List<QuestionDto> questionDtos = dao.questionList(cri);
+		
+		model.addAttribute("pageMaker", pageDto);
+		model.addAttribute("qdtos", questionDtos);
+		model.addAttribute("currPage", pageNumInt);
+		
+		return "questionList";
+	}
+	
+	@RequestMapping(value = "/questionView")
+	public String questionView(HttpServletRequest request, Model model) {
+		
+		String qnum = request.getParameter("qnum");
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		QuestionDto questionDto = dao.questionView(qnum);
+		
+		model.addAttribute("qdto", questionDto);
+		model.addAttribute("qid", questionDto.getQid());//글쓴 유저의 id값 전송
+		
+		return "questionView";
+	}
+	
+	@RequestMapping(value = "/questionModify")
+	public String questionModify(HttpServletRequest request, Model model) {
+		
+		String qnum = request.getParameter("qnum");
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		QuestionDto questionDto = dao.questionView(qnum);
+		
+		model.addAttribute("qdto", questionDto);
+		
+		
+		return "questionModify";
+	}
+	
+	@RequestMapping(value = "/questionModifyOk")
+	public String questionModifyOk(HttpServletRequest request) {
+		
+		String qnum = request.getParameter("qnum");
+		String qname = request.getParameter("qname");
+		String qcontent = request.getParameter("qcontent");
+		String qemail = request.getParameter("qemail");
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		dao.questionModify(qnum, qname, qcontent, qemail);
+		
+		return "redirect:list";
+	}
+	
+	@RequestMapping(value = "/questionDelete")
+	public String questionDelete(HttpServletRequest request) {
+		
+		String qnum= request.getParameter("qnum");
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		dao.questionDelete(qnum);
+		
+		return "redirect:list";
+	}
+	
+	
 }

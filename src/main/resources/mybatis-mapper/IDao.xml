@@ -27,7 +27,35 @@
 		UPDATE MEMBER_TBL SET mpw=#{param2}, mname=#{param3}, memail=#{param4} WHERE mid=#{param1}
 	</update>
 	
-		
+	<!-- 게시판 SQL -->
+	
+	<insert id="writeQuestion">
+		INSERT INTO QUESTION_BOARD(qnum, qid, qtitle, qcontent) VALUES(SEQ_QUESTION_BOARD.nextval, #{param1}, #{param2}, #{param3}) 
+	</insert>
+	
+	<select id="questionList" resultType="com.stuDiHocompany.home.dto.QuestionDto">
+		SELECT * FROM
+			(SELECT A.*,Floor((ROWNUM-1)/#{amount}+1)PAGE,ROWNUM
+			FROM
+			(SELECT * FROM profile_board ORDER BY qnum DESC)A) 
+		WHERE PAGE= #{pageNum}
+	</select>
+	
+	<select id="questionView" resultType="com.stuDiHocompany.home.dto.QuestionDto">
+		SELECT * FROM profile_board WHERE qnum=#{param1}
+	</select>	
+	
+	<update id="questionModify">
+		UPDATE profile_board SET qname=#{param2}, qcontent=#{param3}, qemail=#{param4} WHERE qnum=#{param1}
+	</update>
+	
+	<delete id="questionDelete">
+		DELETE FROM profile_board WHERE qnum=#{param1}
+	</delete>
+	
+	<select id="boardAllCount" resultType="int">
+		SELECT COUNT(*) FROM profile_board
+	</select>	
 
 
 </mapper>
