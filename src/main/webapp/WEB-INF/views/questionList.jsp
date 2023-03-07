@@ -45,7 +45,7 @@
 									<td class="board_content01">${qdto.qid }</td>
 									<td class="board_content02">
 									<a href="questionView?qnum=${qdto.qnum }">
-									<c:choose>
+							<!-- <c:choose>
 										<c:when test="${fn:length(qdto.qcontent) > 23 }">
 											<c:out value="${fn:substring(qdto.qcontent,0,22) }"></c:out>...
 										</c:when>
@@ -53,11 +53,12 @@
 											<c:out value="${qdto.qcontent }"></c:out>
 										</c:otherwise>
 									</c:choose>
+									 -->		
 									</a>
 									</td>
 									<td class="board_content01">${qdto.qname }</td>
 									<td class="board_content01">
-										<c:out value="${fn:substring(qdto.qdate,0,10) }"></c:out>										
+										<!-- <c:out value="${fn:substring(qdto.qdate,0,10) }"></c:out> -->										
 									</td>
 								</tr>						
 								</c:forEach>
