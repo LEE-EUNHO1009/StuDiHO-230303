@@ -4,8 +4,8 @@ public class QuestionDto {
 	
 	private int qnum;//게시판 글 번호(기본키)
 	private String qid;//글쓴이 아이디
+	private String qtitle;
 	private String qcontent;//질문 내용
-	private String qemail;//글쓴이 이메일
 	private String qdate;//글 등록일시
 	
 	public QuestionDto() {
@@ -13,12 +13,12 @@ public class QuestionDto {
 		// TODO Auto-generated constructor stub
 	}
 
-	public QuestionDto(int qnum, String qid, String qcontent, String qemail, String qdate) {
+	public QuestionDto(int qnum, String qid, String qtitle, String qcontent, String qdate) {
 		super();
 		this.qnum = qnum;
 		this.qid = qid;
+		this.qtitle = qtitle;
 		this.qcontent = qcontent;
-		this.qemail = qemail;
 		this.qdate = qdate;
 	}
 
@@ -38,20 +38,20 @@ public class QuestionDto {
 		this.qid = qid;
 	}
 
+	public String getQtitle() {
+		return qtitle;
+	}
+
+	public void setQtitle(String qtitle) {
+		this.qtitle = qtitle;
+	}
+
 	public String getQcontent() {
 		return qcontent;
 	}
 
 	public void setQcontent(String qcontent) {
 		this.qcontent = qcontent;
-	}
-
-	public String getQemail() {
-		return qemail;
-	}
-
-	public void setQemail(String qemail) {
-		this.qemail = qemail;
 	}
 
 	public String getQdate() {
@@ -61,7 +61,7 @@ public class QuestionDto {
 	public void setQdate(String qdate) {
 		this.qdate = qdate;
 	}
-
+	
 	
 	
 	

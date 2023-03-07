@@ -46,7 +46,7 @@
 	</select>	
 	
 	<update id="questionModify">
-		UPDATE QUESTION_BOARD SET qname=#{param2}, qcontent=#{param3}, qemail=#{param4} WHERE qnum=#{param1}
+		UPDATE QUESTION_BOARD SET qid=#{param2}, qtitle=#{param3}, qcontent=#{param4} WHERE qnum=#{param1}
 	</update>
 	
 	<delete id="questionDelete">
