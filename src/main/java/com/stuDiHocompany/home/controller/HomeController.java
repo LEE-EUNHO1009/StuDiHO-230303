@@ -167,8 +167,8 @@ public class HomeController {
 	public String questionOk(HttpServletRequest request) {
 		
 		String qid = request.getParameter("qid");//글쓴유저 아이디
+		String qtitle = request.getParameter("qtitle"); //글 제목
 		String qcontent = request.getParameter("qcontent");//글쓴 질문 내용
-		String qtitle = request.getParameter("qtitle");
 		
 		IDao dao = sqlSession.getMapper(IDao.class);
 		System.out.println(qtitle);
@@ -241,14 +241,14 @@ public class HomeController {
 	@RequestMapping(value = "/questionModifyOk")
 	public String questionModifyOk(HttpServletRequest request) {
 		
-		String qnum = request.getParameter("qnum");
-		String qname = request.getParameter("qname");
+		String qid = request.getParameter("qid");
+		String qtitle = request.getParameter("qtitle");
 		String qcontent = request.getParameter("qcontent");
-		String qemail = request.getParameter("qemail");
+		String qdate = request.getParameter("qdate");
 		
 		IDao dao = sqlSession.getMapper(IDao.class);
 		
-		dao.questionModify(qnum, qname, qcontent, qemail);
+		dao.questionModify(qid, qtitle, qcontent, qdate);
 		
 		return "redirect:list";
 	}

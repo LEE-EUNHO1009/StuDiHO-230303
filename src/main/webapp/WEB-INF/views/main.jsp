@@ -44,8 +44,6 @@
 		    <!--  <div>
 		    	<script id="mbi-simpletalk-kakao-tpl" type="text/template">
 
-	
-		    	
 		    	</script>
 		    </div>
 		    <div class="mbi-simpletalk-kakao" data-bridge-display="Y" data-device="pc" data-position="right"> 

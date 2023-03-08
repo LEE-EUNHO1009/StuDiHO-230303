@@ -15,7 +15,7 @@
 	<table width="75%" border="0" cellspacing="0" cellpadding="20">
 		<tr>
 			<td align="center">
-				<span class="main01">StuDiHo Company</span>
+				<span class="main01">StuDIHO Company</span>
 			</td>
 		</tr>	
 		<tr>
@@ -35,30 +35,21 @@
 								<tr>
 									<th class="board_title">번호</th>
 									<th class="board_title">아이디</th>
+									<th class="board_title">질문 제목</th>
 									<th class="board_title" width="50%">질문내용</th>
-									<th class="board_title">글쓴이</th>
 									<th class="board_title">등록일</th>
 								</tr>
 								<c:forEach items="${qdtos }" var="qdto">
 								<tr>
 									<td class="board_content01">${qdto.qnum }</td>
 									<td class="board_content01">${qdto.qid }</td>
+									<td class="board_content01">${qdto.qtitle }</td>
 									<td class="board_content02">
-									<a href="questionView?qnum=${qdto.qnum }">
-							<!-- <c:choose>
-										<c:when test="${fn:length(qdto.qcontent) > 23 }">
-											<c:out value="${fn:substring(qdto.qcontent,0,22) }"></c:out>...
-										</c:when>
-										<c:otherwise>
-											<c:out value="${qdto.qcontent }"></c:out>
-										</c:otherwise>
-									</c:choose>
-									 -->		
-									</a>
+										<a href="questionView?qnum=${qdto.qnum }">
+									
+										</a>
 									</td>
-									<td class="board_content01">${qdto.qname }</td>
-									<td class="board_content01">
-										<!-- <c:out value="${fn:substring(qdto.qdate,0,10) }"></c:out> -->										
+									<td class="board_content01">									
 									</td>
 								</tr>						
 								</c:forEach>

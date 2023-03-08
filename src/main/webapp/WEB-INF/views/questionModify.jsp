@@ -38,17 +38,13 @@
 										<td><input class="input_type01" type="text" name="qid" value="${qdto.qid }" readonly="readonly"></td>
 									</tr>
 									<tr>
-										<td><span class="content_text01">글 쓴 이 : </span></td>
-										<td><input class="input_type01" type="text" name="qname" value="${qdto.qname }"></td>
+										<td><span class="content_text01">질문제목 : </span></td>
+										<td><input class="input_type01" type="text" name="qtitle" value="${qdto.qtitle }"></td>
 									</tr>
 									<tr>
 										<td><span class="content_text01">질문내용 : </span></td>
 										<td><textarea class="textarea_type01" rows="5" cols="30" name="qcontent">${qdto.qcontent}</textarea></td>
 									</tr>									
-									<tr>
-										<td><span class="content_text01">이 메 일 : </span></td>
-										<td><input class="input_type01" type="text" name="qemail" value="${qdto.qemail }"></td>
-									</tr>
 									<tr>
 										<td><span class="content_text01">등 록 일 : </span></td>
 										<td><input class="input_type01" type="text" name="qdate" value="${qdto.qdate }" readonly="readonly"></td>
