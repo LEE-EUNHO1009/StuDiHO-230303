@@ -1,4 +1,4 @@
-new Swiper('.swiper', {
+ new Swiper('.swiper', {
   direction: 'vertical', // 슬라이드 방향 디폴트값 가로(horizontal)로 지정되어있음
   
   // autoplay: true 도 가능하며 객체 데이터로 할당하면 추가적인 옵션 설정 가능
