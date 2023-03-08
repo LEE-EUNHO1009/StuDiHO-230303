@@ -12,3 +12,38 @@ a:hover {
 	text-decoration: underline; /* 마우스 커서 도달한 하이퍼링크에 밑줄 출력*/
 	color: inherit; 
 }
+
+
+
+a#tip {
+    border-bottom: 1px dashed;
+    text-decoration: none;
+}
+
+a#tip:hover {
+    cursor: help;
+    position: relative;
+}
+
+a#tip span {
+    display: none;
+}
+
+a#tip:hover span {
+    border: #c0c0c0 1px dotted;
+    padding: 5px 20px 5px 5px;
+    display: block;
+    z-index: 100;
+    left: 0px;
+    margin: 10px;
+    width: 250px;
+    position: absolute;
+    top: 10px;
+    text-decoration: none;
+    
+    width:3%;
+	height: 50px;
+	font-family :Arial;
+	color: #000000;
+	text-align: center;
+}
