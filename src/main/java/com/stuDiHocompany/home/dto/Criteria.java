@@ -10,6 +10,11 @@ public class Criteria {
 		return String.format("page=%d&pageSize=%d", pageNum, amount);		
 	}
 
+	public Criteria() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public Criteria(int pageNum, int amount, int startNum) {
 		super();
 		this.pageNum = pageNum;
@@ -40,5 +45,6 @@ public class Criteria {
 	public void setStartNum(int startNum) {
 		this.startNum = startNum;
 	}
+	
 	
 }

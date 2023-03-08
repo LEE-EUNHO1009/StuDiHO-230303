@@ -1,12 +1,6 @@
 package com.stuDiHocompany.home.dto;
 
-//import lombok.AllArgsConstructor;
-//import lombok.Data;
-//import lombok.NoArgsConstructor;
 
-//@Data
-//@NoArgsConstructor
-//@AllArgsConstructor
 public class PageDto {
 	
 	private int startPage;//현재 화면에서 보여질 시작 페이지 번호
@@ -39,4 +33,69 @@ public class PageDto {
 		this.next = this.endPage < realEnd;
 		//이전, 다음 페이지 버튼 출력 여부 결정
 	}
+
+	public PageDto() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public PageDto(int startPage, int endPage, boolean prev, boolean next, int total, Criteria cri) {
+		super();
+		this.startPage = startPage;
+		this.endPage = endPage;
+		this.prev = prev;
+		this.next = next;
+		this.total = total;
+		this.cri = cri;
+	}
+
+	public int getStartPage() {
+		return startPage;
+	}
+
+	public void setStartPage(int startPage) {
+		this.startPage = startPage;
+	}
+
+	public int getEndPage() {
+		return endPage;
+	}
+
+	public void setEndPage(int endPage) {
+		this.endPage = endPage;
+	}
+
+	public boolean isPrev() {
+		return prev;
+	}
+
+	public void setPrev(boolean prev) {
+		this.prev = prev;
+	}
+
+	public boolean isNext() {
+		return next;
+	}
+
+	public void setNext(boolean next) {
+		this.next = next;
+	}
+
+	public int getTotal() {
+		return total;
+	}
+
+	public void setTotal(int total) {
+		this.total = total;
+	}
+
+	public Criteria getCri() {
+		return cri;
+	}
+
+	public void setCri(Criteria cri) {
+		this.cri = cri;
+	}
+	
+	
 }

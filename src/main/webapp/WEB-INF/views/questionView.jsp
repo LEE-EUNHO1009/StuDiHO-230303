@@ -15,12 +15,12 @@
 	<table width="75%" border="0" cellspacing="0" cellpadding="20">
 		<tr>
 			<td align="center">
-				<span class="main01">StuDiHo Company</span>
+				<span class="main02">This is the photo studio. Please call me if you have any questions about the reservation.</span>
 			</td>
 		</tr>	
 		<tr>
 			<td align="center">
-				<span class="main02">This is the photo studio. Please call me if you have any questions about the reservation.</span>
+				<span class="main02">궁금하신 사항을 자유롭게 남겨주세요.</span>
 			</td>
 		</tr>
 		<tr>
@@ -31,28 +31,51 @@
 						<td class="content">
 							<center>						
 							<table border="0" cellspacing="0" cellpadding="10">
-								<form action="questionOk" method="post" name="board_frm">
+								<form action="questionModify" method="post" name="board_frm">
+									<input type="hidden" value="${qdto.qnum }" name="qnum">
 									<tr>
 										<td><span class="content_text01">아 이 디 : </span></td>
-										<td><input class="input_type01" type="text" name="qid" value="${memberId }" readonly="readonly"></td>
+										<td><input class="input_type01" type="text" name="qid" value="${qdto.qid }" readonly="readonly"></td>
 									</tr>
 									<tr>
 										<td><span class="content_text01">글 쓴 이 : </span></td>
-										<td><input class="input_type01" type="text" name="qname"></td>
+										<td><input class="input_type01" type="text" name="qname" value="${qdto.qname }" readonly="readonly"></td>
 									</tr>
 									<tr>
 										<td><span class="content_text01">질문내용 : </span></td>
-										<td><textarea class="textarea_type01" rows="5" cols="30" name="qcontent"></textarea></td>
+										<td><textarea class="textarea_type01" rows="5" cols="30" name="qcontent" readonly="readonly">${qdto.qcontent}</textarea></td>
 									</tr>									
 									<tr>
 										<td><span class="content_text01">이 메 일 : </span></td>
-										<td><input class="input_type01" type="text" name="qemail"></td>
+										<td><input class="input_type01" type="text" name="qemail" value="${qdto.qemail }" readonly="readonly"></td>
 									</tr>
-									
+									<tr>
+										<td><span class="content_text01">등 록 일 : </span></td>
+										<td><input class="input_type01" type="text" name="qdate" value="${qdto.qdate }" readonly="readonly"></td>
+									</tr>
 									<tr>
 										<td colspan="2">
-											<input class="button_type01" type="button" value="질문하기" onclick="boardCheck()">&nbsp;&nbsp;
+										<%
+											String boardId = (String) request.getAttribute("qid");
+										
+											if(boardId.equals("GUEST")) {
+										%>
+										<input class="button_type01" type="submit" value="수정">&nbsp;&nbsp;										
+										<input class="button_type01" type="button" value="삭제" onclick="script:window.location='questionDelete?qnum=${qdto.qnum}'">
+										<input class="button_type01" type="button" value="글목록" onclick="script:window.location='list'">
+										<%
+											} else if((sessionId != null ) && (sessionId.equals(boardId))) {
+										%>
+											<input class="button_type01" type="submit" value="수정">&nbsp;&nbsp;
+											<input class="button_type01" type="button" value="삭제" onclick="script:window.location='questionDelete?qnum=${qdto.qnum}'">
 											<input class="button_type01" type="button" value="글목록" onclick="script:window.location='list'">
+										<%
+											} else {
+										%>
+											<input class="button_type01" type="button" value="글목록" onclick="script:window.location='list'">
+										<%
+											}
+										%>
 										</td>
 									</tr>
 								</form>							

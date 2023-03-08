@@ -30,34 +30,35 @@
 	<!-- 게시판 SQL -->
 	
 	<insert id="writeQuestion">
-		INSERT INTO QUESTION_BOARD(qnum, qid, qtitle, qcontent) VALUES(SEQ_QUESTION_BOARD.nextval, #{param1}, #{param2}, #{param3}) 
+		INSERT INTO Q_BOARD(qnum, qid, qname, qcontent, qemail) VALUES(Q_SEQ.nextval, #{param1}, #{param2}, #{param3}, #{param4}) 
 	</insert>
 	
-	<select id="questionList" resultType="com.stuDiHocompany.home.dto.QuestionDto">
+	<select id="questionList" resultType="com.stuDiHocompany.home.dto.QBoardDto">
 		SELECT * FROM
 			(SELECT A.*,Floor((ROWNUM-1)/#{amount}+1)PAGE,ROWNUM
 			FROM
-			(SELECT * FROM QUESTION_BOARD ORDER BY qnum DESC)A) 
+			(SELECT * FROM Q_BOARD ORDER BY qnum DESC)A) 
 		WHERE PAGE= #{pageNum}
 	</select>
 	
-	<select id="questionView" resultType="com.stuDiHocompany.home.dto.QuestionDto">
-		SELECT * FROM QUESTION_BOARD WHERE qnum=#{param1}
+	<select id="questionView" resultType="com.stuDiHocompany.home.dto.QBoardDto">
+		SELECT * FROM Q_BOARD WHERE qnum=#{param1}
 	</select>	
 	
 	<update id="questionModify">
-		UPDATE QUESTION_BOARD SET qid=#{param2}, qtitle=#{param3}, qcontent=#{param4} WHERE qnum=#{param1}
+		UPDATE Q_BOARD SET qname=#{param2}, qcontent=#{param3}, qemail=#{param4} WHERE qnum=#{param1}
 	</update>
 	
 	<delete id="questionDelete">
-		DELETE FROM QUESTION_BOARD WHERE qnum=#{param1}
+		DELETE FROM Q_BOARD WHERE qnum=#{param1}
 	</delete>
 	
 	<select id="boardAllCount" resultType="int">
-		SELECT COUNT(*) FROM QUESTION_BOARD
-	</select>	
-
-
+		SELECT COUNT(*) FROM Q_BOARD
+	</select>
+	
 </mapper>
+		
+
 	
 	
