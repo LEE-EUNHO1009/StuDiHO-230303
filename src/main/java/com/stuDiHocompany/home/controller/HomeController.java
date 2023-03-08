@@ -220,6 +220,7 @@ public class HomeController {
 		return "questionModify";
 	}
 
+	@RequestMapping(value = "/questionModifyOk")
 	public String questionModifyOk(HttpServletRequest request) {
 		
 		String qnum = request.getParameter("qnum");
@@ -277,14 +278,5 @@ public class HomeController {
 		return "questionList";
 	}	
 	
-	//@RequestMapping(value = "/memberModify")
-	//public String memberModify() {
-	//	return "memberModify";
-	//}
-
-	//@RequestMapping(value = "/memberModifyOk")
-	//public String memberModifyOk() {
-	//	return "memberModifyOk";
-	//}
 	
 }
