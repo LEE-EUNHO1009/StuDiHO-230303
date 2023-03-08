@@ -22,7 +22,7 @@
 		</tr>	
 		<tr>
 			<td align="center">
-				<span class="main03">궁금하신 사항을 자유롭게 남겨주세요.</span>
+				<span class="main03">♡궁금하신 사항을 자유롭게 남겨주세요.♡</span>
 			</td>
 		</tr>
 		<tr>
