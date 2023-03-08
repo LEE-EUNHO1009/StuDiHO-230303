@@ -28,18 +28,18 @@
 					<table width="80%" border="0" cellspacing="0" cellpadding="10">
 						<tr>
 							<td class="click01">
-								<a href="idpic" class="click01" id="tip">
+								<a href="idpic" class="click01" id="banner_bg">
 									<img src="${pageContext.request.contextPath }/resources/img/Dia.png" width="500">
-										<span>증명사진</span>
+										<p class="hover_text">&nbsp;&nbsp;증명사진</p>
 								</a>
 							</td>
 							<td width="70px">
 								&nbsp;&nbsp;&nbsp;
 							</td>
 							<td  class="click01">
-								<a href="profile" class="click01" id="tip">
+								<a href="profile" class="click01" id="banner_bg">
 									<img src="${pageContext.request.contextPath }/resources/img/eunho.png" width="500" height="665">
-										<span>프로필사진</span>
+										<p class="hover_text">프로필사진</p>
 								</a>
 							</td>
 						</tr>

@@ -9,3 +9,39 @@ td.click01 figure img{
 a.click01:hover img {
   	opacity: .5;
 }
+
+
+
+a#banner_bg{
+  display:inline-block;
+  position: relative;
+}
+a#banner_bg:hover:after,
+a#banner_bg:hover > p.hover_text
+{
+  display:block;
+}
+a#banner_bg:after, p.hover_text{
+  display:none;
+}
+a#banner_bg:after{
+  content:'';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+ 
+}
+
+p.hover_text {
+  position: absolute;
+  top: 250px;
+  left: 140px;
+  color: #fff;
+  z-index: 20;
+  font-weight: 600;
+  font-size: 40px;
+}
