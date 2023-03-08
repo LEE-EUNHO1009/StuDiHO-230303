@@ -74,6 +74,10 @@ public class HomeController {
 	public String gallery3() {
 		return "gallery3";
 	}
+	@RequestMapping(value = "/location")
+	public String location() {
+		return "location";
+	}
 
 	@RequestMapping(value = "/login")
 	public String login() {

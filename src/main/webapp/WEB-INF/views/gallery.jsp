@@ -9,10 +9,12 @@
 </head>
 <body>
 	<%@ include file="include/header.jsp" %>
+	
 	<center>
 	<br>
 	<a href="${pageContext.request.contextPath }/resources/img/1.jpg">
 		<img src="${pageContext.request.contextPath }/resources/img/1.jpg" width="300" height="380">&nbsp;&nbsp;
+		
 	</a>
 	<a href="${pageContext.request.contextPath }/resources/img/2.jpg">
 		<img src="${pageContext.request.contextPath }/resources/img/2.jpg" width="300" height="380">&nbsp;&nbsp;

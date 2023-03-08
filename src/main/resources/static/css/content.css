@@ -11,3 +11,10 @@ td.content {
 	font-weight: bold;
 	color: #0A2647;
 }
+td.content01 {
+	text-align: center;
+	font-size: 16px;
+	font-family: malgun;/* 맑은 고딕 글꼴 적용 */
+	font-weight: bold;
+	color: #0A2647;
+}
