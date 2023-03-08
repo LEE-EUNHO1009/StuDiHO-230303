@@ -36,6 +36,10 @@ public class HomeController {
 	public String company() {
 		return "company";
 	}
+	@RequestMapping(value = "/company01")
+	public String company01() {
+		return "company";
+	}
 	
 	@RequestMapping(value = "/reservation")
 	public String reservation() {
@@ -56,6 +60,10 @@ public class HomeController {
 	public String gallery() {
 		return "gallery";
 	}
+	@RequestMapping(value = "/gallery01")
+	public String gallery01() {
+		return "gallery";
+	}
 	
 	@RequestMapping(value = "/gallery2")
 	public String gallery2() {
@@ -69,6 +77,10 @@ public class HomeController {
 
 	@RequestMapping(value = "/login")
 	public String login() {
+		return "login";
+	}
+	@RequestMapping(value = "/login01")
+	public String login01() {
 		return "login";
 	}
 	@RequestMapping(value = "/loginOk")
@@ -144,6 +156,10 @@ public class HomeController {
 	
 	@RequestMapping(value = "/question")
 	public String question() {
+		return "question";
+	}
+	@RequestMapping(value = "/question01")
+	public String question01() {
 		return "question";
 	}
 
