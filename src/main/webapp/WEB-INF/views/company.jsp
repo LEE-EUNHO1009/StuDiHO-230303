@@ -14,7 +14,7 @@
 	<table width="75%" border="0" cellspacing="0" cellpadding="20">
 		<tr>
 			<td align="center">
-				<span class="main01">StuDiHo Company</span>
+				<span class="main01">StuDIHO Company</span>
 			</td>
 		</tr>	
 		<tr>

@@ -41,6 +41,20 @@
 		    <div class="swiper-button-prev"></div>
 		    <div class="swiper-pagination"></div>
 		    <div class="autoplay-progress">
+		    <!--  <div>
+		    	<script id="mbi-simpletalk-kakao-tpl" type="text/template">
+
+	
+		    	
+		    	</script>
+		    </div>
+		    <div class="mbi-simpletalk-kakao" data-bridge-display="Y" data-device="pc" data-position="right"> 
+		    	<a class="badge" data-type="kakaotalk" style="width:100px; margin-bottom: 150px;">
+		    		<img alt="카카오톡 상담하기" src="https://simple.happytalkio.com/images/components/buttons/btn_kakao05.png" title>
+		    	</a>
+		    </div>
+		    -->
+		    <div></div>
 		    <svg viewBox="0 0 48 48">
 	        <circle cx="24" cy="24" r="20"></circle>
 		     </svg>
