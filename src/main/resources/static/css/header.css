@@ -40,9 +40,8 @@ a {
 menu박스 가운데정렬, 글자가운데 정렬 */
 #navi {
 	line-height: 50px; 
-	margin:0 auto;
+	margin:0 0;
 	text-align: center;
-	background-color: yellow;
 }
 
 /* menu태그 자식의 ul의 자식 li를 왼쪽정렬과 넓이 140설정 */
@@ -61,7 +60,6 @@ menu박스 가운데정렬, 글자가운데 정렬 */
 }
 #navi > ul > li:hover > ul {
 	display:block;
-	background-color: red;
 }
 #navi > ul > li > ul > li:hover {
 	background: orange;

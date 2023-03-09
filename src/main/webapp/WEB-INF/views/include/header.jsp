@@ -15,14 +15,7 @@
 	%>
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">		
 		<tr class="header01">
-			<!--  <td class="category">
-				<a href="#none" class="fold">
-					<span></span>
-					<span></span>
-					<span></span>
-				</a>
-			-->
-			</td>
+			
 			<td class="margin01">&nbsp;</td><!-- 여백 -->
 			<td class="headertext01"><a href="main">HOME</a></td>
 			<td class="margin02">&nbsp;</td>
@@ -49,11 +42,10 @@
 			<%
 				}
 			%>
-			<td class="margin02"></td>
 			
 			
-			<td class="headertext01" id="navi">
-				
+			<td class="headertext01" >
+				<div id="navi">
 					<ul class="dropheader">
 						<li class="dropheader01">
 						<a href="company" class="dropheader02">COMPANY</a>
@@ -63,7 +55,7 @@
 							</ul>
 						</li>
 					</ul>
-				
+				</div>
 			</td>
 			
 			
