@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/main.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/content.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/board.css">
 <script type="text/javascript" src="${pageContext.request.contextPath }/resources/js/Board.js"></script>
 <title>Question</title>
 </head>
@@ -35,11 +36,11 @@
 							<center>
 							<table width="80%" border="0" cellspacing="0" cellpadding="10">
 								<tr>
-									<th class="board_title">번호</th>
-									<th class="board_title">아이디</th>
-									<th class="board_title" width="50%">질문내용</th>
-									<th class="board_title">글쓴이</th>
-									<th class="board_title">등록일</th>
+									<th class="board_title" width="10%">번호</th>
+									<th class="board_title" width="10%">아이디</th>
+									<th class="board_title" width="40%">질문내용</th>
+									<th class="board_title" width="10%">글쓴이</th>
+									<th class="board_title" width="10%">등록일</th>
 								</tr>
 								<c:forEach items="${qdtos }" var="qdto">
 								<tr>

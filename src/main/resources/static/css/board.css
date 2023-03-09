@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+th.board_title {
+	background-color: #3A98B9;
+	border: 0px solid #462600;
+	font-size : 18px;
+	color: #f1f1f1;
+	font-family: malgun;
+	font-weight: bold;
+}
+
+td.board_content01 {
+	border: 0px solid #462600;
+	font-size : 16px;
+	color: #000000;
+	font-family: malgun;
+	text-align: center;
+}
+
+td.board_content02 {
+	border: 0px solid #462600;
+	font-size : 16px;
+	color: #000000;
+	font-family: malgun;	
+	text-align: left;
+}
