@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.stuDiHocompany.home.dao.IDao">
+	
+	<!-- 회원 관리 SQL -->
+	<insert id="memberJoin">
+		INSERT INTO MEMBER_TBL(mid, mpw, mname, memail) VALUES(#{param1}, #{param2}, #{param3}, #{param4}) 
+	</insert>
+	
+	<select id="checkId" resultType="int">
+		SELECT COUNT(*) FROM MEMBER_TBL WHERE mid=#{param1}
+	</select>
+	
+	<select id="checkIdAndPW" resultType="int">
+		SELECT COUNT(*) FROM MEMBER_TBL WHERE mid=#{param1} AND mpw=#{param2}
+	</select>
+	
+	<select id="getMemberInfo" resultType="com.stuDiHocompany.home.dto.MemberDto">
+		SELECT * FROM MEMBER_TBL WHERE mid=#{param1}
+	</select>
+	
+	<update id="memberModify">
+		UPDATE MEMBER_TBL SET mpw=#{param2}, mname=#{param3}, memail=#{param4} WHERE mid=#{param1}
+	</update>
+	
+	<!-- 게시판 SQL -->
+	
+	<insert id="writeQuestion">
+		INSERT INTO Q_BOARD(qnum, qid, qname, qcontent, qemail) VALUES(Q_SEQ.nextval, #{param1}, #{param2}, #{param3}, #{param4}) 
+	</insert>
+	
+	<select id="questionList" resultType="com.stuDiHocompany.home.dto.QBoardDto">
+		SELECT * FROM
+			(SELECT A.*,Floor((ROWNUM-1)/#{amount}+1)PAGE,ROWNUM
+			FROM
+			(SELECT * FROM Q_BOARD ORDER BY qnum DESC)A) 
+		WHERE PAGE= #{pageNum}
+	</select>
+	
+	<select id="questionView" resultType="com.stuDiHocompany.home.dto.QBoardDto">
+		SELECT * FROM Q_BOARD WHERE qnum=#{param1}
+	</select>	
+	
+	<update id="questionModify">
+		UPDATE Q_BOARD SET qname=#{param2}, qcontent=#{param3}, qemail=#{param4} WHERE qnum=#{param1}
+	</update>
+	
+	<delete id="questionDelete">
+		DELETE FROM Q_BOARD WHERE qnum=#{param1}
+	</delete>
+	
+	<select id="boardAllCount" resultType="int">
+		SELECT COUNT(*) FROM Q_BOARD
+	</select>
+	
+</mapper>
+		
+
+	
+	
