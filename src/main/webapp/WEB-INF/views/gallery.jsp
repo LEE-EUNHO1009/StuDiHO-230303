@@ -5,12 +5,27 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/hyperlink.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/submenu.css">
 <title>온라인 갤러리</title>
 </head>
 <body>
 	<%@ include file="include/header.jsp" %>
 	
 	<center>
+	<div class="submenu01" style="height: 40%">
+	<ul class="mm1_sub" style="display:block;">
+		<li class="sub01">
+			<a href="/company" class="submenu02">증명사진</a>
+		</li>
+		<li class="sub01">
+			<a href="/location" class="submenu02">프로필/ 컨셉</a>
+		</li>
+		<li class="sub01">
+			<a href="/location" class="submenu02">반려견/ 반려묘</a>
+		</li>
+		
+	</ul>
+	</div>
 	<br>
 	<a href="${pageContext.request.contextPath }/resources/img/1.jpg">
 		<img src="${pageContext.request.contextPath }/resources/img/1.jpg" width="300" height="380">&nbsp;&nbsp;

@@ -26,5 +26,5 @@ a.submenu02{
 li.sub01{
 	display: list-item;
 	list-style: none;
-	float: left;
+	text-align: left;
 }
