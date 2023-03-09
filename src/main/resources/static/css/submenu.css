@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+div.submenu01{
+	position:absolute;
+	left:20px;
+	top:10%;
+	width:250px;
+	background-color: #ffffff;
+}
+a.submenu02{
+	display:block;
+	width:100%;
+	padding:13px 0;
+	color:#ffffff;
+	font-size:16px;
+	font-weight:600;
+	cursor:pointer;
+	text-decoration:none;
+}
+
+li.sub01{
+	display: list-item;
+	list-style: none;
+	float: left;
+}
