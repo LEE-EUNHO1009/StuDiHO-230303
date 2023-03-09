@@ -5,7 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/header.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/subheader.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/hyperlink.css">
 <title>header</title>
 </head>
@@ -50,21 +49,24 @@
 			<%
 				}
 			%>
-			<td class="margin02">&nbsp;</td>
-			<td class="headertext01">
-			<div class="subheader">	
-				<a href="company">COMPANY</a>
+			<td class="margin02"></td>
+			
+			
+			<td class="headertext01" id="navi">
 				
-					<ul class="subheader01">
-						<li class="subheader02">
-							<a href="company">스튜디호 소개</a>
-						</li>
-						<li class="subheader02">
-							<a href="locaion">스튜디호 오시는 길</a>
+					<ul class="dropheader">
+						<li class="dropheader01">
+						<a href="company" class="dropheader02">COMPANY</a>
+							<ul class="dropheader03">
+								<li><a href="company" class="dropheader04">스튜디호 소개</a></li>
+								<li><a href="location" class="dropheader04">스튜디호 오시는 길</a></li>
+							</ul>
 						</li>
 					</ul>
+				
 			</td>
-			</div>
+			
+			
 			<td class="margin02">&nbsp;</td>
 			<td class="headertext01"><a href="reservation">RESERVATION</a></td>
 			<td class="margin02">&nbsp;</td>
