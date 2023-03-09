@@ -46,15 +46,32 @@ public class HomeController {
 		return "reservation";
 	}
 	
-	@RequestMapping(value = "/idpic")
-	public String idpic() {
-		return "idpic";
+	@RequestMapping(value = "/reservationHistory")
+	public String reservationHistory(HttpServletRequest request, Model model) {
+		HttpSession session = request.getSession();
+		String sessionId = (String) session.getAttribute("id");
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+	
+		//MemberDto memberDto = dao.loginOkDao(sessionId);
+		
+		//model.addAttribute("memberDto",memberDto);
+	
+		//model.addAttribute("count",dao.countList(sessionId));
+		//model.addAttribute("list", dao.listDao(sessionId)); // 전체리스트
+		
+		//model.addAttribute("count01",dao.count01List(sessionId));
+		//model.addAttribute("list01", dao.list01Dao(sessionId)); // 접종리스트
+		
+		//model.addAttribute("count02",dao.count02List(sessionId));
+		//model.addAttribute("list02", dao.list02Dao(sessionId)); // 진료리스트
+		
+		//model.addAttribute("count03",dao.count03List(sessionId));
+		//model.addAttribute("list03", dao.list03Dao(sessionId)); // 미용리스트
+	
+		return "reservationHistory";
 	}
 	
-	@RequestMapping(value = "/profile")
-	public String profile() {
-		return "profile";
-	}
 	
 	@RequestMapping(value = "/gallery")
 	public String gallery() {

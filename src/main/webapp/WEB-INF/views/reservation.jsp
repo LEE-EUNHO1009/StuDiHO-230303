@@ -28,18 +28,18 @@
 					<table width="80%" border="0" cellspacing="0" cellpadding="10">
 						<tr>
 							<td class="click01">
-								<a href="idpic" class="click01" id="banner_bg">
-									<img src="${pageContext.request.contextPath }/resources/img/Dia.png" width="500">
-										<p class="hover_text">&nbsp;&nbsp;증명사진</p>
+								<a href="reservationHistory" class="click01" id="banner_bg">
+									<img src="${pageContext.request.contextPath }/resources/img/eunho.png" width="500" height="665">
+										<p class="hover_text">증명/프로필</p>
 								</a>
 							</td>
 							<td width="70px">
 								&nbsp;&nbsp;&nbsp;
 							</td>
 							<td  class="click01">
-								<a href="profile" class="click01" id="banner_bg">
-									<img src="${pageContext.request.contextPath }/resources/img/eunho.png" width="500" height="665">
-										<p class="hover_text">프로필사진</p>
+								<a href="reservationHistory" class="click01" id="banner_bg">
+									<img src="${pageContext.request.contextPath }/resources/img/Dang.jpg" width="500" height="665">
+										<p class="hover_text">반려견&묘</p>
 								</a>
 							</td>
 						</tr>

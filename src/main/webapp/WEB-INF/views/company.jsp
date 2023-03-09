@@ -10,7 +10,7 @@
 <title>스튜디호 소개</title>
 </head>
 <body>
-<%@ include file="include/header.jsp" %>
+	<%@ include file="include/header.jsp" %>
 	<center>
 	<div class="submenu01" style="height: 40%">
 	<ul class="mm1_sub" style="display:block;">

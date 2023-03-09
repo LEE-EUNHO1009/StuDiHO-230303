@@ -42,6 +42,7 @@
 			<%
 				}
 			%>
+			<td class="margin02">&nbsp;</td>
 			
 			
 			<td class="headertext01" >
@@ -60,9 +61,40 @@
 			
 			
 			<td class="margin02">&nbsp;</td>
-			<td class="headertext01"><a href="reservation">RESERVATION</a></td>
+			
+			
+			
+			<td class="headertext01">
+				<div id="navi">
+						<ul class="dropheader">
+							<li class="dropheader01">
+							<a href="reservation">RESERVATION</a>
+								
+							</ul>
+						</li>
+					</ul>
+				</div>		
+			</td>
+			
+			
 			<td class="margin02">&nbsp;</td>
-			<td class="headertext01"><a href="gallery">GALLERY</a></td>
+			<td class="headertext01">
+				<div id="navi">
+						<ul class="dropheader">
+							<li class="dropheader01">
+							<a href="gallery">GALLERY</a>
+								<ul class="dropheader03">
+									<li><a href="gallery" class="dropheader04">증명사진</a></li>
+									<li><a href="#" class="dropheader04">프로필/ 컨셉</a></li>
+									<li><a href="#" class="dropheader04">반려견/ 반려묘</a></li>
+										
+							</ul>
+						</li>
+					</ul>
+				</div>		
+							
+			</td>
+			
 			<td class="margin02">&nbsp;</td>
 			<td class="headertext01"><a href="question">QUESTION</a></td>
 			<td class="margin02">&nbsp;</td>
