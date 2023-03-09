@@ -56,8 +56,6 @@
 			<td class="margin02">&nbsp;</td>
 			<td class="headertext01"><a href="gallery">GALLERY</a></td>
 			<td class="margin02">&nbsp;</td>
-			<td class="headertext01"><a href="location">LOCATION</a></td>
-			<td class="margin02">&nbsp;</td>
 			<td class="headertext01"><a href="question">QUESTION</a></td>
 			<td class="margin02">&nbsp;</td>
 		</tr>		

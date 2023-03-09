@@ -6,11 +6,22 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/main.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/content.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/submenu.css">
 <title>찾아오시는 길</title>
 </head>
 <body>
 <%@ include file="include/header.jsp" %>
 	<center>
+	<div class="submenu01" style="height: 40%">
+	<ul class="mm1_sub" style="display:block;">
+		<li class="sub01">
+			<a href="company" class="submenu02">스튜디호 소개</a>
+		</li>
+		<li class="sub01">
+			<a href="location" class="submenu02">스튜디호 오시는 길</a>
+		</li>
+	</ul>
+	</div>
 	<table width="75%" border="0" cellspacing="0" cellpadding="20">
 		<tr>
 			<td align="center">
