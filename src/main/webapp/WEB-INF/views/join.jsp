@@ -50,7 +50,7 @@
 									
 									<tr>
 										<td colspan="2">
-											<input class="button_type01" type="submit" value="가입완료" onclick="script:window.location='joinOk'">&nbsp;&nbsp;
+											&nbsp;&nbsp;&nbsp;&nbsp;<input class="button_type01" type="submit" value="가입완료" onclick="script:window.location='joinOk'">&nbsp;&nbsp;
 											<input class="button_type01" type="button" value="로그인" onclick="script:window.location='login'">
 										</td>
 									</tr>
