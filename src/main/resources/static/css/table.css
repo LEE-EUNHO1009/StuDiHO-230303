@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;	
+	height:100%;
+	background-color:#FFFFE4;
+}
+header {
+	background-color:#FFFFE4;
+	margin-top: 10px;
+	margin-bottom: 20px;
+    font-family: NanumSquareRound;
+    font-weight: bold;
+}
+
+footer {
+	width: 100%;
+	height: 70px; /* 내용물에 따라 알맞는 값 설정 */
+	bottom: 0px;
+	position: absolute;
+	background-color:#FFFFE4;
+	
+	/*
+	width:100%;
+	bottom:0;
+	background-color:#FFFFE4;
+	margin-bottom: 5px;
+	*/
+}
+
+section {
+	padding-bottom: 70px; /* footer의 height값과 동일 */
+}
+
+#wrap {
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+}
+
+table.mtable {
+	margin-bottom: 50px;
+}
+
+
+
+/* mview */
+td.td-type04 { 
+	font-size: 13px;
+	color: #969696;
+	font-family: NanumSquareRound;
+	text-align:left;
+}
+
+
+#input01 {
+	font-size: 15px;
+	font-family: Arial,NanumSquareRound;	
+	color: #636363;
+	border: 1px solid #c0c0c0;
+	background-color: #ffffff;
+	width: 220px;
+	padding: 5px;
+}
+
+#memberinfo {
+	font-size: 20px;
+	font-weight: bold;	
+	font-family: Arial,NanumSquareRound ;	
+	color: #969696;
+	width: 220px;
+	padding: 5px;
+
+}
+
+#button01 {
+	font-size: 15px;
+	font-family: NanumSquareRound;	
+	color: #ffffff;
+	border: 2px solid #ffffff;
+	background-color: #a0a0a0;
+	width: 175px;
+	height: 40px;
+	padding: 5px;
+}
+
+a:link {
+	text-decoration: none;
+	color: #000000;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #5D5D5D;
+}
+
+#button01:hover {
+	background-color: #666666;
+}
+
+table.tt1 {
+	font-size: 20px;
+	font-family: NanumSquareRound;
+	color: #5D5D5D;
+	font-weight: normal;
+	margin-bottom: 20px;
+}
+
+table.bye {
+	font-size: 20px;
+	font-family: NanumSquareRound;
+	color: #5D5D5D;
+	font-weight: normal;
+	margin-bottom: 20px;
+}
+
+table.tt2 {
+	font-size: 16px;
+	font-family: NanumSquareRound;
+	color: #5D5D5D;
+	font-weight: normal;
+}
+
+table.tt3 {
+	font-size: 16px;
+	font-family: NanumSquareRound;
+	color: #5D5D5D;
+	font-weight: normal;
+	background-color: #FFFFE4;
+}
+
+textarea {
+	width:226px;
+	height:100px;
+	padding: 10px;
+	box-sizing: border-box;
+	border: solid 2px #5d5d5d;
+	border-radius: 2px;
+	font-size: 12px;
+	font-family: NanumSquareRound;
+	resize: none;
+}

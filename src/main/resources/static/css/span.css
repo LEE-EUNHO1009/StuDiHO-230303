@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+
+span.title01 {
+	font-size: 60px;
+	color: #000000;
+	font-family: NanumSquareRound;
+}
+span.title02 {
+	font-size: 20px;
+	color: #ABABAB;
+	font-family: NanumSquareRound;
+}
+
+
+#menu {
+    font-size: 40px;
+    font-family: NanumSquareRound;
+    font-weight: bold;	
+}
+
+#count {
+    font-size: 20px;
+    font-family: NanumSquareRound;
+    font-weight: bold;	
+}

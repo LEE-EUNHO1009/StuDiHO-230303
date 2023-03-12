@@ -42,7 +42,7 @@
 				}
 			%>
 			<!-- 마우스오버 테스트 시작 -->
-			<div id="menu">
+			<!-- <div id="menu">
 			<ul>
 				<li>
 			<a href="company">COMPANY</a>
@@ -63,7 +63,7 @@
 						<li><a href="#">컨셉 사진</a></li>
 					</ul>
 				</li>
-			</div>
+			</div> -->
             <!-- 마우스오버 테스트 끝 -->
 
 			<td class="margin02">&nbsp;</td>

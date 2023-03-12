@@ -4,23 +4,26 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>우리들의 스튜디호 예약페이지</title>
+<title>Insert title here</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/span.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/table.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/style.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/write.css">
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/board.js"></script>
+<link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+
 <link rel="stylesheet" href="//code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="//code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
 </head>
 <body>
 
+
 	
 	<%@ include file="include/header.jsp" %>
 
-	<%--  <% if(session.getAttribute("id") != null) {
-	%> --%>
+	 <% if(session.getAttribute("id") != null) {
+	%> 
 
 	<!--Content 영역-->
     <div id="content" >
@@ -30,7 +33,7 @@
             <h2>${memberDto.mname }님</h2>
             <ul>
                 <li><a href="history">예약내역</a></li>
-                <li><a href="question">문의내역</a></li>
+                <li><a href="QnA">문의내역</a></li>
 				<li><a href="infomodify">회원정보</a></li>
             </ul>
         </div>
@@ -52,12 +55,12 @@
 				<td colspan="4" height="40">&nbsp;</td>
 			</tr>
 				<!-- R_LIST로 넘겨줄 데이터// 아이디, 이름, 예약종류, 예약일자, 요청사항, 예약상태 -->
-				<form action="resWrite" method="post" name="reg_frm">
+				<form action="memberwrite" method="post" name="reg_frm">
 				<input type="hidden" name="rstatus" value="예약완료">
 			
 			<tr>
 				<td>&nbsp;</td>
-				<td>아이디</td>
+				<td><img src="<c:url value="/resources/img/user.png" />"></td>
 				<td text-align="left">
 					<input id="email" type="text" name="rid" value="${memberDto.mid }" readonly>
 				</td>
@@ -65,7 +68,7 @@
 			</tr>
 			<tr>
 				<td width="25%">&nbsp;</td>
-				<td width="10%">예약자 이름</td>
+				<td width="10%"><img src="<c:url value="/resources/img/user.png" />"></td>
 				<td width="40%">
 					<input type="text"  id="password" value="${memberDto.mname }" name="rname">
 				</td>
@@ -73,32 +76,30 @@
 			</tr>
 			<tr>
 				<td width="25%">&nbsp;</td>
-				<td width="10%">촬영 종류</td>
-				<td width="60%">
-					<input type="radio" style="width:15px;height:15px;border:1px;" name="rclass" value="증명사진" id="radio1">
-					<label for="radio1">증명사진</label>
-					<input type="radio" style="width:15px;height:15px;border:1px;" name="rclass" value="프로필/컨셉사진" checked id="radio2">
-					<label for="radio2">프로필/컨셉사진</label>
-					<input type="radio" style="width:15px;height:15px;border:1px;" name="rclass" value="반려동물 사진" id="radio3"/>
-					<label for="radio3">반려동물 사진</label>
+				<td width="10%"><img src="<c:url value="/resources/img/class.png" />"></td>
+				<td width="40%">
+					<input type="radio" style="width:15px;height:15px;border:1px;" name="rclass" value="접종" id="radio1">
+					<label for="radio1">접종</label>
+					<input type="radio" style="width:15px;height:15px;border:1px;" name="rclass" value="진료" checked id="radio2">
+					<label for="radio2">진료</label>
+					<input type="radio" style="width:15px;height:15px;border:1px;" name="rclass" value="미용" id="radio3"/>
+					<label for="radio3">미용</label>
 				</td>
 				<td width="25%">&nbsp;</td>
 			</tr>
 		
 			<tr>
 				<td width="25%">&nbsp;</td>
-				<td width="10%">예약 일자</td>
+				<td width="10%"><img src="<c:url value="/resources/img/date.png" />"></td>
 				<td width="40%">
 					<input name="rdayof" autocomplete="off" readonly="readonly">&nbsp;
 					<select name='rtime'>
 					  <option value='' selected>-- 선택 --</option>
-					  <option value='1'>10:30~11:20</option>
-					  <option value='2'>11:30~12:20</option>
-					  <option value='3'>13:30~14:20</option>
-					  <option value='4'>14:30~15:20</option>
-					  <option value='5'>15:30~16:20</option>
-					  <option value='6'>16:30~17:20</option>
-					  <option value='7'>17:30~18:20</option>
+					  <option value='1'>10:30~11:30</option>
+					  <option value='2'>11:30~12:30</option>
+					  <option value='3'>13:30~14:30</option>
+					  <option value='4'>14:30~15:30</option>
+					  <option value='5'>15:30~16:30</option>
 					</select>
 			
 			<script language="JavaScript">
@@ -123,6 +124,9 @@
 			  $( "input[name='rdayof']" ).datepicker(config);
 			});
 		    </script>
+			<!--
+		https://kimvampa.tistory.com/194
+			 -->
 			
 				</td>
 		
@@ -130,7 +134,7 @@
 		
 			<tr>
 				<td width="25%">&nbsp;</td>
-				<td width="10%">요청사항</td>
+				<td width="10%"><img src="<c:url value="/resources/img/comment.png" />"></td>
 				<td width="40%"><input  type="text" id="password" placeholder="요청사항" name="rcontent"></td>
 				<td width="25%">&nbsp;</td>
 			</tr>
@@ -150,7 +154,7 @@
 
 
 
-<%-- <% } else {out.print("로그인 후 이용 가능합니다.");} %> --%>
+ <% } else {out.print("로그인 후 이용 가능합니다.");} %>
 
 	</div>
 	<table class="mtable">
