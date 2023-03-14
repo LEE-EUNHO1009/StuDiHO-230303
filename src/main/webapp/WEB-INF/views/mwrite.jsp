@@ -22,7 +22,7 @@
 	
 	<%@ include file="include/header.jsp" %>
 
-	<% if(session.getAttribute("id") != null) {
+	<% if(session.getAttribute("Id") != null) {
 	%>
 
 	<!--Content 영역-->
@@ -33,7 +33,7 @@
             <h2>${memberDto.mname }님</h2>
             <ul>
                 <li><a href="history">예약내역</a></li>
-                <li><a href="QnA">문의내역</a></li>
+                <li><a href="question">문의내역</a></li>
 				<li><a href="infomodify">회원정보</a></li>
             </ul>
         </div>
@@ -100,8 +100,8 @@
 					  <option value='3'>13:30~14:30</option>
 					  <option value='4'>14:30~15:30</option>
 					  <option value='5'>15:30~16:30</option>
-					  <option value='5'>16:30~17:30</option>
-					  <option value='5'>17:30~18:30</option>
+					  <option value='6'>16:30~17:30</option>
+					  <option value='7'>17:30~18:30</option>
 					</select>
 			
 			<script language="JavaScript">

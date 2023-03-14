@@ -19,7 +19,7 @@
 	<%@ include file="include/header.jsp" %>
 
 
-<% if(session.getAttribute("id") != null) {
+<% if(session.getAttribute("Id") != null) {
 	%>
 	
 	
@@ -112,7 +112,7 @@
 	<td height="80" colspan="4">
 	
 	<input id="button" type="button" value="정보수정" onclick="infoModifyConfirm()">&nbsp;&nbsp;&nbsp;&nbsp;
-	<input id="button" type="button" value="회원탈퇴" onclick="javascript:window.location='memberCancle'">&nbsp;&nbsp;&nbsp;&nbsp;
+	<input id="button" type="button" value="회원탈퇴" onclick="javascript:window.location='memberCancel'">&nbsp;&nbsp;&nbsp;&nbsp;
 	
 	</td>
 </tr>

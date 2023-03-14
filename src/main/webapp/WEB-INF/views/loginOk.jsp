@@ -76,7 +76,7 @@
 	
 		<tr  height="200">
 			<td><a href="history"><img src="<c:url value="/resources/img/care.png" />"></a></td>
-			<td><a href="QnA"><img src="<c:url value="/resources/img/qna.png" />"></a></td>
+			<td><a href="question"><img src="<c:url value="/resources/img/qna.png" />"></a></td>
 			<td><a href="infomodify"><img src="<c:url value="/resources/img/infomodify.png" />"></a></td>
 		</tr>
 	</table>

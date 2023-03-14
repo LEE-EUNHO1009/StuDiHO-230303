@@ -37,7 +37,7 @@
 			<%
 				} else {
 			%>
-			<td class="headertext01"><a href="memberModify">MODIFY</a></td>
+			<td class="headertext01"><a href="infomodify">MODIFY</a></td>
 			<%
 				}
 			%>

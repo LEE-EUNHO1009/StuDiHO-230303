@@ -18,7 +18,7 @@
 	
 	<%@ include file="include/header.jsp" %>
 
-<% if(session.getAttribute("id") != null) {
+<% if(session.getAttribute("Id") != null) {
 	%>
 
 <!--Content 영역-->
@@ -29,7 +29,7 @@
             <h2>${memberDto.mname }님</h2>
             <ul>
                 <li><a href="history">예약내역</a></li>
-                <li><a href="QnA">문의내역</a></li>
+                <li><a href="question">문의내역</a></li>
 				<li><a href="infomodify">회원정보</a></li>
             </ul>
 	</div>

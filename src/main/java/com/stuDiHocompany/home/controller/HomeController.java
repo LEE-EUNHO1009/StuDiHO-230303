@@ -107,7 +107,7 @@ public class HomeController {
 		return "joinOk"; // 완료되면 joinOk.jsp로 이동
 	}
 	
-	@RequestMapping(value = "/history") // 진료 이력
+	@RequestMapping(value = "/history") // 예약 내역
 	public String history(HttpServletRequest request, Model model) {	
 		
 		HttpSession session = request.getSession();
@@ -123,13 +123,13 @@ public class HomeController {
 		model.addAttribute("list", dao.listDao(sessionId)); // 전체리스트
 		
 		model.addAttribute("count01",dao.count01List(sessionId));
-		model.addAttribute("list01", dao.list01Dao(sessionId)); // 접종리스트
+		model.addAttribute("list01", dao.list01Dao(sessionId)); // 증명사진 리스트
 		
 		model.addAttribute("count02",dao.count02List(sessionId));
-		model.addAttribute("list02", dao.list02Dao(sessionId)); // 진료리스트
+		model.addAttribute("list02", dao.list02Dao(sessionId)); // 프로필/컨셉사진 리스트
 		
 		model.addAttribute("count03",dao.count03List(sessionId));
-		model.addAttribute("list03", dao.list03Dao(sessionId)); // 미용리스트
+		model.addAttribute("list03", dao.list03Dao(sessionId)); // 반려동물 사진 리스트
 	
 		return "history";
 	}
@@ -155,7 +155,7 @@ public class HomeController {
 	public String infomodify(HttpServletRequest request, Model model) {
 
 		HttpSession session = request.getSession();
-		String sessionId = (String) session.getAttribute("id");
+		String sessionId = (String) session.getAttribute("Id");
 		
 		IDao dao = sqlSession.getMapper(IDao.class);
 	
@@ -223,10 +223,25 @@ public class HomeController {
 	
 	
 	@RequestMapping(value = "/reservation") // 회원 예약 글쓰기 화면으로 이동
+	public String reservation(HttpServletRequest request, Model model) {
+
+		HttpSession session = request.getSession();
+		String sessionId = (String) session.getAttribute("Id");
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+	
+		MemberDto memberDto = dao.loginOkDao(sessionId);
+		
+		model.addAttribute("memberDto",memberDto);
+		
+		return "mwrite";
+	}
+	
+	@RequestMapping(value = "/mwrite") // 회원 예약 글쓰기 화면으로 이동
 	public String mwrite(HttpServletRequest request, Model model) {
 
 		HttpSession session = request.getSession();
-		String sessionId = (String) session.getAttribute("id");
+		String sessionId = (String) session.getAttribute("Id");
 		
 		IDao dao = sqlSession.getMapper(IDao.class);
 	
@@ -367,7 +382,8 @@ public class HomeController {
 	      
 	      return "questionModify";
 	   }
-
+	   
+	   @RequestMapping(value = "/questionModifyOk")
 	   public String questionModifyOk(HttpServletRequest request) {
 	      
 	      String qnum = request.getParameter("qnum");

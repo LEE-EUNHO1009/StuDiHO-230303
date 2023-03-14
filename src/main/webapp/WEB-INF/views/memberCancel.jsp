@@ -36,7 +36,7 @@
 			<td height="40">&nbsp;</td>
 		</tr>
 
-			<form action="memberCancleOk" method="post" name="reg_frm">
+			<form action="memberCancelOk" method="post" name="reg_frm">
 			<input type="hidden" name="id" value="${memberDto.mid }">
 
 		<tr>

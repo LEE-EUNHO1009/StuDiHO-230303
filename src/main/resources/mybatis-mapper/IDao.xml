@@ -69,7 +69,7 @@
 	<!--  QuestionListDto (문의게시판) SQL -->
    
 	<select id="questionView" resultType="com.stuDiHocompany.home.dto.QuestionListDto">
-		SELECT * FROM Q_LIST where qid=#{param1} ORDER BY qdate DESC	
+		SELECT * FROM Q_LIST where qnum=#{param1} 
 	</select>
 	<select id="qcountList" resultType="int">
 		SELECT count(*) FROM Q_LIST where qid=#{param1}	
@@ -92,6 +92,10 @@
 	<delete id="qdeleteAllDao">
 		delete from Q_LIST where qid=#{param1}
 	</delete>
+	
+	<update id="questionModify">
+		update Q_LIST set qname=#{param2}, qcontent=#{param3}, qemail=#{param4} where qnum=#{param1}
+	</update>
 	
 	<!-- 게시판 SQL -->
    

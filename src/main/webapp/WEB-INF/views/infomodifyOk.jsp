@@ -7,10 +7,10 @@
 <head>
 <meta charset="UTF-8">
 <title>정보수정 페이지</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/span.css">
+<!-- <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/span.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/table.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/style.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/write.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/write.css"> -->
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/members.js"></script>
 <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
 </head>
@@ -19,7 +19,7 @@
 	
 	<%@ include file="include/header.jsp" %>
 	
-<% if(session.getAttribute("id") != null) {
+<% if(session.getAttribute("Id") != null) {
 	%>
 <!--Content 영역-->
     <div id="content" >
@@ -29,7 +29,7 @@
             <h2>${memberDto.mname }님</h2>
             <ul>
                 <li><a href="history">예약내역</a></li>
-                <li><a href="QnA">문의내역</a></li>
+                <li><a href="question">문의내역</a></li>
 				<li><a href="infomodify">정보수정</a></li>
             </ul>
         </div>

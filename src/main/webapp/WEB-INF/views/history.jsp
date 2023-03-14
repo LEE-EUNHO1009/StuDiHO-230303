@@ -7,8 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>예약 내역 페이지</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/span.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/table.css">
+<%--<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/span.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/table.css">--%> 
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/style.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/tabmenu.css"> 
 </head>
@@ -24,8 +24,8 @@
         <div id="leftColumn">
             <h2>${memberDto.mname }님</h2>
             <ul>
-                <li><a href="history">예약내역</a></li>
-                <li><a href="QnA">문의내역</a></li>
+                <li><a href="reservation">예약내역</a></li>
+                <li><a href="question">문의내역</a></li>
 				<li><a href="infomodify">회원정보</a></li>
             </ul>
         </div>
