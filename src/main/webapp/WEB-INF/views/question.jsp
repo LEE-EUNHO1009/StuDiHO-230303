@@ -34,7 +34,19 @@
 								<form action="questionOk" method="post" name="board_frm">
 									<tr>
 										<td><span class="content_text01">아 이 디 : </span></td>
+										<%
+													if(sessionId != null) {
+												%>	
+												
 										<td><input class="input_type01" type="text" name="qid" value="${memberId }" readonly="readonly"></td>
+											<%
+													} else {
+														%>
+														<td><input class="input_type01" type="text" name="qid" value="${memberId }" readonly="readonly"></td>				
+													<%
+													}
+													%>
+											
 									</tr>
 									<tr>
 										<td><span class="content_text01">글 쓴 이 : </span></td>

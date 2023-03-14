@@ -1,62 +1,53 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/title.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/content.css">
-<title>우리들의 스튜디호</title>
+<title>로그인 페이지</title>
+<%--<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/span.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/table.css"> 
+<<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/style.css"> --%>
 </head>
 <body>
 	<%@ include file="include/header.jsp" %>
-	<center>
-	<table width="75%" border="0" cellspacing="0" cellpadding="20">
-		<tr>
-			<td class="titlebox">
-				<span class="title01">우리들의 스튜디호</span>
-			</td>
-		</tr>
-		<tr>
-			<td class="titlebox">
-				<span class="title02">우리들의 스튜디호</span>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<center>
-				<table width="80%" border="0" cellspacing="0" cellpadding="10">
-					<tr class="contentbox">
-						<td class="content">
-							<center>						
-							<table border="0" cellspacing="0" cellpadding="10">
-								<form action="loginOk" method="post">
-									<tr>
-										<td><span class="content_text01">아 이 디 : </span></td>
-										<td><input class="input_type01" type="text" name="mid"></td>
-									</tr>
-									<tr>
-										<td><span class="content_text01">비밀번호 : </span></td>
-										<td><input class="input_type01" type="password" name="mpw"></td>
-									</tr>
-									<tr>
-										<td colspan="2">
-											<input class="button_type01" type="submit" value="로그인">&nbsp;&nbsp;
-											<input class="button_type01" type="button" value="회원가입" onclick="script:window.location='join'">
-										</td>
-									</tr>
-								</form>							
-							</table>
-							</center>							
-						</td>						
-					</tr>
-					
-				</table>
-				</center>			
-			</td>
-		</tr>
-	</table>
-	</center>
+
+<table class="mtable">
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+
+
+	<form action="loginOk" method="post">
+	 <div class="wrapper_login">
+            <h1>로그인</h1>
+            <div class="id">
+                <img src="<c:url value="/resources/img/user.png" />">&nbsp;
+                <input type="text" id="email" placeholder="아이디" name="id"><br>
+            </div>
+            <div class="password">
+               <img src="<c:url value="/resources/img/pass.png" />">&nbsp;
+                <input type="password" id="password" placeholder="비밀번호" name="pw"><br><br>
+            </div>
+            <div class="div_button">
+				<input id="button" type="submit" value="로그인" >&nbsp;&nbsp;&nbsp;&nbsp;
+				<input id="button" type="button" value="회원가입" onclick="javascript:window.location='join'">
+
+            </div>
+        </div>
+        </form>	
+        
+        
+        
+        
+        <table class="mtable">
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+
 	<%@ include file="include/footer.jsp" %>
 </body>
 </html>

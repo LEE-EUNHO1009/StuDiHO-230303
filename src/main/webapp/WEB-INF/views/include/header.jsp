@@ -10,7 +10,7 @@
 </head>
 <body>
 <%
-		String sessionId = (String) session.getAttribute("memberId");
+		String sessionId = (String) session.getAttribute("Id");
 		//로그인 성공시 memberId 이름으로 아이디가 세션에 set	
 	%>
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">		

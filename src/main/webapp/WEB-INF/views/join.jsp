@@ -1,71 +1,60 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/title.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/content.css">
-<!-- <script type="text/javascript" src="${pageContext.request.contextPath }/resources/js/join.js"></script> -->
+<title>회원가입 페이지</title>
+<%--<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/span.css"> 
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/table.css"> 
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/style.css"> --%>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/members.js"></script>
-<title>우리들의 스튜디호</title>
 </head>
 <body>
-	<%@ include file="include/header.jsp" %>
-	<table width="75%" border="0" cellspacing="0" cellpadding="20">
+
+<%@ include file="include/header.jsp" %>
+
+	<table>
 		<tr>
-			<center><td class="titlebox">
-				<span class="title01">회원 가입 페이지 입니다.</span>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<center>
-				<table width="80%" border="0" cellspacing="0" cellpadding="10">
-					<tr class="contentbox">
-						<td class="content">
-							<center>						
-							<table border="0" cellspacing="0" cellpadding="10">
-								<form action="joinOk" method="post" name="join_frm">
-									<tr>
-										<td><span class="content_text01">아 이 디 : </span></td>
-										<td><input class="input_type01" type="text" name="mid"></td>
-									</tr>
-									<tr>
-										<td><span class="content_text01">비밀번호 : </span></td>
-										<td><input class="input_type01" type="password" name="mpw"></td>
-									</tr>
-									<tr>
-										<td><span class="content_text01">비밀번호체크 : </span></td>
-										<td><input class="input_type01" type="password" name="mpw_check"></td>
-									</tr>
-									<tr>
-										<td><span class="content_text01">이&nbsp;&nbsp;&nbsp;&nbsp;름 : </span></td>
-										<td><input class="input_type01" type="text" name="mname"></td>
-									</tr>
-									<tr>
-										<td><span class="content_text01">이 메 일 : </span></td>
-										<td><input class="input_type01" type="text" name="memail"></td>
-									</tr>
-									
-									<tr>
-										<td colspan="2">
-											<input class="button_type01" type="submit" value="가입완료" onclick="script:window.location='joinOk'">&nbsp;&nbsp;
-											<input class="button_type01" type="button" value="로그인" onclick="script:window.location='login'">
-										</td>
-									</tr>
-								</form>							
-							</table>
-							</center>							
-						</td>						
-					</tr>
-					
-				</table>
-				</center>			
-			</td>
+			<td>&nbsp;</td>
 		</tr>
 	</table>
-	</center>
-	<%@ include file="include/footer.jsp" %>
+
+
+	<form action="joinOk" method="post" name="reg_frm">
+	<div class="wrapper_join">
+		<h1>회원가입</h1>
+		<div class="id">
+			<img src="<c:url value="/resources/img/user.png" />">&nbsp;
+            <input type="text" id="email" placeholder="아이디" name="id"><br>
+		</div>
+		<div class="password">
+			<img src="<c:url value="/resources/img/pass.png" />">&nbsp;
+			<input type="password" id="password" placeholder="비밀번호" name="pw"><br><br>
+
+			<img src="<c:url value="/resources/img/pass.png" />">&nbsp;
+			<input type="password" id="password" placeholder="비밀번호 확인" name="pw_check"><br><br>
+			<img src="<c:url value="/resources/img/user.png" />">&nbsp;
+			<input type="text" id="password" placeholder="이름" name="name"><br><br>
+			<img src="<c:url value="/resources/img/phone.png" />">&nbsp;
+			<input type="text" id="password" placeholder="전화번호" name="phone"><br><br>
+		</div>
+		<div class="div_button">
+			<input id="button" type="button" value="회원가입" onclick="infoConfirm()">&nbsp;&nbsp;&nbsp;&nbsp;
+			<input id="button" type="button" value="로그인" onclick="javascript:window.location='login'">
+		</div>
+	</div>
+	</form>	
+        
+        
+	<table class="mtable">
+		<tr>
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+
+<%@ include file="include/footer.jsp" %>
+
 </body>
 </html>

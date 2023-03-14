@@ -6,14 +6,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>우리들의 스튜디호 예약 리스트</title>
+<title>예약 내역 페이지</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/span.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/table.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/style.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/tabmenu.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/tabmenu.css"> 
 </head>
 <body>
-	<%@ include file="include/header.jsp" %>
+<%@ include file="include/header.jsp" %>
 
 
 
@@ -25,7 +25,7 @@
             <h2>${memberDto.mname }님</h2>
             <ul>
                 <li><a href="history">예약내역</a></li>
-                <li><a href="question">문의내역</a></li>
+                <li><a href="QnA">문의내역</a></li>
 				<li><a href="infomodify">회원정보</a></li>
             </ul>
         </div>
@@ -67,6 +67,7 @@
 				<th width="100px">번호</th>
 				<th width="200px">예약 종류</th>
 				<th width="300px">예약일자</th>
+				<th width="200px">예약 여부</th>
 			</tr>
 
 			<c:forEach items="${list }" var="dto" varStatus="status">
@@ -74,18 +75,18 @@
 								
 				<td width="100px" class="tab_td">${count+1-status.count}</td>
 				<td width="200px" class="tab_td">${dto.rclass }</td>
-				<td width="300px" class="tab_td"><a href="historyView?rnum=${dto.rnum }">
+				<td width="300px" class="tab_td"><a href="mview?rnum=${dto.rnum }">
 					<c:out value="${fn:substring(dto.rdayof,0,10) }"></c:out>&nbsp;
 					<c:set var="time" value="${dto.rtime }"/>
 				
 					<c:choose>
-						<c:when test="${time eq '1' }">10:30~11:20</c:when>
-						<c:when test="${time eq '2' }">11:30~12:20</c:when>
-						<c:when test="${time eq '3' }">13:30~14:20</c:when>
-						<c:when test="${time eq '4' }">14:30~15:20</c:when>
-						<c:when test="${time eq '5' }">15:30~16:20</c:when>
-						<c:when test="${time eq '6' }">16:30~17:20</c:when>
-						<c:when test="${time eq '7' }">17:30~18:20</c:when>
+						<c:when test="${time eq '1' }">10:30~11:30</c:when>
+						<c:when test="${time eq '2' }">11:30~12:30</c:when>
+						<c:when test="${time eq '3' }">13:30~14:30</c:when>
+						<c:when test="${time eq '4' }">14:30~15:30</c:when>
+						<c:when test="${time eq '5' }">15:30~16:30</c:when>
+						<c:when test="${time eq '6' }">16:30~17:30</c:when>
+						<c:when test="${time eq '7' }">17:30~18:30</c:when>
 						<c:otherwise></c:otherwise>
 					</c:choose></a></td>
 	
@@ -113,6 +114,7 @@
 				<th width="100px">번호</th>
 				<th width="200px">예약 종류</th>
 				<th width="300px">예약일자</th>
+				<th width="200px">예약 여부</th>
 			</tr>
 
 			<c:forEach items="${list01 }" var="dto01" varStatus="status">
@@ -120,7 +122,7 @@
 								
 				<td width="100px" class="tab_td">${count01+1-status.count}</td>
 				<td width="200px" class="tab_td">${dto01.rclass }</td>
-				<td width="300px" class="tab_td"><a href="historyView?rnum=${dto01.rnum }">
+				<td width="300px" class="tab_td"><a href="mview?rnum=${dto01.rnum }">
 					<c:out value="${fn:substring(dto01.rdayof,0,10) }"></c:out>&nbsp;
 					<c:set var="time" value="${dto01.rtime }"/>
 									
@@ -130,8 +132,8 @@
 						<c:when test="${time eq '3' }">13:30~14:30</c:when>
 						<c:when test="${time eq '4' }">14:30~15:30</c:when>
 						<c:when test="${time eq '5' }">15:30~16:30</c:when>
-						<c:when test="${time eq '6' }">16:30~17:20</c:when>
-						<c:when test="${time eq '7' }">17:30~18:20</c:when>
+						<c:when test="${time eq '6' }">16:30~17:30</c:when>
+						<c:when test="${time eq '7' }">17:30~18:30</c:when>
 						<c:otherwise></c:otherwise>
 					</c:choose></a></td>
 				<td width="200px" class="tab_td">${dto01.rstatus }</td>
@@ -143,7 +145,7 @@
 		</table>
 
         </div>
-        <div class="tab3_content"> <!-- 프로필/컨셉 사진 -->
+        <div class="tab3_content"> <!-- 프로필/컨셉사진 -->
             
 		<table>
 			<tr>
@@ -156,6 +158,7 @@
 				<th width="100px">번호</th>
 				<th width="200px">예약 종류</th>
 				<th width="300px">예약일자</th>
+				<th width="200px">예약 여부</th>
 			</tr>
 
 
@@ -164,7 +167,7 @@
 								
 				<td width="100px" class="tab_td">${count02+1-status.count}</td>
 				<td width="200px" class="tab_td">${dto02.rclass }</td>
-				<td width="300px" class="tab_td"><a href="historyView?rnum=${dto02.rnum }">
+				<td width="300px" class="tab_td"><a href="mview?rnum=${dto02.rnum }">
 				<c:out value="${fn:substring(dto02.rdayof,0,10) }"></c:out>&nbsp;
 
 
@@ -176,8 +179,8 @@
 					<c:when test="${time eq '3' }">13:30~14:30</c:when>
 					<c:when test="${time eq '4' }">14:30~15:30</c:when>
 					<c:when test="${time eq '5' }">15:30~16:30</c:when>
-					<c:when test="${time eq '6' }">16:30~17:20</c:when>
-					<c:when test="${time eq '7' }">17:30~18:20</c:when>
+					<c:when test="${time eq '6' }">16:30~17:30</c:when>
+					<c:when test="${time eq '7' }">17:30~18:30</c:when>
 					<c:otherwise></c:otherwise>
 				</c:choose></a></td>
 			
@@ -205,13 +208,14 @@
 				<th width="100px">번호</th>
 				<th width="200px">예약 종류</th>
 				<th width="300px">예약일자</th>
+				<th width="200px">예약 여부</th>
 			</tr>
 			<c:forEach items="${list03 }" var="dto03" varStatus="status">
 			<tr height="30">
 								
 				<td width="100px" class="tab_td">${count03+1-status.count}</td>
 				<td width="200px" class="tab_td">${dto03.rclass }</td>
-				<td width="300px" class="tab_td"><a href="historyView?rnum=${dto03.rnum }">
+				<td width="300px" class="tab_td"><a href="mview?rnum=${dto03.rnum }">
 				<c:out value="${fn:substring(dto03.rdayof,0,10) }"></c:out>&nbsp;
 
 
@@ -223,8 +227,8 @@
 					<c:when test="${time eq '3' }">13:30~14:30</c:when>
 					<c:when test="${time eq '4' }">14:30~15:30</c:when>
 					<c:when test="${time eq '5' }">15:30~16:30</c:when>
-					<c:when test="${time eq '6' }">16:30~17:20</c:when>
-					<c:when test="${time eq '7' }">17:30~18:20</c:when>
+					<c:when test="${time eq '6' }">16:30~17:30</c:when>
+					<c:when test="${time eq '7' }">17:30~18:30</c:when>
 					<c:otherwise></c:otherwise>
 				</c:choose></a></td>
 				<td width="200px" class="tab_td">${dto03.rstatus }</td>
@@ -243,7 +247,7 @@
 	<table width="900px" class="tt3">
 		<tr>
 			<td height="80px" colspan="4">
-			<input id="history_button" type="button" value="예약하기" onclick="javascript:window.location='resWrite'">
+			<input id="history_button" type="button" value="예약하기" onclick="javascript:window.location='mwrite'">
 			</td>
 		</tr>
 	</table>
@@ -262,5 +266,6 @@
 
 
 <%@ include file="include/footer.jsp" %>
+
 </body>
 </html>
