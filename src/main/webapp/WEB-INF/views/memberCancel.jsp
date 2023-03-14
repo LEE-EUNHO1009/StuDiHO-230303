@@ -21,6 +21,8 @@
 </head>
 <body>
 	
+	<!-- 230314 수정내용 -->
+	
 	<%@ include file="include/header.jsp" %>
  	<div class="wrapper_loginok">
 
@@ -64,6 +66,7 @@
 
 </div>
 	<%@ include file="include/footer.jsp" %>
+
 
 </body>
 </html>

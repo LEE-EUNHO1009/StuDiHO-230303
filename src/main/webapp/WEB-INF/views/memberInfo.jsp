@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/style.css">
 </head>
 <body>
-
+	<!-- 230314 내용수정 -->
 	<%@ include file="include/header.jsp" %>
 
 
@@ -29,20 +29,20 @@
 
 	<table class="tt1" width="90%">
 		<tr>
-			<td><% if(session.getAttribute("id") != null) { out.print(session.getAttribute("name")); } else {out.print("GUEST");} %>님 안녕하세요.</td>
+			<td><% if(session.getAttribute("Id") != null) { out.print(session.getAttribute("name")); } else {out.print("GUEST");} %>님 안녕하세요.</td>
 		</tr>
 	</table>
 
 
 	<table class="tt2" width="90%">
 		<tr>
-			<td width="25%">예약</td>
-			<td width="25%">1:1 문의하기</td>
+			<td width="25%">예약하기</td>
+			<td width="25%">문의하기</td>
 			<td width="25%">회원정보</td>
 		</tr>
 		<tr  height="200">
 			<td><a href="history"><img src="<c:url value="/resources/img/care.png" />"></a></td>
-			<td><a href="QnA"><img src="<c:url value="/resources/img/qna.png" />"></a></td>
+			<td><a href="question"><img src="<c:url value="/resources/img/qna.png" />"></a></td>
 			<td><a href="infomodify"><img src="<c:url value="/resources/img/infomodify.png" />"></a></td>
 		</tr>
 	</table>
@@ -58,6 +58,5 @@
 	</table>
 
 	<%@ include file="include/footer.jsp" %>
-
 </body>
 </html>

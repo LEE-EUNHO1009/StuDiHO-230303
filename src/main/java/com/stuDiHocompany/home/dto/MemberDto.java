@@ -1,24 +1,26 @@
 package com.stuDiHocompany.home.dto;
 
+import java.sql.Date;
 
 public class MemberDto {
 	
-	private String mid;//아이디
-	private String mpw;//비밀번호
-	private String mname;//이름
-	private String memail;//이메일
-	private String mdate;//가입일시
-	
+	// m_member
+	// 아이디, 이름, 전화번호, 비밀번호, 가입날짜
+	private String mid;
+	private String mname;
+	private String mphone;
+	private String mpw;
+	private String mdate;
 	public MemberDto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public MemberDto(String mid, String mpw, String mname, String memail, String mdate) {
+	public MemberDto(String mid, String mname, String mphone, String mpw, String mdate) {
 		super();
 		this.mid = mid;
-		this.mpw = mpw;
 		this.mname = mname;
-		this.memail = memail;
+		this.mphone = mphone;
+		this.mpw = mpw;
 		this.mdate = mdate;
 	}
 	public String getMid() {
@@ -27,23 +29,23 @@ public class MemberDto {
 	public void setMid(String mid) {
 		this.mid = mid;
 	}
-	public String getMpw() {
-		return mpw;
-	}
-	public void setMpw(String mpw) {
-		this.mpw = mpw;
-	}
 	public String getMname() {
 		return mname;
 	}
 	public void setMname(String mname) {
 		this.mname = mname;
 	}
-	public String getMemail() {
-		return memail;
+	public String getMphone() {
+		return mphone;
 	}
-	public void setMemail(String memail) {
-		this.memail = memail;
+	public void setMphone(String mphone) {
+		this.mphone = mphone;
+	}
+	public String getMpw() {
+		return mpw;
+	}
+	public void setMpw(String mpw) {
+		this.mpw = mpw;
 	}
 	public String getMdate() {
 		return mdate;
@@ -55,4 +57,3 @@ public class MemberDto {
 	
 	
 }
-

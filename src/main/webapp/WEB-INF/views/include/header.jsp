@@ -10,12 +10,11 @@
 </head>
 <body>
 <%
-		String sessionId = (String) session.getAttribute("memberId");
+		String sessionId = (String) session.getAttribute("Id");
 		//로그인 성공시 memberId 이름으로 아이디가 세션에 set	
 	%>
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">		
 		<tr class="header01">
-			
 			<td class="margin01">&nbsp;</td><!-- 여백 -->
 			<td class="headertext01"><a href="main">HOME</a></td>
 			<td class="margin02">&nbsp;</td>
@@ -38,63 +37,41 @@
 			<%
 				} else {
 			%>
-			<td class="headertext01"><a href="memberModify">MODIFY</a></td>
+			<td class="headertext01"><a href="infomodify">MODIFY</a></td>
 			<%
 				}
 			%>
-			<td class="margin02">&nbsp;</td>
-			
-			
-			<td class="headertext01" >
-				<div id="navi">
-					<ul class="dropheader">
-						<li class="dropheader01">
-						<a href="company" class="dropheader02">COMPANY</a>
-							<ul class="dropheader03">
-								<li><a href="company" class="dropheader04">스튜디호 소개</a></li>
-								<li><a href="location" class="dropheader04">스튜디호 오시는 길</a></li>
-							</ul>
-						</li>
+			<!-- 마우스오버 테스트 시작 -->
+			<!-- <div id="menu">
+			<ul>
+				<li>
+			<a href="company">COMPANY</a>
+					<ul>
+						<li><a href="#">회사 소개</a></li>
+						<li><a href="#">찾아오시는길</a></li>
 					</ul>
-				</div>
-			</td>
-			
-			
-			<td class="margin02">&nbsp;</td>
-			
-			
-			
-			<td class="headertext01">
-				<div id="navi">
-						<ul class="dropheader">
-							<li class="dropheader01">
-							<a href="reservation">RESERVATION</a>
-								
-							</ul>
-						</li>
+				</li>
+						<ul>
+				<li>
+				
+			<a href="reservation">RESERVATION</a>
+
+			<a href="gallery">GALLERY</a>
+					<ul>
+						<li><a href="#">프로필 사진</a></li>
+						<li><a href="#">반려견/묘 사진</a></li>
+						<li><a href="#">컨셉 사진</a></li>
 					</ul>
-				</div>		
-			</td>
-			
-			
+				</li>
+			</div> -->
+            <!-- 마우스오버 테스트 끝 -->
+
 			<td class="margin02">&nbsp;</td>
-			<td class="headertext01">
-				<div id="navi">
-						<ul class="dropheader">
-							<li class="dropheader01">
-							<a href="gallery">GALLERY</a>
-								<ul class="dropheader03">
-									<li><a href="gallery" class="dropheader04">증명사진</a></li>
-									<li><a href="#" class="dropheader04">프로필/ 컨셉</a></li>
-									<li><a href="#" class="dropheader04">반려견/ 반려묘</a></li>
-										
-							</ul>
-						</li>
-					</ul>
-				</div>		
-							
-			</td>
-			
+			<td class="headertext01"><a href="company">COMPANY</a></td>
+			<td class="margin02">&nbsp;</td>
+			<td class="headertext01"><a href="reservation">RESERVATION</a></td>
+			<td class="margin02">&nbsp;</td>
+			<td class="headertext01"><a href="gallery">GALLERY</a></td>
 			<td class="margin02">&nbsp;</td>
 			<td class="headertext01"><a href="question">QUESTION</a></td>
 			<td class="margin02">&nbsp;</td>

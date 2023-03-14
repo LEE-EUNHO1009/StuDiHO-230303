@@ -15,7 +15,8 @@
 <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
 </head>
 <body>
-
+	
+	<!-- 230314 내용수정 -->
 	
 	<%@ include file="include/header.jsp" %>
 
@@ -159,5 +160,6 @@
 
 
 <%@ include file="include/footer.jsp" %>
+
 
 </body>

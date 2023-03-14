@@ -12,14 +12,16 @@
 <title>로그인 성공</title>
 </head>
 <body>
+	<!-- 230314 수정내용 -->
 	<%@ include file="include/header.jsp" %>
-	<center>
-	<table width="75%" border="0" cellspacing="0" cellpadding="20">
-		
+
+	<table class="mtable">
 		<tr>
-			<td>
-				<center>
-				
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+
+
 	<%
 		int checkId = Integer.parseInt(request.getAttribute("checkIdFlag").toString());
 		int checkPw = Integer.parseInt(request.getAttribute("checkPwFlag").toString());
@@ -84,7 +86,8 @@
 			<td>&nbsp;</td>
 		</tr>
 	</table>
-	</center>
+
 	<%@ include file="include/footer.jsp" %>
+
 </body>
 </html>

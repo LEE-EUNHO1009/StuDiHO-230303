@@ -14,7 +14,7 @@
 
 </head>
 <body>
-	
+	<!-- 23014 수정내용 -->
 	<%@ include file="include/header.jsp" %>
 	
 	
@@ -49,6 +49,5 @@
 	
 
 	<%@ include file="include/footer.jsp" %>
-
 </body>
 </html>

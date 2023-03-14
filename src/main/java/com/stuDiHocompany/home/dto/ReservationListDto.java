@@ -1,6 +1,10 @@
 package com.stuDiHocompany.home.dto;
 
 public class ReservationListDto {
+
+	// R_LIST, R_LIST_SEQ // 회원
+	// 순번, 예약자 성명, 예약 종류, 요청사항, 예약을 한 날짜, 예약날짜 
+	
 	private int rnum; 
 	private String rid;
 	private String rname;

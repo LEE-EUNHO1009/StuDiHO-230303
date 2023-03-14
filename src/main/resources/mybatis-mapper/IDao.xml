@@ -1,64 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- mapper 선언 -->
 <!DOCTYPE mapper
 	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.stuDiHocompany.home.dao.IDao"> <!-- 인터페이스 -->
+
+	<!-- member SQL -->
+	<insert id="joinDao">
+		insert into m_member (mid, mpw, mname, mphone) values (#{param1}, #{param2}, #{param3}, #{param4})
+	</insert>
+	<select id="checkIdDao" resultType="int"> <!-- 반환값이 있으면 count가 1 (mid가 pk) -->
+		select count(*) from m_member where mid=#{param1}
+	</select>
+	<select id="checkPwDao" resultType="int"> <!-- 반환값이 있으면 count가 1 (mid가 pk) -->
+		select count(*) from m_member where mid=#{param1} and mpw=#{param2}
+	</select>
+	<select id="loginOkDao" resultType="com.stuDiHocompany.home.dto.MemberDto">
+		select * from m_member where mid=#{param1}
+	</select>
+	<update id="InfoModifyOkDao">
+		update m_member set mpw=#{param1}, mname=#{param2}, mphone=#{param3} WHERE mid=#{param4}
+	</update>
+	<delete id="cancelDao"> <!--  탈퇴 -->
+		delete from m_member where mid=#{param1} and mpw=#{param2}
+	</delete>
+
+
+	<!--  MemberReservationListDto (회원예약내역) SQL -->
+	<select id="listDao" resultType="com.stuDiHocompany.home.dto.ReservationListDto">
+		SELECT * FROM R_LIST where rid=#{param1} ORDER BY rdayof DESC	
+	</select>
+	<select id="countList" resultType="int">
+		SELECT count(*) FROM R_LIST where rid=#{param1}	
+	</select>
+	<select id="list01Dao" resultType="com.stuDiHocompany.home.dto.ReservationListDto">
+		SELECT * FROM R_LIST where rid=#{param1} and rclass='증명사진' ORDER BY rdayof DESC	
+	</select>
+	<select id="count01List" resultType="int">
+		SELECT count(*) FROM R_LIST where rid=#{param1}	and rclass='증명사진'
+	</select>
+		<select id="list02Dao" resultType="com.stuDiHocompany.home.dto.ReservationListDto">
+		SELECT * FROM R_LIST where rid=#{param1} and rclass='프로필/컨셉사진' ORDER BY rdayof DESC	
+	</select>
+	<select id="count02List" resultType="int">
+		SELECT count(*) FROM R_LIST where rid=#{param1}	and rclass='프로필/컨셉사진'
+	</select>
+		<select id="list03Dao" resultType="com.stuDiHocompany.home.dto.ReservationListDto">
+		SELECT * FROM R_LIST where rid=#{param1} and rclass='반려동물 사진' ORDER BY rdayof DESC	
+	</select>
+	<select id="count03List" resultType="int">
+		SELECT count(*) FROM R_LIST where rid=#{param1}	and rclass='반려동물 사진'
+	</select>
+	<insert id="writeDao">
+		insert into R_LIST (rnum, rid, rname, rclass, rdayof, rtime, rcontent,  rstatus) values (R_LIST_seq.nextval, #{param1}, #{param2}, #{param3}, #{param4}, #{param5}, #{param6}, #{param7})
+	</insert>
+	<select id="viewDao" resultType="com.stuDiHocompany.home.dto.ReservationListDto">
+		select * from R_LIST where rnum=#{param1}	
+	</select>
+	<update id="rcancelDao"> <!-- 예약취소 -->
+		update R_LIST set rstatus=#{param1} where rnum=#{param2}
+	</update>
+	<delete id="deleteAllDao">
+		delete from R_LIST where rid=#{param1}
+	</delete>
 	
-<mapper namespace="com.stuDiHocompany.home.dao.IDao">
-	
-	<!-- 회원 관리 SQL -->
-	<insert id="memberJoin">
-		INSERT INTO MEMBER_TBL(mid, mpw, mname, memail) VALUES(#{param1}, #{param2}, #{param3}, #{param4}) 
+	<!--  QuestionListDto (문의게시판) SQL -->
+   
+	<select id="questionView" resultType="com.stuDiHocompany.home.dto.QuestionListDto">
+		SELECT * FROM Q_LIST where qnum=#{param1} 
+	</select>
+	<select id="qcountList" resultType="int">
+		SELECT count(*) FROM Q_LIST where qid=#{param1}	
+	</select>
+	<insert id="writeQuestion">
+		insert into Q_LIST (qnum, qid, qname, qcontent, qemail) values (Q_LIST_seq.nextval, #{param1}, #{param2}, #{param3}, #{param4})
 	</insert>
 	
-	<select id="checkId" resultType="int">
-		SELECT COUNT(*) FROM MEMBER_TBL WHERE mid=#{param1}
+	<select id="questionList" resultType="com.stuDiHocompany.home.dto.QuestionListDto">
+		   SELECT * FROM
+         (SELECT A.*,Floor((ROWNUM-1)/#{amount}+1)PAGE,ROWNUM
+         FROM
+         (SELECT * FROM Q_LIST ORDER BY qnum DESC)A) 
+      WHERE PAGE= #{pageNum}
 	</select>
 	
-	<select id="checkIdAndPW" resultType="int">
-		SELECT COUNT(*) FROM MEMBER_TBL WHERE mid=#{param1} AND mpw=#{param2}
-	</select>
+	<update id="qcancelDao"> <!-- 문의취소 -->
+		update Q_LIST set qstatus=#{param1} where qnum=#{param2}
+	</update>
+	<delete id="qdeleteAllDao">
+		delete from Q_LIST where qid=#{param1}
+	</delete>
 	
-	<select id="getMemberInfo" resultType="com.stuDiHocompany.home.dto.MemberDto">
-		SELECT * FROM MEMBER_TBL WHERE mid=#{param1}
-	</select>
-	
-	<update id="memberModify">
-		UPDATE MEMBER_TBL SET mpw=#{param2}, mname=#{param3}, memail=#{param4} WHERE mid=#{param1}
+	<update id="questionModify">
+		update Q_LIST set qname=#{param2}, qcontent=#{param3}, qemail=#{param4} where qnum=#{param1}
 	</update>
 	
 	<!-- 게시판 SQL -->
-	
-	<insert id="writeQuestion">
-		INSERT INTO Q_BOARD(qnum, qid, qname, qcontent, qemail) VALUES(Q_SEQ.nextval, #{param1}, #{param2}, #{param3}, #{param4}) 
-	</insert>
-	
-	<select id="questionList" resultType="com.stuDiHocompany.home.dto.QBoardDto">
-		SELECT * FROM
-			(SELECT A.*,Floor((ROWNUM-1)/#{amount}+1)PAGE,ROWNUM
-			FROM
-			(SELECT * FROM Q_BOARD ORDER BY qnum DESC)A) 
-		WHERE PAGE= #{pageNum}
-	</select>
-	
-	<select id="questionView" resultType="com.stuDiHocompany.home.dto.QBoardDto">
-		SELECT * FROM Q_BOARD WHERE qnum=#{param1}
-	</select>	
-	
-	<update id="questionModify">
-		UPDATE Q_BOARD SET qname=#{param2}, qcontent=#{param3}, qemail=#{param4} WHERE qnum=#{param1}
-	</update>
-	
-	<delete id="questionDelete">
-		DELETE FROM Q_BOARD WHERE qnum=#{param1}
-	</delete>
+   
+  
 	
 	<select id="boardAllCount" resultType="int">
-		SELECT COUNT(*) FROM Q_BOARD
+      SELECT COUNT(*) FROM Q_LIST
+   </select>
+	
+	<!--  관리자 모드 // MemberReservationListDto (회원예약내역) SQL -->
+	<select id="AlllistDao" resultType="com.stuDiHocompany.home.dto.ReservationListDto">
+		SELECT * FROM R_LIST ORDER BY rdayof DESC	
+	</select>
+	<select id="AllcountList" resultType="int">
+		SELECT count(*) FROM R_LIST
+	</select>
+	<select id="Alllist01Dao" resultType="com.stuDiHocompany.home.dto.ReservationListDto">
+		SELECT * FROM R_LIST where rclass='증명사진' ORDER BY rdayof DESC	
+	</select>
+	<select id="Allcount01List" resultType="int">
+		SELECT count(*) FROM R_LIST where rclass='증명사진'
+	</select>
+		<select id="Alllist02Dao" resultType="com.stuDiHocompany.home.dto.ReservationListDto">
+		SELECT * FROM R_LIST where rclass='프로필/컨셉사진' ORDER BY rdayof DESC	
+	</select>
+	<select id="Allcount02List" resultType="int">
+		SELECT count(*) FROM R_LIST where rclass='프로필/컨셉사진'
+	</select>
+		<select id="Alllist03Dao" resultType="com.stuDiHocompany.home.dto.ReservationListDto">
+		SELECT * FROM R_LIST where rclass='반려동물 사진' ORDER BY rdayof DESC	
+	</select>
+	<select id="Allcount03List" resultType="int">
+		SELECT count(*) FROM R_LIST where rclass='반려동물 사진'
+	</select>
+	<update id="visitOkDao">
+		update R_LIST set rstatus=#{param1} where rnum=#{param2}
+	</update>
+
+	<!--  관리자 모드 // QuestionListDto (문의게시판) SQL -->
+	<select id="qAlllistDao" resultType="com.stuDiHocompany.home.dto.QuestionListDto">
+		SELECT * FROM Q_LIST ORDER BY qdate DESC	
+	</select>
+	<select id="qAllcountList" resultType="int">
+		SELECT count(*) FROM Q_LIST
 	</select>
 	
-</mapper>
-		
 
 	
-	
+
+</mapper>

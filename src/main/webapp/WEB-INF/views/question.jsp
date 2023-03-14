@@ -6,7 +6,8 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/main.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/content.css">
-<script type="text/javascript" src="${pageContext.request.contextPath }/resources/js/Board.js"></script>
+<!-- 230314수정 <script type="text/javascript" src="${pageContext.request.contextPath }/resources/js/Board.js"></script>-->
+<script type="text/javascript" src="${pageContext.request.contextPath }/resources/js/board.js"></script>
 <title>Question</title>
 </head>
 <body>
@@ -14,13 +15,13 @@
 	<center>
 	<table width="75%" border="0" cellspacing="0" cellpadding="20">
 		<tr>
-			<td align="center">
-				<span class="main02">This is the photo studio. Please call me if you have any questions about the reservation.</span>
+			<td class="titlebox">
+				<span class="title01">문의 게시판</span>
 			</td>
-		</tr>	
+		</tr>
 		<tr>
-			<td align="center">
-				<span class="main03">♡궁금하신 사항을 자유롭게 남겨주세요.♡</span>
+			<td class="titlebox">
+				<span class="title02">궁금한 사항을 자유롭게 남겨주세요.</span>
 			</td>
 		</tr>
 		<tr>
@@ -34,7 +35,19 @@
 								<form action="questionOk" method="post" name="board_frm">
 									<tr>
 										<td><span class="content_text01">아 이 디 : </span></td>
+										<%
+													if(sessionId != null) {
+												%>	
+												
 										<td><input class="input_type01" type="text" name="qid" value="${memberId }" readonly="readonly"></td>
+											<%
+													} else {
+														%>
+														<td><input class="input_type01" type="text" name="qid" value="${memberId }" readonly="readonly"></td>				
+													<%
+													}
+													%>
+											
 									</tr>
 									<tr>
 										<td><span class="content_text01">글 쓴 이 : </span></td>
@@ -51,7 +64,7 @@
 									
 									<tr>
 										<td colspan="2">
-											&nbsp;&nbsp;<input class="button_type01" type="submit" value="질문하기" onclick="boardCheck()">&nbsp;&nbsp;
+											<input class="button_type01" type="submit" value="질문하기" onclick="boardCheck()">&nbsp;&nbsp;
 											<input class="button_type01" type="button" value="글목록" onclick="script:window.location='list'">
 										</td>
 									</tr>

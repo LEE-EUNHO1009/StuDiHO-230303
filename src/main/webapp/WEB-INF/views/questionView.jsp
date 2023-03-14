@@ -6,21 +6,24 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/main.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/content.css">
-<script type="text/javascript" src="${pageContext.request.contextPath }/resources/js/Board.js"></script>
+<!-- 230314 수정 <script type="text/javascript" src="${pageContext.request.contextPath }/resources/js/Board.js"></script>-->
+<script type="text/javascript" src="${pageContext.request.contextPath }/resources/js/board.js"></script>
 <title>Question</title>
 </head>
 <body>
 	<%@ include file="include/header.jsp" %>
 	<center>
+	<!-- 230314 내용수정 -->
+	<center>
 	<table width="75%" border="0" cellspacing="0" cellpadding="20">
 		<tr>
-			<td align="center">
-				<span class="main02">This is the photo studio. Please call me if you have any questions about the reservation.</span>
+			<td class="titlebox">
+				<span class="title01">문의 게시판 보기</span>
 			</td>
-		</tr>	
+		</tr>
 		<tr>
-			<td align="center">
-				<span class="main03">♡궁금하신 사항을 자유롭게 남겨주세요.♡</span>
+			<td class="titlebox">
+				<span class="title02">문의 게시판 보기</span>
 			</td>
 		</tr>
 		<tr>
