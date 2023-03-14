@@ -18,15 +18,15 @@
    <center>
    <table width="75%" border="0" cellspacing="0" cellpadding="20">
       <tr>
-         <td class="titlebox">
-            <span class="title01">문의 게시판 리스트</span>
-         </td>
-      </tr>
-      <tr>
-         <td class="titlebox">
-            <span class="title02">문의 게시판 리스트</span>
-         </td>
-      </tr>
+			<td align="center">
+				<span class="main02">This is the photo studio. Please call me if you have any questions about the reservation.</span>
+			</td>
+		</tr>	
+		<tr>
+			<td align="center">
+				<span class="main03">♡궁금하신 사항을 자유롭게 남겨주세요.♡</span>
+			</td>
+		</tr>
       <tr>
          <td>
             <center>
@@ -35,13 +35,13 @@
                   <td class="content">
                      <br><br>
                      <center>
-                     <table width="80%" border="0" cellspacing="0" cellpadding="10">
-                        <tr>
-                           <th class="board_title">번호</th>
-                           <th class="board_title">아이디</th>
-                           <th class="board_title" width="50%">질문내용</th>
-                           <th class="board_title">글쓴이</th>
-                           <th class="board_title">등록일</th>
+                     <table width="90%" border="0" cellspacing="0" cellpadding="10">
+                        <tr height="50px">
+                           <th class="board_title" width="10%">번호</th>
+                           <th class="board_title" width="10%">아이디</th>
+                           <th class="board_title" width="40%">질문내용</th>
+                           <th class="board_title" width="10%">글쓴이</th>
+                           <th class="board_title" width="10%">등록일</th>
                         </tr>
                         <c:forEach items="${qdtos }" var="qdto">
                         <tr>

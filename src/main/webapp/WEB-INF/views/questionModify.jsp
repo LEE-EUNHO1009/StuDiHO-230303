@@ -15,13 +15,13 @@
 	<center>
 	<table width="75%" border="0" cellspacing="0" cellpadding="20">
 		<tr>
-			<td class="titlebox">
-				<span class="title01">문의게시판 글 수정</span>
+			<td align="center">
+				<span class="main02">This is the photo studio. Please call me if you have any questions about the reservation.</span>
 			</td>
-		</tr>
+		</tr>	
 		<tr>
-			<td class="titlebox">
-				<span class="title02">문의게시판 글 수정</span>
+			<td align="center">
+				<span class="main03">♡궁금하신 사항을 자유롭게 남겨주세요.♡</span>
 			</td>
 		</tr>
 		<tr>
