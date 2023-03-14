@@ -15,9 +15,7 @@
 <body>
 
 	<!-- 230314 내용수정 -->
-	
-	
-		<%@ include file="include/header.jsp" %>
+	<%@ include file="include/header.jsp" %>
 	<center> 
 	
 	<% if(session.getAttribute("Id") != null) {
@@ -35,92 +33,89 @@
 	                <li><a href="QnA">문의내역</a></li>
 					<li><a href="infomodify">회원정보</a></li>
 	            </ul>
-	      </div>
+	      	</div>
 	       
 	       
 	        <!-- 본문 컨테이너 : main -->
 	        
-	        <div>
-	        
-			 <div>
-			 
-				<table>
-					<tr>
-						<td><span>회원정보</span></td>
-					</tr>
-				</table>
-				
-						
-				<center>						
-				<table width="60%" border="0" cellspacing="0" cellpadding="10">
+	       <div>
+				<div>
+					<table>
+						<tr>
+							<td><span id="menu">회원정보</span></td>
+						</tr>
+					</table>
 					
-					<tr class="contentbox">
-						<td class="content">
-							<center>	
-								<table border="0" cellspacing="0" cellpadding="10">
-									<form action="infomodifyOk" method="post" name="reg_frm" >
-										<!--<input type="hidden" name="id" value="${memberDto.mid }">-->
-											<tr>
-												<td>&nbsp;</td>
-												<td class="content_text01">아이디</td>
-												<td>
-													<input type="text" class="input_type01" value="${memberDto.mid }" readonly="readonly">
-													</span>
-												</td>
-												<td>&nbsp;</td>
-											</tr >
-											<tr>
-												<td>&nbsp;</td>
-												<td>비밀번호</td>
-												<td>
-												 <input type="password" id="password" class="input_type01" placeholder="비밀번호" name="pw">
-												</td>
-												<td >&nbsp;</td>
-											</tr>
-											<tr>
-												<td >&nbsp;</td>
-												<td>비밀번호 확인</td>
-												<td >
-												 <input type="password" id="password" class="input_type01" placeholder="비밀번호 확인" name="pw_check">
-												</td>
-												<td>&nbsp;</td>
-											</tr>
-											<tr>
-												<td >&nbsp;</td>
-												<td>이름</td>
-												<td >
-												<input type="text" id="password" class="input_type01" placeholder="이름" value="${memberDto.mname }" name="name">
-												</td>
-												<td width>&nbsp;</td>
-											</tr>
-											
-											<tr>
-												<td>&nbsp;</td>
-												<td>전화번호</td>
-												<td><input type="text" id="password" class="input_type01" placeholder="전화번호"  value="${memberDto.mphone }" name="phone"></td>
-												<td>&nbsp;</td>
-											</tr>
-											<tr>
-												<td>&nbsp;</td>
-												<td>가입일자</td>
-												<td ><input type="text" id="password" class="input_type01" value="${memberDto.mdate}" readonly></td>
-												<td >&nbsp;</td>
-											</tr>
-											
-											<tr>
-												<td colspan="2">
-													<input class="button_type01"  type="button" value="정보수정" onclick="infoModifyConfirm()">&nbsp;&nbsp;
-													<input class="button_type01" type="button" value="회원탈퇴" onclick="javascript:window.location='memberCancel'">
+					<center>						
+					<table width="60%" border="0" cellspacing="0" cellpadding="10">
+						
+						<tr class="contentbox">
+							<td class="content">
+								<center>	
+									<table border="0" cellspacing="0" cellpadding="10">
+										<form action="infomodifyOk" method="post" name="reg_frm" >
+											<!--<input type="hidden" name="id" value="${memberDto.mid }">-->
+												<tr>
 													
-												</td>
-											</tr>
-									</form>
-								</table>
-							</center>
-						</td>
-					</tr>
-				</table>
-				</center>	
+													<td><span class="content_text01">아 이 디 : </span></td>
+													<td>
+														<input type="text" class="input_type01" value="${memberDto.mid }" readonly="readonly">
+														
+													</td>
+													
+												</tr >
+												<tr>
+													
+													<td><span class="content_text01">비밀번호 : </span></td>
+													<td>
+													 <input type="password" id="password" class="input_type01" placeholder="비밀번호" name="pw">
+													</td>
+													
+												</tr>
+												<tr>
+													
+													<td><span class="content_text01">비밀번호 확인 : </span></td>
+													<td >
+													 <input type="password" id="password" class="input_type01" placeholder="비밀번호 확인" name="pw_check">
+													</td>
+													
+												</tr>
+												<tr>
+													
+													<td><span class="content_text01">이  름 : </span></td>
+													<td >
+													<input type="text" id="password" class="input_type01" placeholder="이름" value="${memberDto.mname }" name="name">
+													</td>
+													
+												</tr>
+												
+												<tr>
+													
+													<td><span class="content_text01">전화번호 : </span></td>
+													<td><input type="text" id="password" class="input_type01" placeholder="전화번호"  value="${memberDto.mphone }" name="phone"></td>
+													
+												</tr>
+												<tr>
+													
+													<td><span class="content_text01">가입일자 : </span></td>
+													<td ><input type="text" id="password" class="input_type01" value="${memberDto.mdate}" readonly></td>
+													
+												</tr>
+												
+												<tr>
+													<td colspan="2">
+														&nbsp;&nbsp;&nbsp;&nbsp;<input class="button_type01"  type="button" value="정보수정" onclick="infoModifyConfirm()" >&nbsp;&nbsp;
+														<input class="button_type01" type="button" value="회원탈퇴" onclick="javascript:window.location='memberCancel'">
+														
+													</td>
+												</tr>
+										</form>
+									</table>
+								</center>
+							</td>
+						</tr>
+					</table>
+					</center>	
 	
 	<% } else {out.print("로그인 후 이용 가능합니다.");} %>
 	

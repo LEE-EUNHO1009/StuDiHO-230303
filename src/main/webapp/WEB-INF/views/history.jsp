@@ -32,13 +32,13 @@
 		        <!-- 본문 컨테이너 : main -->
 		        <div id="main">
 		
-				<div class="wrapper_history">
-		
-				<table class="tt1">
-					<tr>
-						<td><span id="menu">예약내역</span></td>
-					</tr>		
-				</table>
+					<div class="wrapper_history">
+			
+						<table class="tt1">
+							<tr>
+								<td><span id="menu">예약내역</span></td>
+							</tr>		
+						</table>
 							
 		
 				<div class="tabmenu">
