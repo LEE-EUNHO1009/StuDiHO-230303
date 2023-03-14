@@ -1,0 +1,173 @@
+#content{
+	margin-top:50px;
+    margin-left: auto;
+    margin-right: auto;
+    /*background-color:Yellow;  */
+    width:85%;
+
+}
+ 
+#leftColumn{
+    width:185px;   
+    float:left;
+    color: #636363;
+	font-family: NanumSquareRound;
+	font-weight: bold;
+}
+ 
+#main{
+    padding : 0;   /* 안쪽 여백  */
+    margin-bottom: 30px ;/*바같쪽 여백 */
+    min-height: 400px; /* 최소 높이(세로크기) 지정, IE6에서 적용안됨. */
+    _height: 300px; /* IE전용 :  _(언더스코어)로 시작하는 속성 */
+   
+    margin-left:220px; /*leftColumn 영역의 width값만큼 여백으로 지정*/
+    width:950px;
+}
+
+
+ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+li{
+	padding-bottom:12px;
+	font-size: 15px;
+	
+}
+   
+.wrapper_login {
+    text-align: center;
+    margin:auto;
+    width: 420px;
+    height: 450px;
+    border:solid 3px;
+    border-radius: 10%;
+    background: pink;
+}
+
+.wrapper_loginok {
+    text-align: center;
+    margin:auto;
+    width: 900px;
+    height: 450px;
+
+}
+
+.wrapper_join {
+    text-align: center;
+    margin:auto;
+    width: 420px;
+    height: 600px;
+    border:solid 3px;
+    border-radius: 10%;
+    background: pink;
+}
+
+.wrapper_joinok {
+    text-align: center;
+    margin:auto;
+    width: 420px;
+    height: 450px;
+    border-radius: 10%;
+    background: pink;
+}
+
+.wrapper_write {
+    text-align: center;
+    margin:auto;
+    width: 900px;
+    height: 600px;
+    border-radius: 2%;
+    background: pink;
+}
+
+.wrapper_history {
+    margin:auto;
+    width: 900px;
+    height: 450px;
+}
+
+.wrapper_modify {
+    text-align: center;
+    margin:auto;
+    width: 420px;
+    height: 700px;
+    border:solid 3px;
+    border-radius: 10%;
+    background: pink;
+}
+
+h1 {
+    margin-top: 65px;
+    font-size: 50px;
+    font-family: NanumSquareRound;
+    font-weight: bold;	
+}
+
+h2 {
+    font-size: 22px;
+    font-family: NanumSquareRound;
+}
+
+input {
+    text-align: left;
+    width:225px;
+    height:30px;
+    border: none;
+    border-bottom: solid 3px #5D5D5D;
+    background: pink;
+    font-size: 12px;
+}
+
+input::placeholder {
+    color: black;
+    font-size: 12px;
+    font-family: NanumSquareRound;
+}
+
+
+.id {
+    padding-top: 19px;
+}
+
+
+
+.password {
+    padding-bottom: 32px;
+    padding-top: 22px;
+}
+
+#button {
+    width: 100px;
+    height: 50px;
+    border-radius: 10%;
+    font-size: 18px;
+    font-weight: bold;
+    border:solid 2px;
+    background: #FFFFE4;
+    font-family: NanumSquareRound;
+    padding: 5px;
+    text-align: center;
+}
+
+#history_button {
+    width: 100px;
+    height: 50px;
+    border-radius: 10%;
+    font-size: 18px;
+    font-weight: bold;
+    border:solid 2px;
+    background: #FFFFE4;
+    font-family: NanumSquareRound;
+    padding: 5px;
+    text-align: center;
+}
+
+/* 캘린더 css 설정 */
+
+input[name='rdayof'] {
+    width: 33%;
+}

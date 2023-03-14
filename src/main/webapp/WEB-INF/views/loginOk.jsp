@@ -1,11 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/main.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/content.css">
+<link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
 <title>로그인 성공</title>
 </head>
 <body>
@@ -16,36 +19,69 @@
 		<tr>
 			<td>
 				<center>
-				<table width="80%" border="0" cellspacing="0" cellpadding="10">
-					<tr class="contentbox">
-						<td class="content">
-							<%
-								int checkIdFlag = Integer.parseInt(request.getAttribute("checkIdFlag").toString());
-								int checkIdPwFlag = Integer.parseInt(request.getAttribute("checkIdPwFlag").toString());
-								if(checkIdFlag  == 0) {
-							%>
-							<script type="text/javascript">
-								alert("입력하신 아이디는 존재하지 않습니다. 다시 확인해 주세요.");
-								history.go(-1);
-							</script>						
-							<%
-								} else if(checkIdPwFlag == 0) {
-							%>
-							<script type="text/javascript">
-								alert("입력하신 아이디의 비밀번호가 일치하지 않습니다. 다시 확인해 주세요.");
-								history.go(-1);
-							</script>
-							<%
-								}
-							%>
-							${mid }님 로그인 하셨습니다. 반갑습니다!<br>
-							${memberDto.mname }님의 가입일은 [${memberDto.mdate }]입니다.						
-						</td>						
-					</tr>
-					
-				</table>
-				</center>			
-			</td>
+				
+	<%
+		int checkId = Integer.parseInt(request.getAttribute("checkIdFlag").toString());
+		int checkPw = Integer.parseInt(request.getAttribute("checkPwFlag").toString());
+	
+		if(checkId == 0) {								
+	%>				
+		<script language="JavaScript">
+			alert("입력하신 아이디는 존재하지 않는 아이디입니다. 아이디를 확인해 주세요.");
+			history.go(-1);
+		</script>
+	<% 
+		} else if (checkPw == 0) {
+	%>
+		<script language="JavaScript">
+			alert("입력하신 비밀번호가 틀립니다. 다시 확인해 주세요.");
+			history.go(-1);
+		</script>
+	<% 
+		} else if (session.getAttribute("Id").equals("admin")) {
+	%>
+		<script language="JavaScript">
+		document.location = "adminInfo";
+		</script>
+	
+	<% 
+		} else {
+			
+			session.setAttribute("ValidMem", "yes");
+		}
+	%>
+	 
+	 
+	<div class="wrapper_loginok">
+
+
+	<table class="tt1" width="90%">
+		<tr>
+			<td>
+			${mname }님 안녕하세요.</td>
+		</tr>
+	</table>
+
+
+	<table class="tt2" width="90%">
+		<tr>
+			<td width="25%">예약하기</td>
+			<td width="25%">1:1 문의하기</td>
+			<td width="25%">회원정보</td>
+		</tr>
+	
+		<tr  height="200">
+			<td><a href="history"><img src="<c:url value="/resources/img/care.png" />"></a></td>
+			<td><a href="question"><img src="<c:url value="/resources/img/qna.png" />"></a></td>
+			<td><a href="infomodify"><img src="<c:url value="/resources/img/infomodify.png" />"></a></td>
+		</tr>
+	</table>
+				
+	</div>
+
+	<table class="mtable">
+		<tr>
+			<td>&nbsp;</td>
 		</tr>
 	</table>
 	</center>
