@@ -6,8 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<%--<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/span.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/table.css">--%> 
+<title>예약 내역 확인 페이지</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/style.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/tabmenu.css"> 
 </head>

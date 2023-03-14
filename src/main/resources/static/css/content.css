@@ -4,6 +4,7 @@ tr.contentbox{
 	height: 535px;
 	background-color: #FFF1DC;
 }
+
 td.content {
 	text-align: center;
 	font-size: 20px;
@@ -40,6 +41,7 @@ input.button_type01 {
 	font-weight: bold;
 	padding: 5px;
 	border-radius: 10px;
+	text-align: center;
 }
 
 input.button_type01:hover {
