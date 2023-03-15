@@ -52,7 +52,7 @@
 		        <input type="radio" name="tab" id="tab4">
 		        <label class="label1" for="tab1">전체 보기</label>
 		        <label for="tab2">증명사진</label>
-		        <label for="tab3">프로필/컨셉사진</label>
+		        <label for="tab3">프로필/<br>컨셉사진</label>
 		        <label for="tab4">반려동물 사진</label>
 		        
 		        
