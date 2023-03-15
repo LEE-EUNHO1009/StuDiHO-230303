@@ -111,8 +111,8 @@
 											<tr>
 												<td colspan="2">
 													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="button_type01"  type="button" value="정보수정" onclick="infoModifyConfirm()" >&nbsp;&nbsp;
-													<input class="button_type01" id="button" type="button" value="회원탈퇴" onclick="javascript:window.location='memberCancel'">
 													
+													<input class="button_type01"  type="button" value="회원탈퇴" onclick="javascript:window.location='memberCancel'" >&nbsp;&nbsp;
 												</td>
 											</tr>
 									</form>
