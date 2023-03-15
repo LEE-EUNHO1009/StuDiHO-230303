@@ -50,22 +50,22 @@
 					<tr class="contentbox">
 						<td class="content">
 							<center>
-          							 <table width="90%" border="0" cellspacing="0" cellpadding="10">
-          							  	<tr>
-          							  		<td><br></td>
-          							  	</tr>
-			                        <tr height="50px">
+          						<table width="90%" border="0" cellspacing="0" cellpadding="10">
+        							<tr>
+        							  <td><br></td>
+        							</tr>
+			                        <tr >
 			                           <th class="board_title" width="10%">번호</th>
 			                           <th class="board_title" width="10%">아이디</th>
-			                           <th class="board_title" width="40%">질문내용</th>
+			                           <th class="board_title" width="30%">질문내용</th>
 			                           <th class="board_title" width="10%">글쓴이</th>
-			                           <th class="board_title" width="10%">등록일</th>
+			                           <th class="board_title" width="20%">등록일</th>
 			                        </tr>
 			                        <c:forEach items="${qdtos }" var="qdto">
 			                        <tr>
-			                           <td class="board_content01">${qdto.qnum }</td>
-			                           <td class="board_content01">${qdto.qid }</td>
-			                           <td class="board_content02">
+			                           <td class="board_content01" style="text-align: center;">${qdto.qnum }</td>
+			                           <td class="board_content01" style="text-align: center;">${qdto.qid }</td>
+			                           <td class="board_content02" style="text-align: center;">
 			                           <a href="questionView?qnum=${qdto.qnum }">
 			                           <c:choose>
 			                              <c:when test="${fn:length(qdto.qcontent) > 23 }">
@@ -77,8 +77,8 @@
 			                           </c:choose>
 			                           </a>
 			                           </td>
-			                           <td class="board_content01">${qdto.qname }</td>
-			                           <td class="board_content01">
+			                           <td class="board_content01" style="text-align: center;">${qdto.qname }</td>
+			                           <td class="board_content01" style="text-align: center;">
 			                              <c:out value="${fn:substring(qdto.qdate,0,10) }"></c:out>                              
 			                           </td>
 			                        </tr>                  
