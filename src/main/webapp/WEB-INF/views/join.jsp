@@ -16,46 +16,61 @@
 <!-- 230314 내용수정 -->
 	
 	<%@ include file="include/header.jsp" %>
-	
-		<table>
-			<tr>
-				<td>&nbsp;</td>
-			</tr>
-		</table>
-	
-	
-		<form action="joinOk" method="post" name="reg_frm">
-		<div class="wrapper_join">
-			<h1>회원가입</h1>
-			<div class="id">
-				<img src="<c:url value="/resources/img/user.png" />">&nbsp;
-	            <input type="text" id="email" placeholder="아이디" name="id"><br>
-			</div>
-			<div class="password">
-				<img src="<c:url value="/resources/img/pass.png" />">&nbsp;
-				<input type="password" id="password" placeholder="비밀번호" name="pw"><br><br>
-	
-				<img src="<c:url value="/resources/img/pass.png" />">&nbsp;
-				<input type="password" id="password" placeholder="비밀번호 확인" name="pw_check"><br><br>
-				<img src="<c:url value="/resources/img/user.png" />">&nbsp;
-				<input type="text" id="password" placeholder="이름" name="name"><br><br>
-				<img src="<c:url value="/resources/img/phone.png" />">&nbsp;
-				<input type="text" id="password" placeholder="전화번호" name="phone"><br><br>
-			</div>
-			<div class="div_button">
-				<input id="button" type="button" value="회원가입" onclick="infoConfirm()">&nbsp;&nbsp;&nbsp;&nbsp;
-				<input id="button" type="button" value="로그인" onclick="javascript:window.location='login'">
-			</div>
-		</div>
-		</form>	
-	        
-	        
-		<table class="mtable">
-			<tr>
-				<td>&nbsp;</td>
-			</tr>
-		</table>
-	
+	<center>
+	<table width="75%" border="0" cellspacing="0" cellpadding="20">
+		<tr>
+			<td align="center">
+				<span class="main02">This is the photo studio. Please call me if you have any questions about the reservation.</span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<center>
+				<table width="80%" border="0" cellspacing="0" cellpadding="10">
+					<tr class="contentbox">
+						<td class="content">
+							<center>						
+							<table border="0" cellspacing="0" cellpadding="10">
+								<form action="joinOk" method="post" name="reg_frm">
+									<tr>
+										<td><span class="content_text01">아 이 디 : &nbsp;</span></td>
+										<td><input class="input_type01" type="text" id="email" placeholder="아이디" name="id"><br></td>
+									</tr>
+									<tr>
+										<td><span class="content_text01">비밀번호 : </span></td>
+										<td><input class="input_type01" type="password" id="password" placeholder="비밀번호" name="pw"></td>
+									</tr>
+									<tr>
+										<td><span class="content_text01">비밀번호 확인 : </span></td>
+										<td><input class="input_type01" type="password" id="password" placeholder="비밀번호 확인" name="pw_check"></td>
+									</tr>
+									<tr>
+										<td><span class="content_text01">이  름 : &nbsp;</span></td>
+										<td><input class="input_type01" type="text" id="password" placeholder="이름" name="name"></td>
+									</tr>
+									<tr>
+										<td><span class="content_text01">전화번호 : </span></td>
+										<td><input class="input_type01" type="text" id="password" placeholder="전화번호" name="phone"></td>
+									</tr>
+									<tr >
+										<td colspan="2">
+												&nbsp;&nbsp;&nbsp;<input  class="button_type01" id="button" type="button" value="회원가입" onclick="infoConfirm()">&nbsp;&nbsp;&nbsp;&nbsp;
+												<input  class="button_type01" id="button" type="button" value="로그인" onclick="javascript:window.location='login'">
+										</td>
+									</tr>
+									
+								</form>	
+							    </table>
+							</center>							
+						</td>						
+					</tr>
+					
+				</table>
+				</center>			
+			</td>
+		</tr>
+	</table>
+	</center>
 	<%@ include file="include/footer.jsp" %>
 
 </body>
