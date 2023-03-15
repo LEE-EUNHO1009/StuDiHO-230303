@@ -226,9 +226,13 @@ public class HomeController {
 		return "membercancelOk"; // 완료 후 membercancelOk.jsp로 이동
 	}
 	
+	@RequestMapping(value = "/reservation")
+	public String reservation() {
+		return "reservation";
+	}
 	
-	@RequestMapping(value = "/reservation") // 회원 예약 글쓰기 화면으로 이동
-	public String reservation(HttpServletRequest request, Model model) {
+	@RequestMapping(value = "/reservationHistory") // 회원 예약 글쓰기 화면으로 이동
+	public String reservationHistory(HttpServletRequest request, Model model) {
 
 		HttpSession session = request.getSession();
 		String sessionId = (String) session.getAttribute("Id");
