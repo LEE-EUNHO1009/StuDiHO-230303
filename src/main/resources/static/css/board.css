@@ -7,6 +7,7 @@ th.board_title {
 	color: #f1f1f1;
 	font-family: malgun;
 	font-weight: bold;
+	text-align: center;
 }
 
 td.board_content01 {
@@ -22,5 +23,5 @@ td.board_content02 {
 	font-size : 16px;
 	color: #000000;
 	font-family: malgun;	
-	text-align: left;
+	text-align: center;
 }
