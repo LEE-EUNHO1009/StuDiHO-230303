@@ -283,7 +283,7 @@ public class HomeController {
 	public String mview(HttpServletRequest request, Model model) {
 		
 		HttpSession session = request.getSession();
-		String sessionId = (String) session.getAttribute("id");
+		String sessionId = (String) session.getAttribute("Id");
 		
 		IDao dao = sqlSession.getMapper(IDao.class);
 		MemberDto memberDto = dao.loginOkDao(sessionId);

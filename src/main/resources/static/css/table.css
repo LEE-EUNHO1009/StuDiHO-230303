@@ -77,7 +77,7 @@ a:visited {
 
 a:hover {
 	text-decoration: underline;
-	color: #5D5D5D;
+	color: #000000;
 }
 
 #button01:hover {
@@ -95,7 +95,7 @@ table.tt1 {
 table.bye {
 	font-size: 20px;
 	font-family: NanumSquareRound;
-	color: #5D5D5D;
+	color: #000000;
 	font-weight: normal;
 	margin-bottom: 20px;
 }
@@ -110,9 +110,9 @@ table.tt2 {
 table.tt3 {
 	font-size: 16px;
 	font-family: NanumSquareRound;
-	color: #5D5D5D;
+	color: #000000;
 	font-weight: normal;
-	background-color: #FFFFE4;
+	background-color: #ffffff;
 }
 
 textarea {
@@ -120,7 +120,7 @@ textarea {
 	height:100px;
 	padding: 10px;
 	box-sizing: border-box;
-	border: solid 2px #5d5d5d;
+	border: solid 2px #000000;
 	border-radius: 2px;
 	font-size: 12px;
 	font-family: NanumSquareRound;

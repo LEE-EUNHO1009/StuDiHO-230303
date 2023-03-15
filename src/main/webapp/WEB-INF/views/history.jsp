@@ -67,7 +67,7 @@
 							
 				<table width="800px" class="tab_table01">
 					<tr height="40">
-						<th width="100px">번호</th>
+						<th width="100px" style="color: wrtie;"">번호</th>
 						<th width="200px">예약 종류</th>
 						<th width="300px">예약일자</th>
 						<th width="200px">예약 여부</th>
@@ -249,8 +249,8 @@
 		
 			<table width="900px" class="tt3">
 				<tr>
-					<td height="80px" colspan="4">
-					<input id="history_button" type="button" value="예약하기" onclick="javascript:window.location='mwrite'">
+					<td colspan="4" align="right">
+						<input class="button_type02" type="submit" value="예약하기" onclick="javascript:window.location='mwrite'">&nbsp;&nbsp;&nbsp;
 					</td>
 				</tr>
 			</table>

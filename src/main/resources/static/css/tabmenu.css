@@ -7,9 +7,9 @@
     line-height: 20px;
     font-weight: bold;
 
-    border: 2px solid pink;
+    border: 2px solid #3A98B9;
     border-radius: 3px 3px 0 0;
-    color:#5D5D5D;
+    color:#000000;
     border-width:2px 2px 0 2px;
     cursor:pointer;
     font-family: NanumSquareRound;
@@ -24,27 +24,27 @@
     line-height: 25px;
     font-weight: bold;
 
-    border: 2px solid pink;
+    border: 2px solid #3A98B9;
     border-radius: 3px 3px 0 0;
-    color:#5D5D5D;
+    color:#000000;
     border-width:2px 2px 0 0;
     cursor:pointer;
     font-family: NanumSquareRound;
 }
 .tabmenu input:nth-of-type(1):checked ~ label:nth-of-type(1) {
-    background-color:pink;
+    background-color :#3A98B9;
     color:#FFFFE4;
 }
 .tabmenu input:nth-of-type(2):checked ~ label:nth-of-type(2) {
-    background-color:pink;
+    background-color :#3A98B9;
     color:#FFFFE4;
 }
 .tabmenu input:nth-of-type(3):checked ~ label:nth-of-type(3) {
-    background-color:pink;
+    background-color :#3A98B9;
     color:#FFFFE4;
 }
 .tabmenu input:nth-of-type(4):checked ~ label:nth-of-type(4) {
-    background-color:pink;
+    background-color :#3A98B9;
     color:#FFFFE4;
 }
 
@@ -60,12 +60,14 @@
 .tabmenu .tab4_content {
 	font-family: NanumSquareRound;
     padding: 32px;
-    border: 2px solid pink;
+    border: 2px solid #3A98B9;
     width: 90%;
     height: 100%;
-    color:#5D5D5D;
+    color:#000000;
     background-color:#FFFFE4;
 }
+
+
 .tabmenu label:nth-of-type(1):hover{
     background-color:#ffffff;
 }
@@ -89,13 +91,13 @@ table.tab_table01 {
 }
 
 table th {
-    border-top:solid 2px pink;
-    background-color:pink;
+    border-top:solid 2px #3A98B9;
+    background-color:#3A98B9;
     font-family: NanumSquareRound;
 }
 
 table td.tab_td {
-    border-bottom:solid 1px pink;
+    border-bottom:solid 1px #3A98B9;
     text-align:center;
     font-family: NanumSquareRound;
     font-weight: bold;
@@ -103,7 +105,7 @@ table td.tab_td {
 
 table td.tab_td01 {
 	padding-left:40px;
-    border-bottom:solid 1px pink;
+    border-bottom:solid 1px #3A98B9;
     text-align:left;
     font-family: NanumSquareRound;
     font-weight: bold;

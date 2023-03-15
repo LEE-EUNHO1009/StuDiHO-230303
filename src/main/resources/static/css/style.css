@@ -13,7 +13,6 @@
     color: #000000;
 	font-family: NanumSquareRound;
 	font-weight: bold;
-	background-color: yellow;
 }
  
 #main{
@@ -46,7 +45,7 @@ li{
     height: 450px;
     border:solid 3px;
     border-radius: 10%;
-    background: pink;
+    background: #3A98B9;
 }
 
 .wrapper_loginok {
@@ -65,7 +64,7 @@ li{
     height: 600px;
     border:solid 3px;
     border-radius: 10%;
-    background: pink;
+    background:#3A98B9;
 }
 
 .wrapper_joinok {
@@ -74,7 +73,7 @@ li{
     width: 420px;
     height: 450px;
     border-radius: 10%;
-    background: pink;
+    background:#3A98B9;
 }
 
 .wrapper_write {
@@ -83,7 +82,7 @@ li{
     width: 900px;
     height: 600px;
     border-radius: 2%;
-    background: pink;
+    background:#3A98B9;
 }
 
 .wrapper_history {
@@ -99,7 +98,7 @@ li{
     height: 700px;
     border:solid 3px;
     border-radius: 10%;
-    background: pink;
+    background:#3A98B9;
 }
 
 h1 {
@@ -119,8 +118,8 @@ input {
     width:225px;
     height:30px;
     border: none;
-    border-bottom: solid 3px #5D5D5D;
-    background: pink;
+    border-bottom: solid 3px #000000;
+    background:#3A98B9;
     font-size: 12px;
 }
 
