@@ -44,11 +44,7 @@ public class HomeController {
 	
 		return "login"; // login.jsp로 이동
 	}
-	@RequestMapping(value = "/login01") // 로그인 클릭하면
-	public String login01() {
 	
-		return "login"; // login.jsp로 이동
-	}
 	
 	@RequestMapping(value = "/logout") // 로그아웃 클릭하면
 	public String logout() {
@@ -81,7 +77,7 @@ public class HomeController {
 		}
 		
 		
-		return "loginOk"; // loginOk.jsp로 이동
+		return "main"; // loginOk.jsp로 이동
 	}
 	
 	@RequestMapping(value = "/join") // 회원가입 클릭하면
@@ -343,18 +339,8 @@ public class HomeController {
 	      
 	      return "question";
 	      
-
-	   }  @RequestMapping(value = "/question01")
-	   public String question01(HttpSession session, Model model) {	
-			
-		   String sessionId = (String) session.getAttribute("Id");
-		   
-		   model.addAttribute("memberId", sessionId);
-	      
-	      return "question";
-	      
-
 	   }
+	  
 	   
 	   @RequestMapping(value = "/questionOk")
 	   public String questionOk(HttpServletRequest request) {
@@ -494,11 +480,7 @@ public class HomeController {
 		
 		return "company";
 	}
-	@RequestMapping(value = "/company01")  // 회사소개 페이지 이동
-	public String company01( ) {
-		
-		return "company";
-	}
+	
 	@RequestMapping(value = "/location")  // 회사위치 소개 페이지 이동
 	public String location( ) {
 		

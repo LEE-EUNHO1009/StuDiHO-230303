@@ -17,22 +17,22 @@
 		 <div class="swiper mySwiper">
 		    <div class="swiper-wrapper">
 		      <div class="swiper-slide";>
-		      	<a href="company01" >
+		      	<a href="company" >
 		      		<img src="${pageContext.request.contextPath }/resources/img/gran.png">
 		      	</a>
 		      </div>
 		      <div class="swiper-slide">
-			     <a href="login01">
+			     <a href="reservation">
 			      	<img src="${pageContext.request.contextPath }/resources/img/main1.png">
 		      	</a>
 		      </div>
 		      <div class="swiper-slide">
-		     	 <a href="gallery01" >
+		     	 <a href="gallery" >
 		      		<img src="${pageContext.request.contextPath }/resources/img/main2.png" height="100%" width="100%" >
 		      	</a>
 		      </div>
 		      <div class="swiper-slide">
-		      	<a href="question01" >
+		      	<a href="question" >
 		      		<img src="${pageContext.request.contextPath }/resources/img/main3.png" width="100%" height="100%">
 		      	</a>
 		      </div>
