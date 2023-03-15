@@ -41,7 +41,7 @@
         <div id="main">
 
 
-	 		<div class="wrapper_loginok">
+	 		
 	            
 				<table align="center">
 					<tr>
@@ -79,7 +79,7 @@
 					</tr>
 				</table>
 <% } else {out.print("로그인 후 이용 가능합니다.");} %>
-				 </div>
+				
         </div>
 	    <table>
             <tr>
