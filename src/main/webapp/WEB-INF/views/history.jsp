@@ -13,36 +13,38 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/table.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/style.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/tabmenu.css"> 
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/board.js"></script>
+<link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
 </head>
 <body>
 <!-- 230314 수정내용 -->
-		<%@ include file="include/header.jsp" %>
-		
-		
-		
-		<!--Content 영역-->
-		<div id="content" >
+<%@ include file="include/header.jsp" %>
+
+
+
+<!--Content 영역-->
+<div id="content" >
+       
+       <!-- 왼쪽 메뉴 영역 -->
+       <div id="leftColumn">
+           <h2>${memberDto.mname }님</h2>
+           <ul>
+               <li><a href="history">예약내역</a></li>
+               <li><a href="question">문의내역</a></li>
+			<li><a href="infomodify">회원정보</a></li>
+           </ul>
+       </div>
 		       
-		        <!-- 왼쪽 메뉴 영역 -->
-		        <div id="leftColumn">
-		            <h2>${memberDto.mname }님</h2>
-		            <ul>
-		                <li><a href="history">예약내역</a></li>
-		                <li><a href="question">문의내역</a></li>
-						<li><a href="infomodify">회원정보</a></li>
-		            </ul>
-		        </div>
-		       
-		        <!-- 본문 컨테이너 : main -->
-		        <div id="main">
-		
-					<div class="wrapper_history">
-			
-						<table class="tt1">
-							<tr>
-								<td><span id="menu">예약내역</span></td>
-							</tr>		
-						</table>
+        <!-- 본문 컨테이너 : main -->
+        <div id="main">
+
+			<div class="wrapper_history">
+	
+				<table class="tt1">
+					<tr>
+						<td><span id="menu">예약내역</span></td>
+					</tr>		
+				</table>
 							
 		
 				<div class="tabmenu">
@@ -250,25 +252,30 @@
 			<table width="900px" class="tt3">
 				<tr>
 					<td colspan="4" align="right">
-						<input class="button_type02" type="submit" value="예약하기" onclick="javascript:window.location='mwrite'">&nbsp;&nbsp;&nbsp;
+						<input class="button_type02" type="submit" value="예약하기" onclick="javascript:window.location='mwrite'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					</td>
-				</tr>
-			</table>
-				
-			</div>
-			<table class="mtable">
-				<tr>
-					<td>&nbsp;</td>
-				</tr>
-			</table>
-		
-		<!--  왼쪽 메뉴 추가 -->
-		
-			</div>
+											</tr>
+									</form>	
+								</table>
+							</center>
+						</td>
+					</tr>
+				</table>
 		</div>
+        </div>
+	    <table>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+	    </table>
+
+<!--  왼쪽 메뉴 추가 -->
+</div>
 		
-		
-		<%@ include file="include/footer.jsp" %>
+<!--  푸터 뜨는 현상 수정 -->
+ <div style="height: 100px">
+</div>
+<%@ include file="include/footer.jsp" %>
 
 </body>
 </html>
