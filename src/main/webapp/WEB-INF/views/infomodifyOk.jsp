@@ -55,8 +55,8 @@
 				</div>
 							
 							
-		<table width="900px">
-			<tr class="contentbox">
+				<table width="900px">
+					<tr class="contentbox">
 							<td class="content">
 								<center>	
 									<table border="0" cellspacing="0" cellpadding="10">
@@ -65,69 +65,58 @@
 											<tr>								
 												<td><span class="content_text01">아 이 디 : </span></td>
 												<td>
-													<input type="text" id="email" value="${memberDto.mid }" readonly name="id">
+													<input class="input_type01" type="text" id="email" value="${memberDto.mid }" readonly name="id">
 												</td>
 											</tr>
 											<tr>
 												<td><span class="content_text01">변경된 비밀번호 : </span></td>
 												<td>
-													 <input type="password" id="password" value="<c:forEach begin="1" end="${fn:length(memberDto.mpw)}" step="1">*</c:forEach>" readonly name="pw">
-			</td>
-												
+													 <input class="input_type01" type="password" id="password" value="<c:forEach begin="1" end="${fn:length(memberDto.mpw)}" step="1">*</c:forEach>" readonly name="pw">
+												</td>
 											</tr>
 											<tr>
-												
-												<td><span class="content_text01">이  름 : </span></td>
+												<td><span class="content_text01">이   름 : </span></td>
 												<td >
-			<input type="text" id="password"  readonly value="${memberDto.mname }" name="name">
-			</td>
-			<td width="25%">&nbsp;</td>
-		</tr>
-		
-		<tr>
-			<td width="25%">&nbsp;</td>
-			<td width="10%" class="td-type04">전화번호</td>
-			<td width="40%"><input type="text" id="password" readonly  value="${memberDto.mphone }" name="phone"></td>
-			<td width="25%">&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="25%">&nbsp;</td>
-			<td width="10%" class="td-type04">가입일자</td>
-			<td width="40%"><input type="text" id="password" value="${memberDto.mdate}" readonly></td>
-			<td width="25%">&nbsp;</td>
-		</tr>
-		<tr>
-			<td height="40">&nbsp;</td>
-		</tr>
-		<tr>
-			<td height="80" colspan="4">
+													<input class="input_type01" type="text" id="password"  readonly value="${memberDto.mname }" name="name">
+												</td>
+											</tr>
+											<tr>
+												<td><span class="content_text01">전화번호 : </span></td>
+												<td>
+													<input class="input_type01" type="text" id="password" readonly  value="${memberDto.mphone }" name="phone">
+												</td>
+											</tr>
+											<tr>
+												<td><span class="content_text01">가입일자 : </span></td>
+												<td>
+													<input class="input_type01" type="text" id="password" value="${memberDto.mdate}" readonly>
+												</td>
 			
-			<input id="button" type="button" value="확인" onclick="javascript:window.location='memberInfo'">
-			
-			</td>
-		</tr>
-		
-		</table>
-		</form>	
-		
-		
-		
-		
+											<tr>
+										
+												<td colspan="2" align="right">
+												<input class="button_type01" type="button" value="확인" onclick="javascript:window.location='memberInfo'">
+												</td>
+											</tr>
+										</form>	
+									</table>
+								</center>
+							</td>
+						</tr>
+					</table>	
 		<% } else {out.print("로그인 후 이용 가능합니다.");} %>
 		
-		</div>
-		        <table class="mtable">
-			<tr>
-				<td>&nbsp;</td>
-			</tr>
-		</table>
+		        <table>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+				</table>
 		
 		<!--  왼쪽 메뉴 추가 -->
 		
-		         </div>
-		     </div>
-		     
-		<%@ include file="include/footer.jsp" %>
+        </center>
+     
+<%@ include file="include/footer.jsp" %>
 
 </body>
 </html>
