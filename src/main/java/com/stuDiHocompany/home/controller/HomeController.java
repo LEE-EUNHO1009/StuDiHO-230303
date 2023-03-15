@@ -643,6 +643,11 @@ public class HomeController {
 		
 		return "company";
 	}
+	@RequestMapping(value = "/location")  // 회사위치 소개 페이지 이동
+	public String location( ) {
+		
+		return "location";
+	}
 	//=================================================================================================	
 	
 
