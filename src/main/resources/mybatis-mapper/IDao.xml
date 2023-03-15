@@ -89,8 +89,8 @@
 	<update id="qcancelDao"> <!-- 문의취소 -->
 		update Q_LIST set qstatus=#{param1} where qnum=#{param2}
 	</update>
-	<delete id="qdeleteAllDao">
-		delete from Q_LIST where qid=#{param1}
+	<delete id="questionDelete">
+		delete from Q_LIST where qnum=#{param1}
 	</delete>
 	
 	<update id="questionModify">

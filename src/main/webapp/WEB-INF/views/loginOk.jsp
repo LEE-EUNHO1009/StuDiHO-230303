@@ -15,11 +15,9 @@
 	<!-- 230314 수정내용 -->
 	<%@ include file="include/header.jsp" %>
 
-	<table class="mtable">
-		<tr>
-			<td>&nbsp;</td>
-		</tr>
-	</table>
+	<center>
+	<div>
+	<table width="75%" border="0" cellspacing="0" cellpadding="20">
 
 
 	<%
@@ -54,40 +52,37 @@
 	%>
 	 
 	 
-	<div class="wrapper_loginok">
-
-
-	<table class="tt1" width="90%">
+	<tr>
+			<td align="center">
+				<span class="main01">StuDIHO Company</span>
+			</td>
+		</tr>	
 		<tr>
-			<td>
-			${mname }님 안녕하세요.</td>
+			<td align="center">
+				<span class="main02">This is the photo studio. Please call me if you have any questions about the reservation.</span>
+			</td>
 		</tr>
-	</table>
-
-
-	<table class="tt2" width="90%">
 		<tr>
-			<td width="25%">예약하기</td>
-			<td width="25%">1:1 문의하기</td>
-			<td width="25%">회원정보</td>
-		</tr>
-	
-		<tr  height="200">
-			<td><a href="history"><img src="<c:url value="/resources/img/care.png" />"></a></td>
-			<td><a href="question"><img src="<c:url value="/resources/img/qna.png" />"></a></td>
-			<td><a href="infomodify"><img src="<c:url value="/resources/img/infomodify.png" />"></a></td>
-		</tr>
+			<td align="center">
+				<table width="80%" border="0" cellspacing="0" cellpadding="10">
+					<tr>
+						<td colspan="2" class="content">
+						${memberDto.mname }님 안녕하세요.
+						</td>
+					</tr>
+					<tr class="contentbox01">
+						<td width="25%" class="content">
+							<a href="reservation">예약하기</a></td>
+						<td width="25%" class="content">
+							<a href="question01">1:1문의하기</a></td>
+					</tr>
+				</table>
+			</td>
+		</tr>	
 	</table>
-				
 	</div>
-
-	<table class="mtable">
-		<tr>
-			<td>&nbsp;</td>
-		</tr>
-	</table>
-
-	<%@ include file="include/footer.jsp" %>
+</center>
+<%@ include file="include/footer.jsp" %>
 
 </body>
 </html>
