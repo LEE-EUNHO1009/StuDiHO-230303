@@ -14,7 +14,7 @@
 	<center>
 	
 	<!--Content 영역-->
-	  <div>  
+	    
 		<!-- 왼쪽 메뉴 영역 -->
 	        <div class="submenu01">
 	            <ul class="mm1_sub" style="display:block;">
@@ -56,7 +56,7 @@
 			</td>
 		</tr>	
 	</table>
-	</div>
+	
 	</center>
 	<%@ include file="include/footer.jsp" %>
 </body>

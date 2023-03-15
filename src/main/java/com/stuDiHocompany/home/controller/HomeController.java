@@ -200,8 +200,8 @@ public class HomeController {
 		return "memberCancel"; // memberCancel.jsp 로 이동
 	}
 	
-	@RequestMapping(value = "/membercancelOk", method = RequestMethod.POST) // 회원탈퇴 버튼 클릭시
-	public String membercancelOk(HttpServletRequest request, Model model) {
+	@RequestMapping(value = "/memberCancelOk", method = RequestMethod.POST) // 회원탈퇴 버튼 클릭시
+	public String memberCancelOk(HttpServletRequest request, Model model) {
 		
 		IDao dao = sqlSession.getMapper(IDao.class);
 		
@@ -216,14 +216,14 @@ public class HomeController {
 			int check = dao.cancelDao(request.getParameter("id"),request.getParameter("pw"));
 			
 			dao.deleteAllDao(request.getParameter("id"));
-			dao.qdeleteAllDao(request.getParameter("id"));
+			//dao.qdeleteAllDao(request.getParameter("id"));
 			HttpSession session = request.getSession();
 
 			// 회원 정보 삭제 후 세션정보 삭제
 			session.invalidate();
 		}
 		
-		return "membercancelOk"; // 완료 후 membercancelOk.jsp로 이동
+		return "memberCancelOk"; // 완료 후 membercancelOk.jsp로 이동
 	}
 	
 	@RequestMapping(value = "/reservation")

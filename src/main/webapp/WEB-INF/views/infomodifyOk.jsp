@@ -7,10 +7,9 @@
 <head>
 <meta charset="UTF-8">
 <title>정보수정 페이지</title>
-<!-- <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/span.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/table.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/main.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/content.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/style.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/write.css"> -->
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/members.js"></script>
 <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
 </head>
@@ -18,66 +17,68 @@
 
 	
 		<%@ include file="include/header.jsp" %>
-			
-		<% if(session.getAttribute("Id") != null) {
-			%>
-		<!--Content 영역-->
-		    <div id="content" >
-		       
-		        <!-- 왼쪽 메뉴 영역 -->
-		        <div id="leftColumn">
-		            <h2>${memberDto.mname }님</h2>
-		            <ul>
-		                <li><a href="history">예약내역</a></li>
-		                <li><a href="question">문의내역</a></li>
-						<li><a href="infomodify">정보수정</a></li>
-		            </ul>
-		        </div>
-		       
-		        <!-- 본문 컨테이너 : main -->
-		        <div id="main">
-		        
-		 <div class="wrapper_loginok">
-		            
+	<center> 
+	
+	<% if(session.getAttribute("Id") != null) {
+		%>
 		
-		
-										
-		
-							<table class="tt1">
-								<tr>
-									<td><span id="menu">회원정보</span></td>
-								</tr>
-							</table>
+	<!--Content 영역-->
+        <!-- 왼쪽 메뉴 영역 -->
+        <div id="leftColumn">
+            <h2>${memberDto.mname }님</h2>
+            <ul>
+                <li class="sub01">
+                	<a href="history">예약내역</a>
+                </li>
+                <li>
+                	<a href="question">문의내역</a>
+                </li>
+				<li>
+					<a href="infomodify">정보수정</a>
+				</li>
+            </ul>
+      	</div>
+	       
+	       
+	        <!-- 본문 컨테이너 : main -->
+				<div>
+					<ul>
+						<li>&nbsp;</li>
+					</ul>
+					<ul>
+						<li><h2>회원정보</h2></li>
+						
+					</ul>
+					<ul>
+						<li>&nbsp;</li>
+					</ul>
+				</div>
 							
 							
-		<table width="900px" class="tt3">
-		<tr>
-			<td height="40">&nbsp;</td>
-		</tr>
-		
-			<form action="infoModifyOk" method="post" name="reg_frm">
-			<input type="hidden" name="id" value="${memberDto.mid }">
-			
-		<tr>
-			<td width="25%">&nbsp;</td>
-			<td width="10%" class="td-type04">아이디</td>
-			<td width="40%" text-align="left">
-				<input type="text" id="email" value="${memberDto.mid }" readonly name="id">
+		<table width="900px">
+			<tr class="contentbox">
+							<td class="content">
+								<center>	
+									<table border="0" cellspacing="0" cellpadding="10">
+										<form action="infomodifyOk" method="post" name="reg_frm" >
+											<input type="hidden" name="id" value="${memberDto.mid }">
+											<tr>								
+												<td><span class="content_text01">아 이 디 : </span></td>
+												<td>
+													<input type="text" id="email" value="${memberDto.mid }" readonly name="id">
+												</td>
+											</tr>
+											<tr>
+												<td><span class="content_text01">변경된 비밀번호 : </span></td>
+												<td>
+													 <input type="password" id="password" value="<c:forEach begin="1" end="${fn:length(memberDto.mpw)}" step="1">*</c:forEach>" readonly name="pw">
 			</td>
-			<td width="25%">&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="25%">&nbsp;</td>
-			<td width="10%" class="td-type04">비밀번호</td>
-			<td width="40%">
-			 <input type="password" id="password" value="<c:forEach begin="1" end="${fn:length(memberDto.mpw)}" step="1">*</c:forEach>" readonly name="pw">
-			</td>
-			<td width="25%">&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="25%">&nbsp;</td>
-			<td width="10%" class="td-type04">이름</td>
-			<td width="40%">
+												
+											</tr>
+											<tr>
+												
+												<td><span class="content_text01">이  름 : </span></td>
+												<td >
 			<input type="text" id="password"  readonly value="${memberDto.mname }" name="name">
 			</td>
 			<td width="25%">&nbsp;</td>

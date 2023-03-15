@@ -40,20 +40,20 @@
 	       
 	       
 	        <!-- 본문 컨테이너 : main -->
-				<table>
-					<tr>
-						<td>&nbsp;</td>
-					</tr>
-					<tr>
-						<td><h2>회원정보</h2></td>
+				<div>
+					<ul>
+						<li>&nbsp;</li>
+					</ul>
+					<ul>
+						<li><h2>회원정보</h2></li>
 						
-					</tr>
-					<tr>
-						<td>&nbsp;</td>
-					</tr>
-				</table>
+					</ul>
+					<ul>
+						<li>&nbsp;</li>
+					</ul>
+				</div>
 										
-				<table width="60%" border="0" cellspacing="0" cellpadding="10">
+				<table width="900px">
 					
 					<tr class="contentbox">
 						<td class="content">
@@ -72,7 +72,7 @@
 											</tr >
 											<tr>
 												
-												<td><span class="content_text01">비밀번호 : </span></td>
+												<td><span class="content_text01">변경할 비밀번호 : </span></td>
 												<td>
 												 <input type="password" id="password" class="input_type01" placeholder="비밀번호" name="pw">
 												</td>
@@ -110,7 +110,7 @@
 											
 											<tr>
 												<td colspan="2">
-													&nbsp;&nbsp;&nbsp;&nbsp;<input class="button_type01"  type="button" value="정보수정" onclick="infoModifyConfirm()" >&nbsp;&nbsp;
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="button_type01"  type="button" value="정보수정" onclick="infoModifyConfirm()" >&nbsp;&nbsp;
 													<input class="button_type01" type="button" value="회원탈퇴" onclick="javascript:window.location='memberCancel'">
 													
 												</td>
