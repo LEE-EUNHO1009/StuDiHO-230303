@@ -1,18 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/main.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/content.css">
-<!-- 230314 수정 <script type="text/javascript" src="${pageContext.request.contextPath }/resources/js/Board.js"></script>-->
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/span.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/tabmenu.css"> 
 <script type="text/javascript" src="${pageContext.request.contextPath }/resources/js/board.js"></script>
 <title>Question</title>
 </head>
 <body>
 <%@ include file="include/header.jsp" %>
-<% if(session.getAttribute("Id") != null) {
+	<% if(session.getAttribute("Id") != null) {
 	%>
 	
 <!--Content 영역-->
@@ -41,8 +45,7 @@
 						</td>
 					</tr>
 				</table>
-					
-					
+				
 				<table width="900px">
 					<tr class="contentbox">
 						<td class="content">
