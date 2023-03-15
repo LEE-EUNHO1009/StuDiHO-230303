@@ -10,10 +10,10 @@
 <body>
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">
 		<tr class="footer02">
-			<td class="footertext01">Copyright ⓒ StuDiHoCompany. All Rights Reserved</td>
+			<td class="footertext01">Copyright ⓒ StuDIHOCompany. All Rights Reserved</td>
 		</tr>
 		<tr class="footer02">
-			<td class="footertext02">This homepage is built with Spring Framework. Made by StuDiHoCompany. E-Mail: StuDiHoCompany@gmail.com</td>
+			<td class="footertext02">This homepage is built with Spring Framework. Made by StuDIHOCompany. E-Mail: StuDIHOCompany@gmail.com</td>
 		</tr>
 	</table>
 </body>

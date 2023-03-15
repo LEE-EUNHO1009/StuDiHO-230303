@@ -61,15 +61,14 @@
 			<td align="center">
 				<span class="main02">This is the photo studio. Please call me if you have any questions about the reservation.</span>
 			</td>
+			<td colspan="2" class="content">
+				${memberDto.mname }님 안녕하세요.
+			</td>
 		</tr>
 		<tr>
 			<td align="center">
 				<table width="80%" border="0" cellspacing="0" cellpadding="10">
-					<tr>
-						<td colspan="2" class="content">
-						${memberDto.mname }님 안녕하세요.
-						</td>
-					</tr>
+					
 					<tr class="contentbox01">
 						<td width="25%" class="content">
 							<a href="reservation">예약하기</a></td>

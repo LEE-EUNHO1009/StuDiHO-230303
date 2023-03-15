@@ -10,9 +10,10 @@
 #leftColumn{
     width:185px;   
     float:left;
-    color: #636363;
+    color: #000000;
 	font-family: NanumSquareRound;
 	font-weight: bold;
+	background-color: yellow;
 }
  
 #main{

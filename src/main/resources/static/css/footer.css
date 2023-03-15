@@ -3,13 +3,16 @@
 body{
 	margin: 0;
 	padding: 0;
+	/*position: fixed;*/
 }
 tr.footer01{/*하단 여백*/
 	height: 50px;
+	
 }
 tr.footer02{
 	height: 30px;
 	background-color: #3A98B9;
+	
 }
 
 td.footertext01{

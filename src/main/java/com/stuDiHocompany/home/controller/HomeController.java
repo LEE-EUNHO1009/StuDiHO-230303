@@ -143,7 +143,7 @@ public class HomeController {
 	public String memberInfo(HttpServletRequest request, Model model) {
 
 		HttpSession session = request.getSession();
-		String sessionId = (String) session.getAttribute("id");
+		String sessionId = (String) session.getAttribute("Id");
 		
 		IDao dao = sqlSession.getMapper(IDao.class);
 	
@@ -189,7 +189,7 @@ public class HomeController {
 	public String membercancel(HttpServletRequest request, Model model) {
 		
 		HttpSession session = request.getSession();
-		String sessionId = (String) session.getAttribute("id");
+		String sessionId = (String) session.getAttribute("Id");
 		
 		IDao dao = sqlSession.getMapper(IDao.class);
 	
