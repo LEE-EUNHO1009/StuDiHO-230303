@@ -28,9 +28,9 @@
     <div id="leftColumn">
         <h2>안녕하세요</h2>
         <ul>
-            <li><a href="/company">증명사진</a></li>
-            <li><a href="/location">프로필/ 컨셉</a></li>
-            <li><a href="/location">반려견/ 반려묘</a></li>
+            <li><a href="/gallery">증명사진</a></li>
+            <li><a href="/gallery2">프로필/ 컨셉</a></li>
+            <li><a href="/gallery3">반려견/ 반려묘</a></li>
         </ul>
     </div>
 	

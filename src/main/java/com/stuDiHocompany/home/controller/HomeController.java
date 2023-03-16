@@ -332,25 +332,7 @@ public class HomeController {
 		return "map";
 	}
 	
-	// 1:1 문의
-	/*@RequestMapping(value = "/QnA") // 문의 하기
-	public String QnA(HttpServletRequest request, Model model) {	
-		
-		HttpSession session = request.getSession();
-		String sessionId = (String) session.getAttribute("id");
-		
-		IDao dao = sqlSession.getMapper(IDao.class);
 	
-		MemberDto memberDto = dao.loginOkDao(sessionId);
-		
-		model.addAttribute("memberDto",memberDto);
-	
-		model.addAttribute("count",dao.qcountList(sessionId));
-		model.addAttribute("list", dao.qlistDao(sessionId));
-
-	
-		return "QnA";
-	}*/
 	
 	   @RequestMapping(value = "/question")
 	   public String question(HttpSession session, Model model) {	
@@ -478,12 +460,6 @@ public class HomeController {
 		
 		return "gallery";
 	}
-	@RequestMapping(value = "/gallery01")  // 갤러리 1 페이지 이동
-	public String gallery01(HttpServletRequest request) {
-		
-		return "gallery";
-	}
-	
 	
 	@RequestMapping(value = "/gallery2")  // 갤러리 2 페이지 이동
 	public String gallery2(HttpServletRequest request) {
