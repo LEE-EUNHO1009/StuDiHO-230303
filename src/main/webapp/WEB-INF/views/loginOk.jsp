@@ -75,7 +75,7 @@
 						<td width="25%" class="content">
 							<a href="reservation">예약하기</a></td>
 						<td width="25%" class="content">
-							<a href="question01">문의하기</a></td>
+							<a href="question">문의하기</a></td>
 						<td width="25%" class="content">
 							<a href="infomodify">정보수정</a></td>
 					</tr>

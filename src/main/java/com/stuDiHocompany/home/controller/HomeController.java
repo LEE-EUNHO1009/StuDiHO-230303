@@ -72,7 +72,7 @@ public class HomeController {
 			session.setAttribute("Id", memberDto.getMid()); 
 			session.setAttribute("pw", memberDto.getMpw());
 			session.setAttribute("name", memberDto.getMname());
-			
+			System.out.print("로그인성공");
 
 		}
 		
@@ -105,7 +105,7 @@ public class HomeController {
 			model.addAttribute("mname", request.getParameter("name"));
 		}
 		
-		return "login"; // 완료되면 joinOk.jsp로 이동
+		return "joinOk"; // 완료되면 joinOk.jsp로 이동
 	}
 	
 	@RequestMapping(value = "/history") // 예약 내역
