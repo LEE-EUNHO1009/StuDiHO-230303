@@ -31,7 +31,7 @@
     <div id="leftColumn">
         <h2>안녕하세요.</h2>
         <ul>
-            <li><a href="company01">스튜디호 소개</a></li>
+            <li><a href="company">스튜디호 소개</a></li>
             <li><a href="location">스튜디호 오시는 길</a></li>
         </ul>
     </div>

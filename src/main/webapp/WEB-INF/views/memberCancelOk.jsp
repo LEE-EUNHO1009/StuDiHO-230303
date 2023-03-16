@@ -7,11 +7,14 @@
 <meta charset="UTF-8">
 
 <title>회원 탈퇴 확인</title>
-<%--<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/span.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/main.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/content.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/span.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/table.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/style.css"> --%>
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/tabmenu.css"> 
 <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
-
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/members.js"></script>
 </head>
 <body>
 	<!-- 23014 수정내용 -->
@@ -56,18 +59,16 @@
 									<form>
 										<!-- <input type="hidden" name="id" value="${memberDto.mid }"> -->
 										<tr>
-											<td><span class="content_text01">그동안 이용해주셔서 감사합니다. </span></td>
-											<td>
-												<input type="password" class="input_type01" placeholder="비밀번호" name="pw">
-											</td>
+											<td colspan="2" align="center"><span class="content_text01">그동안 이용해주셔서 감사합니다. </span></td>
+											
 										</tr>
 										<tr>
 											<td><br></td>
 										</tr>
 										<tr>
 											<td colspan="2" align="center">
-												<input class="button_type01" type="button" value="회원탈퇴" onclick="checkValue()">&nbsp;
-												<input class="button_type01" type="button" value="취소" onclick="javascript:window.location='infomodify'">
+												<input class="button_type01" type="button" value="처음으로" onclick="javascript:window.location='main'">&nbsp;
+												<input class="button_type01" type="button" value="회원가입" onclick="javascript:window.location='join'">
 											</td>
 										</tr>
 									</form>	
