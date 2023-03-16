@@ -18,63 +18,73 @@
 <!-- 230314 수정 내용 -->
 
 <%@ include file="include/header.jsp" %>
-	 <div style="height: 100px">
-	</div>
-		<div class="wrapper_loginok">
-		
-			<table width="900px">
-				<tr class="contentbox">
-					<td class="content">
-						<table border="0" cellspacing="0" cellpadding="10">
-							
-							<tr align="center">
-								<td>
-									<span id="menu">
-										<%
-											int checkId = Integer.parseInt(request.getAttribute("checkIdFlag").toString());
-										
-											if(checkId == 1) {								
-										%>				
-											<script language="JavaScript">
-												alert("입력하신 아이디는 이미 사용중입니다. 다른 아이디를 입력하세요.");
-												history.go(-1);
-											</script>
-										<% 
-											} 
-										%>
-								
-										${mname }</b> 님 회원 가입을 축하드립니다!
-									</span>
-								</td>
-							</tr>
-							<tr height="40" align="center">
-								<td align="center">가입하신 아이디는 ${mid } 입니다.
-								</td>
-							</tr>
-							
-						</table>
-						<table class="tt2" width="90%">
-								
-							<tr height="150px">
-								<td align="center">
-									<input class="button_type01"  type="button" value="로그인 하기" onclick="javascript:window.location='login'" >
-								</td >
-							
-							</tr>
-						</table>
-					</td>
-				</tr>
-			</table>
+	 
+	<div class="wrapper_loginok">
+		<table width="900px">
+			<tr>
+				<td><br></td>
+			</tr>
+			<tr>
+				<td align="center">
+					<span class="main02">This is the photo studio. Please call me if you have any questions about the reservation.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><br></td>
+			</tr>
+		</table>	
+		<table width="900px">
+			<tr class="contentbox">
+				<td class="content">
+					<table class="tt2" align="center" width="90%">
 						
-		</div>
-		    <table>
-				<tr>
-					<td>&nbsp;</td>
-				</tr>
-			</table>
-	
+						<tr align="center">
+							<td>
+								<h2><span class="content_text01" align="center">
+									<%
+										int checkId = Integer.parseInt(request.getAttribute("checkIdFlag").toString());
+									
+										if(checkId == 1) {								
+									%>				
+										<script language="JavaScript" class="content_text01">
+											alert("입력하신 아이디는 이미 사용중입니다. 다른 아이디를 입력하세요.");
+											history.go(-1);
+										</script>
+									<% 
+										} 
+									%>
+									 ${mname }</b> 님 회원 가입을 축하드립니다!
+								</span>
+								</h2>
+							</td>
+						<tr height="40" align="center">
+							<td align="center">
+								<h3>가입하신 아이디는 ${mid } 입니다.</h3>
+							</td>
+						</tr>
+						
+					</table>
+					<table align="center" width="90%">
+							
+						<tr height="150px">
+							<td align="center">
+								<input class="button_type01"  type="button" value="로그인 하기" onclick="javascript:window.location='login'" >
+							</td >
+						
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+				
+	</div>
+		<table>
+			<tr>
+				<td><br></td>
+			</tr>
+		</table> 
 	<!--  푸터 뜨는 현상 수정 -->
- <div style="height: 100px">
+ <div style="height: 300px">
 </div>
 <%@ include file="include/footer.jsp" %>
 </body>
