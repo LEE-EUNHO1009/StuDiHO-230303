@@ -34,8 +34,11 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "/main")
-	public String main() {
-	
+	public String main(Model model) {
+		
+		model.addAttribute("checkIdFlag", 1); // checkIdFlag=1이면 로그인하려는 아이디가 존재, 0이면 아이디가 존재하지 않음.
+		model.addAttribute("checkPwFlag", 1); // checkPwFlag=1이면 아이디와 그 아이디의 비밀번호가 일치하므로 로그인 가능
+		
 		return "main";
 	}
 	

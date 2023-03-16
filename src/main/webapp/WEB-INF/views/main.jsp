@@ -12,6 +12,36 @@
 </head>
 <body>
 	<%@ include file="include/header.jsp" %>
+	<%
+		int checkId = Integer.parseInt(request.getAttribute("checkIdFlag").toString());
+		int checkPw = Integer.parseInt(request.getAttribute("checkPwFlag").toString());
+	
+		if(checkId == 0) {								
+	%>				
+		<script language="JavaScript">
+			alert("입력하신 아이디는 존재하지 않는 아이디입니다. 아이디를 확인해 주세요.");
+			history.go(-1);
+		</script>
+	<% 
+		} else if (checkPw == 0) {
+	%>
+		<script language="JavaScript">
+			alert("입력하신 비밀번호가 틀립니다. 다시 확인해 주세요.");
+			history.go(-1);
+		</script>
+	<% 
+		} else if (session.getAttribute("Id").equals("admin")) {
+	%>
+		<script language="JavaScript">
+		document.location = "adminInfo";
+		</script>
+	
+	<% 
+		} else {
+			
+			session.setAttribute("ValidMem", "yes");
+		}
+	%>
 	 <!-- Swiper -->
 	 <center>
 		 <div class="swiper mySwiper">
