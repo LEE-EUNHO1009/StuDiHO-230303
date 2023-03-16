@@ -252,7 +252,7 @@
 			<table width="900px" class="tt3">
 				<tr>
 					<td colspan="4" align="right">
-						<input class="button_type02" type="submit" value="예약하기" onclick="javascript:window.location='mwrite'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input class="button_type02" type="submit" value="예약하기" onclick="javascript:window.location='reservation'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					</td>
 											</tr>
 									</form>	
@@ -273,7 +273,7 @@
 </div>
 		
 <!--  푸터 뜨는 현상 수정 -->
- <div style="height: 100px">
+ <div style="height: 150px">
 </div>
 <%@ include file="include/footer.jsp" %>
 

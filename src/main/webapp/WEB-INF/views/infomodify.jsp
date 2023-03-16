@@ -31,7 +31,7 @@
         <h2>${memberDto.mname }님</h2>
         <ul>
             <li><a href="history">예약내역</a></li>
-            <li><a href="question">문의내역</a></li>
+            <li><a href="question">문의하기</a></li>
             <li><a href="infomodify">회원정보</a></li>
         </ul>
     </div>
@@ -99,7 +99,7 @@
 											<tr>
 												
 												<td><span class="content_text01">가입일자 : </span></td>
-												<td ><input type="text" id="password" class="input_type01" value="${memberDto.mdate}" readonly></td>
+												<td><input type="text" id="password" class="input_type01" value="${memberDto.mdate }" readonly="readonly"></td>
 												
 											</tr>
 											
@@ -130,7 +130,7 @@
 <!--  왼쪽 메뉴 추가 -->
 </div>
 <!--  푸터 뜨는 현상 수정 -->
- <div style="height: 100px">
+ <div style="height: 200px">
 </div>	  
 	
 <%@ include file="include/footer.jsp" %>

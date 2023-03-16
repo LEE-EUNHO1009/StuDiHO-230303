@@ -28,27 +28,30 @@ public class HomeController {
 	
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-	
-		return "main";
-	}
-	
-	@RequestMapping(value = "/main")
-	public String main() {
-	
-		return "main";
-	}
+	   public String home(Model model) {
+	      
+	      model.addAttribute("checkIdFlag", 1); // checkIdFlag=1이면 로그인하려는 아이디가 존재, 0이면 아이디가 존재하지 않음.
+	      model.addAttribute("checkPwFlag", 1);
+	      
+	      return "main";
+	   }
+	   
+	   @RequestMapping(value = "/main")
+	   public String main(Model model) {
+	      
+	      model.addAttribute("checkIdFlag", 1); // checkIdFlag=1이면 로그인하려는 아이디가 존재, 0이면 아이디가 존재하지 않음.
+	      model.addAttribute("checkPwFlag", 1);
+	      
+	   
+	      return "main";
+	   }
 	
 	@RequestMapping(value = "/login") // 로그인 클릭하면
 	public String login() {
 	
 		return "login"; // login.jsp로 이동
 	}
-	@RequestMapping(value = "/login01") // 로그인 클릭하면
-	public String login01() {
 	
-		return "login"; // login.jsp로 이동
-	}
 	
 	@RequestMapping(value = "/logout") // 로그아웃 클릭하면
 	public String logout() {
@@ -76,12 +79,12 @@ public class HomeController {
 			session.setAttribute("Id", memberDto.getMid()); 
 			session.setAttribute("pw", memberDto.getMpw());
 			session.setAttribute("name", memberDto.getMname());
-			
+			System.out.print("로그인성공");
 
 		}
 		
 		
-		return "loginOk"; // loginOk.jsp로 이동
+		return "main"; // main.jsp로 이동
 	}
 	
 	@RequestMapping(value = "/join") // 회원가입 클릭하면
@@ -231,20 +234,35 @@ public class HomeController {
 		return "reservation";
 	}
 	
-	@RequestMapping(value = "/reservationHistory") // 회원 예약 글쓰기 화면으로 이동
-	public String reservationHistory(HttpServletRequest request, Model model) {
+	@RequestMapping(value = "/reservationHistory1") // 회원 예약 글쓰기 화면으로 이동
+	   public String reservationHistory(HttpServletRequest request, Model model) {
 
-		HttpSession session = request.getSession();
-		String sessionId = (String) session.getAttribute("Id");
-		
-		IDao dao = sqlSession.getMapper(IDao.class);
-	
-		MemberDto memberDto = dao.loginOkDao(sessionId);
-		
-		model.addAttribute("memberDto",memberDto);
-		
-		return "mwrite";
-	}
+	      HttpSession session = request.getSession();
+	      String sessionId = (String) session.getAttribute("Id");
+	      
+	      IDao dao = sqlSession.getMapper(IDao.class);
+	   
+	      MemberDto memberDto = dao.loginOkDao(sessionId);
+	      
+	      model.addAttribute("memberDto",memberDto);
+	      
+	      return "mwrite";
+	   }
+	   
+	   @RequestMapping(value = "/reservationHistory2") // 회원 예약 글쓰기 화면으로 이동
+	   public String reservationHistory2(HttpServletRequest request, Model model) {
+
+	      HttpSession session = request.getSession();
+	      String sessionId = (String) session.getAttribute("Id");
+	      
+	      IDao dao = sqlSession.getMapper(IDao.class);
+	   
+	      MemberDto memberDto = dao.loginOkDao(sessionId);
+	      
+	      model.addAttribute("memberDto",memberDto);
+	      
+	      return "mwrite2";
+	   }
 	
 	@RequestMapping(value = "/mwrite") // 회원 예약 글쓰기 화면으로 이동
 	public String mwrite(HttpServletRequest request, Model model) {
@@ -314,25 +332,7 @@ public class HomeController {
 		return "map";
 	}
 	
-	// 1:1 문의
-	/*@RequestMapping(value = "/QnA") // 문의 하기
-	public String QnA(HttpServletRequest request, Model model) {	
-		
-		HttpSession session = request.getSession();
-		String sessionId = (String) session.getAttribute("id");
-		
-		IDao dao = sqlSession.getMapper(IDao.class);
 	
-		MemberDto memberDto = dao.loginOkDao(sessionId);
-		
-		model.addAttribute("memberDto",memberDto);
-	
-		model.addAttribute("count",dao.qcountList(sessionId));
-		model.addAttribute("list", dao.qlistDao(sessionId));
-
-	
-		return "QnA";
-	}*/
 	
 	   @RequestMapping(value = "/question")
 	   public String question(HttpSession session, Model model) {	
@@ -343,18 +343,8 @@ public class HomeController {
 	      
 	      return "question";
 	      
-
-	   }  @RequestMapping(value = "/question01")
-	   public String question01(HttpSession session, Model model) {	
-			
-		   String sessionId = (String) session.getAttribute("Id");
-		   
-		   model.addAttribute("memberId", sessionId);
-	      
-	      return "question";
-	      
-
 	   }
+	  
 	   
 	   @RequestMapping(value = "/questionOk")
 	   public String questionOk(HttpServletRequest request) {
@@ -470,12 +460,6 @@ public class HomeController {
 		
 		return "gallery";
 	}
-	@RequestMapping(value = "/gallery01")  // 갤러리 1 페이지 이동
-	public String gallery01(HttpServletRequest request) {
-		
-		return "gallery";
-	}
-	
 	
 	@RequestMapping(value = "/gallery2")  // 갤러리 2 페이지 이동
 	public String gallery2(HttpServletRequest request) {
@@ -494,11 +478,7 @@ public class HomeController {
 		
 		return "company";
 	}
-	@RequestMapping(value = "/company01")  // 회사소개 페이지 이동
-	public String company01( ) {
-		
-		return "company";
-	}
+	
 	@RequestMapping(value = "/location")  // 회사위치 소개 페이지 이동
 	public String location( ) {
 		

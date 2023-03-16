@@ -129,7 +129,7 @@
 											</tr>
 											<tr>
 												<td colspan="2" align="right">
-													<input class="button_type01" type="button" value="돌아가기" onclick="javascript:window.location='history'">&nbsp;&nbsp;&nbsp;&nbsp;
+													<input class="button_type01" type="button" value="돌아가기" onclick="javascript:window.location='history'">&nbsp;&nbsp;
 														<%
 														if(request.getAttribute("Rstatus").equals("예약완료")) {
 														%>
@@ -157,7 +157,7 @@
 <!--  왼쪽 메뉴 추가 -->
 </div>
 <!--  푸터 뜨는 현상 수정 -->
- <div style="height: 100px">
+ <div style="height: 150px">
 </div>
 <%@ include file="include/footer.jsp" %>
 

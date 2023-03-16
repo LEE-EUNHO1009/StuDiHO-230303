@@ -37,8 +37,8 @@
 							            <td><input class="input_type01" type="password" id="password" placeholder="비밀번호" name="pw"></td>
 							           </tr>
 							           <tr>
-							            <td colspan="2">
-											&nbsp;<input class="button_type01" id="button" type="submit" value="로그인" >&nbsp;&nbsp;&nbsp;&nbsp;
+							            <td colspan="2" align="center">
+											<input class="button_type01" id="button" type="submit" value="로그인" >&nbsp;&nbsp;
 											<input class="button_type01" id="button" type="button" value="회원가입" onclick="javascript:window.location='join'">
 										</td>
 									</tr>
@@ -54,6 +54,8 @@
 		</tr>
 	</table>
 	</center>
+	<div style="height: 100px">
+</div>
 		<%@ include file="include/footer.jsp" %>
 </body>
 </html>

@@ -12,27 +12,52 @@
 </head>
 <body>
 	<%@ include file="include/header.jsp" %>
+	
+	<%
+		int checkId = Integer.parseInt(request.getAttribute("checkIdFlag").toString());
+		int checkPw = Integer.parseInt(request.getAttribute("checkPwFlag").toString());
+	
+		if(checkId == 0) {								
+	%>				
+		<script language="JavaScript">
+			alert("입력하신 아이디는 존재하지 않는 아이디입니다. 아이디를 확인해 주세요.");
+			history.go(-1);
+		</script>
+	<% 
+		} else if (checkPw == 0) {
+	%>
+		<script language="JavaScript">
+			alert("입력하신 비밀번호가 틀립니다. 다시 확인해 주세요.");
+			history.go(-1);
+		</script>
+	<% 
+		} else {
+			
+			session.setAttribute("ValidMem", "yes");
+		}
+	%>
+	
 	 <!-- Swiper -->
 	 <center>
 		 <div class="swiper mySwiper">
 		    <div class="swiper-wrapper">
 		      <div class="swiper-slide";>
-		      	<a href="company01" >
+		      	<a href="company" >
 		      		<img src="${pageContext.request.contextPath }/resources/img/gran.png">
 		      	</a>
 		      </div>
 		      <div class="swiper-slide">
-			     <a href="login01">
+			     <a href="reservation">
 			      	<img src="${pageContext.request.contextPath }/resources/img/main1.png">
 		      	</a>
 		      </div>
 		      <div class="swiper-slide">
-		     	 <a href="gallery01" >
+		     	 <a href="gallery" >
 		      		<img src="${pageContext.request.contextPath }/resources/img/main2.png" height="100%" width="100%" >
 		      	</a>
 		      </div>
 		      <div class="swiper-slide">
-		      	<a href="question01" >
+		      	<a href="question" >
 		      		<img src="${pageContext.request.contextPath }/resources/img/main3.png" width="100%" height="100%">
 		      	</a>
 		      </div>
@@ -41,17 +66,7 @@
 		    <div class="swiper-button-prev"></div>
 		    <div class="swiper-pagination"></div>
 		    <div class="autoplay-progress">
-		    <!--  <div>
-		    	<script id="mbi-simpletalk-kakao-tpl" type="text/template">
-
-		    	</script>
-		    </div>
-		    <div class="mbi-simpletalk-kakao" data-bridge-display="Y" data-device="pc" data-position="right"> 
-		    	<a class="badge" data-type="kakaotalk" style="width:100px; margin-bottom: 150px;">
-		    		<img alt="카카오톡 상담하기" src="https://simple.happytalkio.com/images/components/buttons/btn_kakao05.png" title>
-		    	</a>
-		    </div>
-		    -->
+		    
 		    <div></div>
 		    <svg viewBox="0 0 48 48">
 	        <circle cx="24" cy="24" r="20"></circle>

@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<!-- 사용안함 -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,13 +39,6 @@
 			history.go(-1);
 		</script>
 	<% 
-		} else if (session.getAttribute("Id").equals("admin")) {
-	%>
-		<script language="JavaScript">
-		document.location = "adminInfo";
-		</script>
-	
-	<% 
 		} else {
 			
 			session.setAttribute("ValidMem", "yes");
@@ -75,7 +69,7 @@
 						<td width="25%" class="content">
 							<a href="reservation">예약하기</a></td>
 						<td width="25%" class="content">
-							<a href="question01">문의하기</a></td>
+							<a href="question">문의하기</a></td>
 						<td width="25%" class="content">
 							<a href="infomodify">정보수정</a></td>
 					</tr>
