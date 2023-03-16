@@ -19,77 +19,59 @@
 	<!-- 230314 내용수정 -->
 	<%@ include file="include/header.jsp" %>
 	<center height="100%">
-
+		<div class="wrapper_loginok">
 	
-
-	<div class="wrapper_loginok">
-
-
-	<table class="tt1" width="100%">
-		<tr>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td align="center">
-				<span class="main01">StuDIHO Company</span>
-			</td>
-		</tr>	
-		<tr>
-			<td>
-				&nbsp;
-			</td>
-		</tr>
-		<tr>
-			<td align="center">
-				<span class="main02">This is the photo studio. Please call me if you have any questions about the reservation.</span>
-			</td>
-		</tr>
-		<tr>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td>&nbsp;</td>
-		</tr>
-		
-	</table>
+			<table class="tt1" width="100%">
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<span class="main01">StuDIHO Company</span>
+					</td>
+				</tr>	
+				<tr>
+					<td>
+						&nbsp;
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<span class="main02">This is the photo studio. Please call me if you have any questions about the reservation.</span>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+				
+			</table>
 
 
-	<table class="tt1" width="100%" >
-		<tr>
-			<td colspan="3"><% if(session.getAttribute("Id") != null) { out.print(session.getAttribute("name")); } else {out.print("GUEST");} %>님 안녕하세요.</td>
-		</tr>
-		<tr height="300px">
-			<td>
-				<input class="button_type01"  type="button" value="예약내역" onclick="javascript:window.location='history'" >&nbsp;
-			</td>
-			<td>
-				<input class="button_type01"  type="button" value="문의하기" onclick="javascript:window.location='question'" >&nbsp;
-			</td>
-			<td>
-				<input class="button_type01"  type="button" value="회원정보" onclick="javascript:window.location='infomodify'" >&nbsp;
-			</td>
-		</tr>
-	</table>
+			<table class="tt1" width="100%" >
+				<tr>
+					<td colspan="3"><% if(session.getAttribute("Id") != null) { out.print(session.getAttribute("name")); } else {out.print("GUEST");} %>님 안녕하세요.</td>
+				</tr>
+				<tr height="300px">
+					<td>
+						<input class="button_type01"  type="button" value="예약내역" onclick="javascript:window.location='history'" >&nbsp;
+					</td>
+					<td>
+						<input class="button_type01"  type="button" value="문의하기" onclick="javascript:window.location='question'" >&nbsp;
+					</td>
+					<td>
+						<input class="button_type01"  type="button" value="회원정보" onclick="javascript:window.location='infomodify'" >&nbsp;
+					</td>
+				</tr>
+			</table>
 				
 	</div>
-
-        
-        
-	<table class="mtable">
-		<tr>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td>&nbsp;</td>
-		</tr>
-	</table>
 </center>
-	<%@ include file="include/footer.jsp" %>
+<!--  푸터 뜨는 현상 수정 -->
+<div style="height: 100px">
+</div>	
+<%@ include file="include/footer.jsp" %>
 </body>
 </html>

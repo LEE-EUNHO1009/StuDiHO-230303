@@ -40,8 +40,6 @@
         <!-- 본문 컨테이너 : main -->
         <div id="main">
 
-
-	 		
 	            
 				<table align="center">
 					<tr>
