@@ -11,6 +11,8 @@
 </head>
 <body>
 	<%@ include file="include/header.jsp" %>
+	<% if(session.getAttribute("Id") != null) {
+	%>
 	<center>
 		<table width="75%" border="0" cellspacing="0" cellpadding="20">
 			<tr>
@@ -44,6 +46,7 @@
 							</td>
 						</tr>
 					</table>
+<% } else {out.print("로그인 후 이용 가능합니다.");} %>
 				</td>
 			</tr>	
 		</table>

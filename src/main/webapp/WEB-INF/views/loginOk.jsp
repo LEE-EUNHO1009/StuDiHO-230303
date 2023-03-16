@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<!-- 사용안함 -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,13 +38,6 @@
 			alert("입력하신 비밀번호가 틀립니다. 다시 확인해 주세요.");
 			history.go(-1);
 		</script>
-	<% 
-		} else if (session.getAttribute("Id").equals("admin")) {
-	%>
-		<script language="JavaScript">
-		document.location = "adminInfo";
-		</script>
-	
 	<% 
 		} else {
 			

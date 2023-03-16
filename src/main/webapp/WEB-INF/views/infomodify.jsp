@@ -99,7 +99,7 @@
 											<tr>
 												
 												<td><span class="content_text01">가입일자 : </span></td>
-												<td ><input type="text" id="password" class="input_type01" value="${memberDto.mdate}" readonly></td>
+												<td><input type="text" id="password" class="input_type01" value="${memberDto.mdate }" readonly="readonly"></td>
 												
 											</tr>
 											

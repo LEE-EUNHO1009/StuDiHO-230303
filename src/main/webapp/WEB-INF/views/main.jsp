@@ -12,6 +12,7 @@
 </head>
 <body>
 	<%@ include file="include/header.jsp" %>
+	
 	<%
 		int checkId = Integer.parseInt(request.getAttribute("checkIdFlag").toString());
 		int checkPw = Integer.parseInt(request.getAttribute("checkPwFlag").toString());
@@ -30,18 +31,12 @@
 			history.go(-1);
 		</script>
 	<% 
-		} else if (session.getAttribute("Id").equals("admin")) {
-	%>
-		<script language="JavaScript">
-		document.location = "adminInfo";
-		</script>
-	
-	<% 
 		} else {
 			
 			session.setAttribute("ValidMem", "yes");
 		}
 	%>
+	
 	 <!-- Swiper -->
 	 <center>
 		 <div class="swiper mySwiper">
@@ -71,17 +66,7 @@
 		    <div class="swiper-button-prev"></div>
 		    <div class="swiper-pagination"></div>
 		    <div class="autoplay-progress">
-		    <!--  <div>
-		    	<script id="mbi-simpletalk-kakao-tpl" type="text/template">
-
-		    	</script>
-		    </div>
-		    <div class="mbi-simpletalk-kakao" data-bridge-display="Y" data-device="pc" data-position="right"> 
-		    	<a class="badge" data-type="kakaotalk" style="width:100px; margin-bottom: 150px;">
-		    		<img alt="카카오톡 상담하기" src="https://simple.happytalkio.com/images/components/buttons/btn_kakao05.png" title>
-		    	</a>
-		    </div>
-		    -->
+		    
 		    <div></div>
 		    <svg viewBox="0 0 48 48">
 	        <circle cx="24" cy="24" r="20"></circle>

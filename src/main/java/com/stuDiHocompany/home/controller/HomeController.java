@@ -28,19 +28,23 @@ public class HomeController {
 	
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-	
-		return "main";
-	}
-	
-	@RequestMapping(value = "/main")
-	public String main(Model model) {
-		
-		model.addAttribute("checkIdFlag", 1); // checkIdFlag=1이면 로그인하려는 아이디가 존재, 0이면 아이디가 존재하지 않음.
-		model.addAttribute("checkPwFlag", 1); // checkPwFlag=1이면 아이디와 그 아이디의 비밀번호가 일치하므로 로그인 가능
-		
-		return "main";
-	}
+	   public String home(Model model) {
+	      
+	      model.addAttribute("checkIdFlag", 1); // checkIdFlag=1이면 로그인하려는 아이디가 존재, 0이면 아이디가 존재하지 않음.
+	      model.addAttribute("checkPwFlag", 1);
+	      
+	      return "main";
+	   }
+	   
+	   @RequestMapping(value = "/main")
+	   public String main(Model model) {
+	      
+	      model.addAttribute("checkIdFlag", 1); // checkIdFlag=1이면 로그인하려는 아이디가 존재, 0이면 아이디가 존재하지 않음.
+	      model.addAttribute("checkPwFlag", 1);
+	      
+	   
+	      return "main";
+	   }
 	
 	@RequestMapping(value = "/login") // 로그인 클릭하면
 	public String login() {
@@ -80,7 +84,7 @@ public class HomeController {
 		}
 		
 		
-		return "main"; // loginOk.jsp로 이동
+		return "main"; // main.jsp로 이동
 	}
 	
 	@RequestMapping(value = "/join") // 회원가입 클릭하면
