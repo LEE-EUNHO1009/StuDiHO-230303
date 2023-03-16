@@ -54,6 +54,8 @@
 		</tr>
 	</table>
 	</center>
+	<div style="height: 100px">
+</div>
 		<%@ include file="include/footer.jsp" %>
 </body>
 </html>

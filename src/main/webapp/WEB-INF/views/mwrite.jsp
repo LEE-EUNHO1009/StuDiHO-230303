@@ -48,7 +48,7 @@
 
 				<table class="tt1">
 					<tr>
-						<td><span id="menu">예약하기</span></td>
+						<td><span id="menu">증명사진/프로필 예약하기</span></td>
 					</tr>
 				</table>
 					
@@ -165,7 +165,7 @@
 <!--  왼쪽 메뉴 추가 -->
 </div>
 <!--  푸터 뜨는 현상 수정 -->
- <div style="height: 100px">
+ <div style="height: 200px">
 </div>
 <%@ include file="include/footer.jsp" %>
 

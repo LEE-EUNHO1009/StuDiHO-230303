@@ -108,7 +108,7 @@
 <!--  왼쪽 메뉴 추가 -->
 </div>
 <!--  푸터 뜨는 현상 수정 -->
- <div style="height: 100px">
+ <div style="height: 150px">
 </div>
 <%@ include file="include/footer.jsp" %>
 </body>
