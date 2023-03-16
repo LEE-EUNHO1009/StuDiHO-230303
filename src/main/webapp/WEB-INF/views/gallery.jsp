@@ -88,7 +88,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><br><br>
+				<td colspan="3" align="center"><br><br>
 					<a href="gallery">1</a>&nbsp;&nbsp;<a href="gallery2">2</a>&nbsp;&nbsp;<a href="gallery3">3</a><br><br>
 					<br><br><br><br>
 				</td>
