@@ -82,11 +82,9 @@
 												<span class="content_text01">사진선택 : </span>
 											</td>
 											<td width="70%">
-												<input type="radio" style="width:15px;height:15px;border:1px;" name="rclass" value="증명사진" id="radio1">&nbsp;
-												<label for="radio1">증명사진</label>
-												<input type="radio" style="width:15px;height:15px;border:1px;" name="rclass" value="프로필/컨셉사진" checked id="radio2">&nbsp;
-												<label for="radio2">프로필/컨셉사진</label>
 												
+												<input type="radio" style="width:15px;height:15px;border:1px;" name="rclass" value="반려동물 사진" id="radio3"/>
+												<label for="radio3">반려동물 사진</label>
 											</td>
 										</tr>
 										<tr>

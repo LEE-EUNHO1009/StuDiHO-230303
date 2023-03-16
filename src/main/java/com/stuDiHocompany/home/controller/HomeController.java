@@ -234,20 +234,35 @@ public class HomeController {
 		return "reservation";
 	}
 	
-	@RequestMapping(value = "/reservationHistory") // 회원 예약 글쓰기 화면으로 이동
-	public String reservationHistory(HttpServletRequest request, Model model) {
+	@RequestMapping(value = "/reservationHistory1") // 회원 예약 글쓰기 화면으로 이동
+	   public String reservationHistory(HttpServletRequest request, Model model) {
 
-		HttpSession session = request.getSession();
-		String sessionId = (String) session.getAttribute("Id");
-		
-		IDao dao = sqlSession.getMapper(IDao.class);
-	
-		MemberDto memberDto = dao.loginOkDao(sessionId);
-		
-		model.addAttribute("memberDto",memberDto);
-		
-		return "mwrite";
-	}
+	      HttpSession session = request.getSession();
+	      String sessionId = (String) session.getAttribute("Id");
+	      
+	      IDao dao = sqlSession.getMapper(IDao.class);
+	   
+	      MemberDto memberDto = dao.loginOkDao(sessionId);
+	      
+	      model.addAttribute("memberDto",memberDto);
+	      
+	      return "mwrite";
+	   }
+	   
+	   @RequestMapping(value = "/reservationHistory2") // 회원 예약 글쓰기 화면으로 이동
+	   public String reservationHistory2(HttpServletRequest request, Model model) {
+
+	      HttpSession session = request.getSession();
+	      String sessionId = (String) session.getAttribute("Id");
+	      
+	      IDao dao = sqlSession.getMapper(IDao.class);
+	   
+	      MemberDto memberDto = dao.loginOkDao(sessionId);
+	      
+	      model.addAttribute("memberDto",memberDto);
+	      
+	      return "mwrite2";
+	   }
 	
 	@RequestMapping(value = "/mwrite") // 회원 예약 글쓰기 화면으로 이동
 	public String mwrite(HttpServletRequest request, Model model) {

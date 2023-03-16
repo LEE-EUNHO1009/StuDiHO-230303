@@ -30,7 +30,7 @@
 					<table width="80%" border="0" cellspacing="0" cellpadding="10">
 						<tr>
 							<td class="click01">
-								<a href="reservationHistory" class="click01" id="banner_bg">
+								<a href="reservationHistory1" class="click01" id="banner_bg">
 									<img src="${pageContext.request.contextPath }/resources/img/eunho.png" width="500" height="665">
 										<p class="hover_text">증명/프로필</p>
 								</a>
@@ -39,7 +39,7 @@
 								&nbsp;&nbsp;&nbsp;
 							</td>
 							<td  class="click01">
-								<a href="reservationHistory" class="click01" id="banner_bg">
+								<a href="reservationHistory2" class="click01" id="banner_bg">
 									<img src="${pageContext.request.contextPath }/resources/img/Dang.jpg" width="500" height="665">
 										<p class="hover_text">반려견&묘</p>
 								</a>
