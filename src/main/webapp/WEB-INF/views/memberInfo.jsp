@@ -60,7 +60,7 @@
 		</tr>
 		<tr height="300px">
 			<td>
-				<input class="button_type01"  type="button" value="예약하기" onclick="javascript:window.location='history'" >&nbsp;
+				<input class="button_type01"  type="button" value="예약내역" onclick="javascript:window.location='history'" >&nbsp;
 			</td>
 			<td>
 				<input class="button_type01"  type="button" value="문의하기" onclick="javascript:window.location='question'" >&nbsp;

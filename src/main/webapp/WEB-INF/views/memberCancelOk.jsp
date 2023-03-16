@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>예약 페이지</title>
+<title>회원 탈퇴 확인</title>
 <%--<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/span.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/table.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/style.css"> --%>

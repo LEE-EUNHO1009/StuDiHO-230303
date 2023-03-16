@@ -129,7 +129,7 @@
 											</tr>
 											<tr>
 												<td colspan="2" align="right">
-													<input class="button_type01" type="button" value="돌아가기" onclick="javascript:window.location='history'">&nbsp;&nbsp;&nbsp;&nbsp;
+													<input class="button_type01" type="button" value="돌아가기" onclick="javascript:window.location='history'">&nbsp;&nbsp;
 														<%
 														if(request.getAttribute("Rstatus").equals("예약완료")) {
 														%>
