@@ -33,19 +33,62 @@
 	<% 
 		}
 	%>
-	
-		<div class="wrapper_loginok">
+<!--Content 영역-->
+ <div id="content" >
+ 	
+		<!-- 본문 컨테이너 : main -->
+        <div id="main">
 
+	            
+				<table class="tt1">
+					<tr>
+						<td><span id="menu">회원 탈퇴</span></td>
+					</tr>
+				</table>
+					
+					
+				<table width="900px">
+					<tr class="contentbox">
+						<td class="content">
+							<center>
+								<table border="0" cellspacing="0" cellpadding="10">
+									<!--  <form action="memberCancelOk" method="post" name="reg_frm">-->
+									<form>
+										<!-- <input type="hidden" name="id" value="${memberDto.mid }"> -->
+										<tr>
+											<td><span class="content_text01">그동안 이용해주셔서 감사합니다. </span></td>
+											<td>
+												<input type="password" class="input_type01" placeholder="비밀번호" name="pw">
+											</td>
+										</tr>
+										<tr>
+											<td><br></td>
+										</tr>
+										<tr>
+											<td colspan="2" align="center">
+												<input class="button_type01" type="button" value="회원탈퇴" onclick="checkValue()">&nbsp;
+												<input class="button_type01" type="button" value="취소" onclick="javascript:window.location='infomodify'">
+											</td>
+										</tr>
+									</form>	
+								</table>
+							</center>
+						</td>
+					</tr>
+				</table>
+			
+        </div>
+		    <table>
+	            <tr>
+	                <td>&nbsp;</td>
+	            </tr>
+		    </table>
 
-					<table class="tt1" width="90%">
-						<tr>
-							<td>
-							
-							그동안 이용해주셔서 감사합니다.</td>
-						</tr>
-					</table>
-
-		</div>
+<!--  왼쪽 메뉴 추가 -->
+ </div>
+<!--  푸터 뜨는 현상 수정 -->
+ <div style="height: 100px">
+</div>	  
 	
 
 	<%@ include file="include/footer.jsp" %>

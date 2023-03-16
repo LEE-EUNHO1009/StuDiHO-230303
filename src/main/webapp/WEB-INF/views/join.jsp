@@ -53,8 +53,8 @@
 										<td><input class="input_type01" type="text" id="password" placeholder="전화번호" name="phone"></td>
 									</tr>
 									<tr >
-										<td colspan="2">
-												&nbsp;&nbsp;&nbsp;<input  class="button_type01" id="button" type="button" value="회원가입" onclick="infoConfirm()">&nbsp;&nbsp;&nbsp;&nbsp;
+										<td colspan="2" align="center">
+												<input  class="button_type01" id="button" type="button" value="회원가입" onclick="infoConfirm()">&nbsp;&nbsp;
 												<input  class="button_type01" id="button" type="button" value="로그인" onclick="javascript:window.location='login'">
 										</td>
 									</tr>

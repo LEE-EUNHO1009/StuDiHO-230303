@@ -105,7 +105,7 @@ public class HomeController {
 			model.addAttribute("mname", request.getParameter("name"));
 		}
 		
-		return "joinOk"; // 완료되면 joinOk.jsp로 이동
+		return "login"; // 완료되면 joinOk.jsp로 이동
 	}
 	
 	@RequestMapping(value = "/history") // 예약 내역
