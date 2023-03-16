@@ -1,5 +1,5 @@
 package com.stuDiHocompany.home.controller;
-//2차 머지 완료
+//최종본
 import java.util.List;
 import java.util.Locale;
 
